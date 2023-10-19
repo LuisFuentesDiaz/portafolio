@@ -1,0 +1,14 @@
+.foto-personal{
+  border-radius: 40%;
+  border: 3px solid white;
+
+}
+
+.body-info{
+  text-align: center;
+  background-color: saddlebrown;
+  width: 100%;
+  margin: 0; /* Elimina los márgenes */
+  padding: 0;
+}
+
