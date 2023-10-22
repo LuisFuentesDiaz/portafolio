@@ -1,14 +1,26 @@
 .foto-personal{
   border-radius: 40%;
   border: 3px solid white;
-
 }
 
-.body-info{
+h1{
+  font-family: 'Graduate', serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 3.5rem;
+
+}
+h1,h3{
   text-align: center;
-  background-color: saddlebrown;
-  width: 100%;
-  margin: 0; /* Elimina los márgenes */
-  padding: 0;
 }
 
+.fotoPersonal{
+ width: 25vh;
+ border-radius: 50%;
+ border: 3px solid black;
+
+
+}
+.containerFoto{
+  text-align: center;
+}

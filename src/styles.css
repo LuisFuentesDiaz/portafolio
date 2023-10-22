@@ -1,23 +1,4 @@
+
 body {
-    background: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: 'Bebas Neue', sans-serif;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
-
-.paño{
-  height: 100vh;
-  justify-content: center;
-  background-color: aqua;
-  display: flex;
-}
-
-.centrado-al-paño{
-  display: flex;
-  align-items: center;
-  background-color: blue;
-  width: 80%;
-}
-
-
-
