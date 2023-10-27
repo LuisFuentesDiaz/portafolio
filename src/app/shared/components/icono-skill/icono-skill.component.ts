@@ -10,6 +10,7 @@ export class IconoSkillComponent {
   @Input() ancho: Number = 150;
   @Input() largo: Number = 150;
   @Input() capacidad: string = '0';
+  @Input() tooltip: string = '';
 
   constructor() { }
 

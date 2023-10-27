@@ -1,0 +1,22 @@
+.form {
+  padding: 10%;
+  border: 1px solid black;
+  border-radius: 10%;
+  height: 300px;
+  width: calc(270px);
+  display: block;
+  background-color: #f1eef1;
+  background-image: linear-gradient(0deg, #f1eef1 0%, #e2d9e2 30%, #d0c7dc 71%, #ffffff 100%);
+}
+
+.sobre-mi {
+  width: 270px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.titulo {
+  font-family: 'Graduate', serif;
+  font-weight: bold;
+}
