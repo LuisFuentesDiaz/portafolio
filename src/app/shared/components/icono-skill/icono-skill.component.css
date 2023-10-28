@@ -1,4 +1,4 @@
-.skill{
+.skill {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,7 +10,8 @@
   position: absolute;
   overflow: hidden;
 }
-.capacidad{
+
+.capacidad {
   display: flex;
   position: absolute;
   opacity: 55%;
@@ -21,15 +22,9 @@
   transition: 0.7s;
 }
 
-.skill:hover{
+.skill:hover {
   transform: scale(1.2);
   transition: transform 0.2s;
   z-index: 1000;
   cursor: grab;
 }
-
-
-
-
-
-
