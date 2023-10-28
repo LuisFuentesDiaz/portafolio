@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-down-section',
@@ -7,25 +7,53 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DownSectionComponent implements OnInit {
 
-  secciones: string[] = ["cabecera",];
+  @Input() down: string = "";
+  esVisible: boolean = false;
+  tab: string[] = ["tabindex1", "tabindex2", "tabindex3"];
+  indexActual = 0;
 
-  ngOnInit() {
-    document.addEventListener("DOMContentLoaded", function () {
-      // Obtén una referencia al botón y al elemento al que deseas darle foco
-      const boton = document.getElementById("down");
-      const elementoFoco = document.getElementById("SegundoArt");
+  ngOnInit(): void {
 
-      console.log("sii?? ", boton, elementoFoco);
+    this.esVisible = true;
 
-      // Agrega un controlador de eventos al botón
-      boton?.addEventListener("click", function () {
-        // Dale foco al elemento al hacer clic en el botón
-        if (elementoFoco) {
-          elementoFoco.focus();
-          elementoFoco.scrollIntoView({ behavior: "instant" });
-        }
-      });
-    });
+
   }
 
+
+  downScroll(): void {
+    console.log("doww");
+    let elemento;
+    if ((this.indexActual + 1) <= this.tab.length) {
+      elemento = document.getElementById(this.tab[this.indexActual + 1]);
+
+    }
+    if (elemento) {
+      console.log("siii ", elemento);
+
+      elemento.focus();
+      elemento.scrollIntoView({ behavior: "smooth" });
+      this.indexActual++;
+
+    }
+
+  }
+
+  upScroll(): void {
+    console.log("upppp");
+    let elemento;
+    if ((this.indexActual - 1) >= 0) {
+      elemento = document.getElementById(this.tab[this.indexActual - 1]);
+
+    }
+    if (elemento) {
+      console.log("siii ", elemento);
+
+      elemento.focus();
+      elemento.scrollIntoView({ behavior: "smooth" });
+      this.indexActual--;
+
+    }
+
+
+  }
 }

@@ -1,18 +1,32 @@
-.downSection {
-  box-shadow: 0px 0px 5px 0px black;
-  border-radius: 25px;
-  width: 20%;
-}
-
-.downSection:hover>.down-img {
+.downUpSection:hover {
   transform: scale(1.4);
   font-weight: bold;
 }
 
-.section-down {
+.section-downUp {
   justify-content: center;
-  position: relative;
+  position: fixed;
   display: flex;
   text-align: center;
-  top: 30vh;
+  top: 85vh;
+}
+
+.downUp-img {
+  font-size: 40px;
+}
+
+.downUpSection {
+  margin-top: -10px;
+  text-align: center;
+
+}
+
+.center-icons {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

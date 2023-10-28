@@ -1,4 +1,4 @@
-import { Component, Input, ElementRef, Renderer2, AfterViewInit } from '@angular/core';
+import { Component, Input, ElementRef, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-sider-tarjeta',
@@ -10,8 +10,6 @@ export class SiderTarjetaComponent {
   @Input() top: string = "";
   @Input() img: string = "";
   @Input() id: string = 'miElemento';
-
-
 
   constructor(private renderer: Renderer2, private elementRef: ElementRef) { }
 

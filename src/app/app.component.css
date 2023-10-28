@@ -1,17 +1,25 @@
-.infoSuperior{
+.infoSuperior {
   text-align: center;
 }
-.paño{
+
+.paño {
   height: 100vh;
 }
-section{
+
+section {
   height: 60vh;
 }
-article{
+
+article {
   width: 90%;
 }
 
-.conjuntoHabilidades{
+.conjuntoHabilidades {
   rotate: 1.2s;
 }
 
+.upDown {
+  justify-content: center;
+  display: block;
+  text-align: center;
+}
