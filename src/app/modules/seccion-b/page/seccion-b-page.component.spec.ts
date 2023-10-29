@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { SeccionUnoPageComponent } from './seccion-uno-page.component';
+import { SeccionBPageComponent } from './seccion-b-page.component';
 
-describe('SeccionUnoPageComponent', () => {
-  let component: SeccionUnoPageComponent;
-  let fixture: ComponentFixture<SeccionUnoPageComponent>;
+describe('SeccionBPageComponent', () => {
+  let component: SeccionBPageComponent;
+  let fixture: ComponentFixture<SeccionBPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SeccionUnoPageComponent ]
+      declarations: [ SeccionBPageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SeccionUnoPageComponent);
+    fixture = TestBed.createComponent(SeccionBPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
