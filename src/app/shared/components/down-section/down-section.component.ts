@@ -13,47 +13,31 @@ export class DownSectionComponent implements OnInit {
   indexActual = 0;
 
   ngOnInit(): void {
-
     this.esVisible = true;
-
-
   }
-
 
   downScroll(): void {
     console.log("doww");
     let elemento;
     if ((this.indexActual + 1) <= this.tab.length) {
       elemento = document.getElementById(this.tab[this.indexActual + 1]);
-
     }
     if (elemento) {
-      console.log("siii ", elemento);
-
       elemento.focus();
       elemento.scrollIntoView({ behavior: "smooth" });
       this.indexActual++;
-
     }
-
   }
 
   upScroll(): void {
-    console.log("upppp");
     let elemento;
     if ((this.indexActual - 1) >= 0) {
       elemento = document.getElementById(this.tab[this.indexActual - 1]);
-
     }
     if (elemento) {
-      console.log("siii ", elemento);
-
       elemento.focus();
       elemento.scrollIntoView({ behavior: "smooth" });
       this.indexActual--;
-
     }
-
-
   }
 }

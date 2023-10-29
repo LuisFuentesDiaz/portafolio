@@ -1,7 +1,11 @@
+.grab:hover {
+  cursor: grab;
+}
+
 body {
   background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
 
-.grab:hover {
-  cursor: grab;
+.paño {
+  height: 100vh;
 }
