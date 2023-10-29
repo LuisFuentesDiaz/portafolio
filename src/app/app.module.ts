@@ -2,22 +2,19 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SharedModule } from './shared/shared.module';
-import { DatoSiderModule } from './modules/datos-sider/datos-sider.module';
-import { ContactoSiderComponent } from './modules/contacto-sider/contacto-sider.component';
 import { PrimeraSeccionModule } from './modules/seccion-uno/primera-seccion.module';
+import { DownAndUpComponent } from './modules/downAndUp/downAndUp.component';
+import { SiderTarjetaModule } from './modules/sider-tarjeta/sider-tarjeta.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ContactoSiderComponent,
+    AppComponent, DownAndUpComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule,
-    DatoSiderModule,
-    PrimeraSeccionModule
+    PrimeraSeccionModule,
+    SiderTarjetaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

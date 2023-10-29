@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-down-section',
-  templateUrl: './down-section.component.html',
-  styleUrls: ['./down-section.component.css']
+  selector: 'app-downAndUp',
+  templateUrl: './downAndUp.component.html',
+  styleUrls: ['./downAndUp.component.css']
 })
-export class DownSectionComponent implements OnInit {
+export class DownAndUpComponent implements OnInit {
 
   @Input() down: string = "";
   esVisible: boolean = false;
