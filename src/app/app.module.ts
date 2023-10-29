@@ -6,6 +6,7 @@ import { DownAndUpComponent } from './modules/downAndUp/downAndUp.component';
 import { SiderTarjetaModule } from './modules/sider-tarjeta/sider-tarjeta.module';
 import { SeccionBModule } from './modules/seccion-b/seccion-b.module';
 import { SeccionAModule } from './modules/seccion-a/seccion-a.module';
+import { SeccionCModule } from './modules/seccion-c/seccion-c.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SeccionAModule } from './modules/seccion-a/seccion-a.module';
     AppRoutingModule,
     SeccionAModule,
     SiderTarjetaModule,
-    SeccionBModule
+    SeccionBModule,
+    SeccionCModule
   ],
   providers: [],
   bootstrap: [AppComponent]

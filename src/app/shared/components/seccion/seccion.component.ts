@@ -7,24 +7,15 @@ import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
 })
 export class SeccionComponent implements AfterViewInit {
 
-  @Input() numArticulo: any;
-  @Input() seccionHeigth: string = "60";
-  @Input() articleWidth: String = "90";
-
+  @Input() id: any;
+  @Input() height: string = "60";
 
   ngAfterViewInit(): void {
-    if (this.numArticulo) {
-      let seccion = document.getElementById("seccion");
+    if (this.id) {
+      let seccion = document.getElementById("seccion" + this.id)?.style;
       if (seccion) {
-        seccion.style.height = `${this.seccionHeigth}vh`;
-      }
-
-      let articulo = document.getElementById("articulo");
-      if (articulo) {
-        articulo.style.width = `${this.articleWidth}%`;
+        seccion.height = this.height + "%";
       }
     }
   }
-
-
 }

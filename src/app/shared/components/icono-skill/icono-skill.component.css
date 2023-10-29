@@ -20,6 +20,17 @@
   border-radius: 30%;
   background-color: darkgray;
   transition: 0.7s;
+  justify-content: center;
+  align-items: center;
+}
+
+.a-capacidad {
+  display: none;
+  font-size: 22px;
+}
+
+.skill:hover>.a-capacidad {
+  display: block;
 }
 
 .skill:hover {
