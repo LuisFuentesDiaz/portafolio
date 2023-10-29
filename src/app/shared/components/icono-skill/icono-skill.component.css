@@ -14,7 +14,7 @@
 .capacidad {
   display: flex;
   position: absolute;
-  opacity: 55%;
+  opacity: 70%;
   height: 0%;
   bottom: 0%;
   border-radius: 30%;
@@ -26,7 +26,9 @@
 
 .a-capacidad {
   display: none;
-  font-size: 22px;
+  font-size: 20px;
+  font-family: 'Graduate', serif;
+  font-weight: bold;
 }
 
 .skill:hover>.a-capacidad {

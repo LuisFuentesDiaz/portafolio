@@ -12,7 +12,7 @@ export class HabilidadesCabeceraComponent implements OnInit {
     const elementos: any = document.querySelectorAll(".skillContenedor");
     const contSk = document.getElementById("contenedorSkill");
     const cantidadCirculos = elementos.length;
-    const radio = 220;
+    const radio = 150;
 
     for (let i = 0; i < elementos.length; i++) {
       const angulo = (i / cantidadCirculos) * 2 * Math.PI;
