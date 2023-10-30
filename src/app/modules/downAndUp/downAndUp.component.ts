@@ -17,7 +17,6 @@ export class DownAndUpComponent implements OnInit {
   }
 
   downScroll(): void {
-    console.log("doww");
     let elemento;
     if ((this.indexActual + 1) <= this.tab.length) {
       elemento = document.getElementById(this.tab[this.indexActual + 1]);

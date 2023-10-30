@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   tab: any[] = [1, 2];
 
   ngOnInit(): void {
-    document.body.style.overflow = 'hidden';
+    //document.body.style.overflow = 'hidden';
   }
 
   ngAfterViewInit() {

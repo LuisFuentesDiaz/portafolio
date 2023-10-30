@@ -7,8 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class IconoSkillComponent {
   @Input() nombre: string = "";
-  @Input() ancho: Number = 150;
-  @Input() largo: Number = 150;
+  @Input() ancho: Number = 65;
+  @Input() largo: Number = 65;
   @Input() capacidad: string = '0';
   @Input() tooltip: string = '';
   capacidadString: string = '';

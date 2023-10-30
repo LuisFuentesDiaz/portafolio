@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { SharedModule } from 'src/app/shared/shared.module';
 import { InfoCabeceraComponent } from './components/info-cabecera/info-cabecera.component';
-import { HabilidadesCabeceraComponent } from './components/habilidades-cabecera/habilidades-cabecera.component';
 import { SeccionAPageComponent } from './page/seccion-a-page.component';
 
 @NgModule({
@@ -11,7 +10,7 @@ import { SeccionAPageComponent } from './page/seccion-a-page.component';
     CommonModule,
     SharedModule
   ],
-  declarations: [InfoCabeceraComponent, HabilidadesCabeceraComponent, SeccionAPageComponent],
+  declarations: [InfoCabeceraComponent, SeccionAPageComponent],
   exports: [SeccionAPageComponent]
 })
 export class SeccionAModule { }

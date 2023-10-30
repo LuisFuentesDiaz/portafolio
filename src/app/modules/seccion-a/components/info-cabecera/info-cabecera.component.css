@@ -5,9 +5,10 @@
 
 h1 {
   font-family: 'Graduate', serif;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   font-size: 3.5rem;
+  font-weight: bold;
 }
 
 h1,
