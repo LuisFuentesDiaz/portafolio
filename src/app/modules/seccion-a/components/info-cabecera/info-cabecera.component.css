@@ -1,8 +1,3 @@
-.foto-personal {
-  border-radius: 40%;
-  border: 3px solid white;
-}
-
 h1 {
   font-family: 'Graduate', serif;
   margin-top: 5px;
@@ -11,16 +6,34 @@ h1 {
   font-weight: bold;
 }
 
+@media(max-width: 400px) {
+  h1 {
+    font-family: 'Graduate', serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .textoCabecera {
+    margin-top: 25px;
+  }
+
+  .textoCabecera>.h3HextoCabecera {
+    font-size: 1.0rem;
+  }
+}
+
 h1,
-h3 {
+.h3HextoCabecera {
   text-align: center;
+  margin: 2%;
 }
 
 .fotoPersonal {
   width: 25vh;
   border-radius: 50%;
   border: 3px solid white;
-
 }
 
 .containerFoto {
@@ -28,5 +41,5 @@ h3 {
 }
 
 .info-cabecera-div {
-  margin-top: 15vh;
+  margin-top: 20vh;
 }

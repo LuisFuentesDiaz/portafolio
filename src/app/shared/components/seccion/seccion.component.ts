@@ -20,7 +20,6 @@ export class SeccionComponent implements AfterViewInit {
         seccion.height = this.height + "%";
         seccion.width = this.width + "%";
         seccion.maxWidth = this.maxWidth + "px";
-
       }
     }
   }

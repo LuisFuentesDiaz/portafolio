@@ -5,6 +5,7 @@ import { SiderTarjetaComponent } from './components/sider-tarjeta/sider-tarjeta.
 import { SeccionComponent } from './components/seccion/seccion.component';
 import { ArticuloComponent } from './components/articulo/articulo.component';
 
+
 @NgModule({
   declarations: [IconoSkillComponent, SiderTarjetaComponent, SeccionComponent, ArticuloComponent],
   imports: [

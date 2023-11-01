@@ -10,6 +10,7 @@ export class SiderTarjetaComponent {
   @Input() top: string = "";
   @Input() img: string = "";
   @Input() id: string = 'miElemento';
+  @Input() isLink: string = "false";
 
   constructor(private renderer: Renderer2, private elementRef: ElementRef) { }
 
@@ -17,15 +18,20 @@ export class SiderTarjetaComponent {
     const elemento = this.elementRef.nativeElement.querySelector('#' + this.id);
 
     if (elemento) {
-      this.renderer.listen(elemento, 'mouseover', () => {
-        this.renderer.setStyle(elemento, 'width', '300px');
-        this.renderer.setStyle(elemento, 'height', '400px');
-      });
+      if (this.isLink == "false") {
+        this.renderer.listen(elemento, 'mouseover', () => {
+          this.renderer.setStyle(elemento, 'width', '300px');
+          this.renderer.setStyle(elemento, 'height', '400px');
+        });
 
-      this.renderer.listen(elemento, 'mouseout', () => {
-        this.renderer.setStyle(elemento, 'width', '50px');
-        this.renderer.setStyle(elemento, 'height', '50px');
-      });
+        this.renderer.listen(elemento, 'mouseout', () => {
+          this.renderer.setStyle(elemento, 'width', '50px');
+          this.renderer.setStyle(elemento, 'height', '50px');
+        });
+      } else {
+        this.renderer.setStyle(elemento, 'border-radius', '25px');
+        this.renderer.setStyle(elemento, 'margin-left', '5px');
+      }
     }
   }
 }

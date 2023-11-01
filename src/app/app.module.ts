@@ -7,10 +7,11 @@ import { SiderTarjetaModule } from './modules/sider-tarjeta/sider-tarjeta.module
 import { SeccionBModule } from './modules/seccion-b/seccion-b.module';
 import { SeccionAModule } from './modules/seccion-a/seccion-a.module';
 import { SeccionCModule } from './modules/seccion-c/seccion-c.module';
+import { NavbarComponent } from './modules/navbar/navbar.component';
 
 @NgModule({
   declarations: [
-    AppComponent, DownAndUpComponent,
+    AppComponent, DownAndUpComponent, NavbarComponent
   ],
   imports: [
     BrowserModule,

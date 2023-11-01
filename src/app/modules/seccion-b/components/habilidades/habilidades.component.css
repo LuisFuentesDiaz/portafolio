@@ -1,17 +1,6 @@
-.skskillContenedorill {
-  display: block;
-  margin-top: 3%;
-}
-
-#contenedorSkill {
-  width: 100%;
-  height: 100%;
-}
-
 .h3Titulo {
   font-family: 'Graduate', serif;
-  margin-top: 3%;
-  margin-bottom: 15px;
+  margin-bottom: 5%;
   font-size: 2.0rem;
   text-align: center;
 }
@@ -32,4 +21,26 @@
   padding-left: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+
+@media(max-width:400px) {
+  .movil-habilidades {
+    display: block;
+  }
+
+  .web-habilidades {
+    display: none;
+  }
+
+}
+
+@media(min-width:401px) {
+  .movil-habilidades {
+    display: none;
+  }
+
+  .web-habilidades {
+    display: block;
+  }
 }

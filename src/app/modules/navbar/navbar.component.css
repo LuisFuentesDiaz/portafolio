@@ -1,0 +1,16 @@
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: #212529;
+  position: fixed;
+  color: wheat;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item {
+  color: #485563;
+  margin: 20px;
+  font-size: 1.0rem;
+  align-items: center;
+}
