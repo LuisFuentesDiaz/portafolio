@@ -1,0 +1,157 @@
+#estrella{
+  overflow: hidden;
+  width: 99%;
+}
+
+@keyframes escalar1 {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.5); /* Escala al 120% del tamaño original */
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+@keyframes escalar2 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2); /* Escala al 120% del tamaño original */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes escalar3 {
+  0% {
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.1); /* Escala al 120% del tamaño original */
+  }
+  100% {
+    transform: scale(0.3);
+  }
+}
+
+@keyframes escala4 {
+  0% {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1.8); /* Escala al 120% del tamaño original */
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+.escalar1 {
+  animation: escalar1 0.9s ease-in-out infinite;
+}
+
+.escalar2 {
+  animation: escalar2 0.9s ease-in-out infinite;
+}
+
+.escalar3 {
+  animation: escalar3 1s ease-in-out infinite;
+}
+
+.escalar4 {
+  animation: escalar4 1.1s ease-in-out infinite;
+}
+
+.escalar5 {
+  animation: escalar1 1.2s ease-in-out infinite;
+}
+
+.escalar6 {
+  animation: escalar2 1.3s ease-in-out infinite;
+}
+
+.escalar7 {
+  animation: escalar3 1.4s ease-in-out infinite;
+}
+
+.escalar8 {
+  animation: escalar4 1.5s ease-in-out infinite;
+}
+
+.escalar9 {
+  animation: escalar3 1.6s ease-in-out infinite;
+}
+
+.escalar10 {
+  animation: escalar4 1.5s ease-in-out infinite;
+}
+
+.estrellaFugaz {
+  width: 200px;
+  height: 50px;
+  transform: rotate(330deg);
+
+  background-image: url("/src/assets/angular.png");
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  overflow: hidden;
+}
+
+.animacionPaused{
+  animation-play-state: paused;
+}
+
+.animacionStart{
+  animation-play-state: running;
+}
+
+.contEstrellaFugaz1{
+
+  animation: estrellaFugaz1 2s ease-in-out infinite;
+
+}
+
+@keyframes estrellaFugaz1 {
+  0% {
+      transform: translateX(50,0);
+      opacity: 0;
+  }
+  50% {
+    transform: translateX(50,0);
+    opacity: 100;
+ }
+  100% {
+        transform: translate(-100vw, 100vh);
+      opacity: 0;
+  }
+}
+
+@keyframes estrellaFugaz2 {
+  0% {
+      transform: translateX(0,0);
+      opacity: 1;
+  }
+  100% {
+        transform: translate(-100vw, 100vh);
+      opacity: 0;
+  }
+}
+
+@keyframes estrellaFugaz3 {
+  0% {
+      transform: translateX(0,0);
+      opacity: 1;
+  }
+  100% {
+        transform: translate(-100vw, 100vh);
+      opacity: 0;
+  }
+}
+

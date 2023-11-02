@@ -8,6 +8,7 @@ import { SeccionBModule } from './modules/seccion-b/seccion-b.module';
 import { SeccionAModule } from './modules/seccion-a/seccion-a.module';
 import { SeccionCModule } from './modules/seccion-c/seccion-c.module';
 import { NavbarComponent } from './modules/navbar/navbar.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -19,9 +20,10 @@ import { NavbarComponent } from './modules/navbar/navbar.component';
     SeccionAModule,
     SiderTarjetaModule,
     SeccionBModule,
-    SeccionCModule
+    SeccionCModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }
