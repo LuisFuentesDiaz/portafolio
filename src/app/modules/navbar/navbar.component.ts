@@ -10,6 +10,18 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+  }
+
+
+  focus(elemento) {
+
+    let seccion = document.getElementById("tabindex2");
+    if (seccion) {
+      console.log("ele ", seccion);
+      seccion.focus();
+
+    }
   }
 
 }

@@ -23,6 +23,8 @@ export class SeccionBPageComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {
     this.screenWidth = window.innerWidth;
+    console.log("cambia? ", this.screenWidth);
+
     if (this.screenWidth < 400) {
       console.log("menor");
 

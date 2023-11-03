@@ -22,24 +22,31 @@ h1 {
   .textoCabecera>.h3HextoCabecera {
     font-size: 1.0rem;
   }
+
+  .en-linea {
+    justify-content: center;
+    text-align: center;
+  }
 }
 
-h1,
-.h3HextoCabecera {
+h1 {
   text-align: center;
-  margin: 2%;
 }
 
 .fotoPersonal {
-  width: 25vh;
+  width: 20vh;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 3px solid transparent;
 }
 
-.containerFoto {
+.centrado {
+  display: flex;
   text-align: center;
+  align-items: center;
 }
 
-.info-cabecera-div {
-  margin-top: 20vh;
+.en-linea {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }

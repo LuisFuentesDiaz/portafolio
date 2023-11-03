@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { ParticleComponent } from './particle.component';
+import { EstrellaFugazComponent } from './estrella-fugaz.component';
 
-describe('ParticleComponent', () => {
-  let component: ParticleComponent;
-  let fixture: ComponentFixture<ParticleComponent>;
+describe('EstrellaFugazComponent', () => {
+  let component: EstrellaFugazComponent;
+  let fixture: ComponentFixture<EstrellaFugazComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ParticleComponent ]
+      declarations: [ EstrellaFugazComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ParticleComponent);
+    fixture = TestBed.createComponent(EstrellaFugazComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

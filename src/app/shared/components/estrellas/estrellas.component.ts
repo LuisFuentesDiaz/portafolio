@@ -6,7 +6,7 @@ import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
   styleUrls: ['./estrellas.component.css']
 })
 export class EstrellasComponent implements OnInit {
-  estrellas = 120;
+  estrellas = 150;
   constructor(private el: ElementRef, private renderer: Renderer2) { }
 
   ngOnInit(): void {
@@ -18,9 +18,9 @@ export class EstrellasComponent implements OnInit {
           tipoEscala = 1;
         }
 
-        let tamaño = Math.random() * (6 - 2) + 1;
+        let tamaño = Math.random() * (4 - 1) + 1;
         let x = 0;
-        let y = Math.random() * (100 - 0) + 0;
+        let y = Math.random() * (50 - 0) + 0;
 
         if (i <= (win.estrellas / 4)) {
           x = Math.random() * (25 - 1) + 0;

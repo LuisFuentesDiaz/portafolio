@@ -1,0 +1,23 @@
+.nave-separador {
+  width: 75px;
+  height: 50px;
+}
+
+.nave-separador-izquierdo {
+  rotate: 270deg;
+}
+
+.nave-separador-derecho {
+  rotate: 90deg;
+}
+
+.separador-web {
+  width: 30%;
+  margin: inherit;
+}
+
+.contenedor-separador-web {
+  background-color: ghostwhite;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,20 @@
+.seccion-seccion-c {
+  width: auto;
+  margin: auto;
+  padding: 5%;
+}
+
+.articulo-seccion-c {
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 0px 74px 102px ghostwhite;
+  border-top-right-radius: 20%;
+  border-top-left-radius: 20%;
+}
+
+
+@media(min-width:401px) {
+  .web-articulo-seccion-b {
+    display: block;
+  }
+}

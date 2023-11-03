@@ -3,7 +3,8 @@
 }
 
 body {
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  background-image: linear-gradient(to top, #b47820 0%, #5b41b8 60%, #0a17a7 90%);
+  background-repeat: repeat;
   overflow-x: hidden;
 }
 
@@ -20,7 +21,7 @@ body {
 }
 
 .color-secundario-fondo {
-  background-color: #656faf;
+  background-color: ghostwhite;
 }
 
 .tituloInvertido {
@@ -30,9 +31,6 @@ body {
 .separator {
   border: none;
   border-top: 2px solid #000;
-  /* Línea superior delgada */
   width: 80%;
-  /* Ancho del separador en el centro */
   margin: 20px auto;
-  /* Margen para centrar el separador */
 }

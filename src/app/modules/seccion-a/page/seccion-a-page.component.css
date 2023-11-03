@@ -1,0 +1,24 @@
+.container-seccion-a {
+  overflow: hidden;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.info-cabecera {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: grid;
+}
+
+@media(max-width: 400px) {
+  .container-seccion-a {
+    height: 100vh;
+  }
+}
+
+@media(min-width: 401px) {
+  .container-seccion-a {
+    height: 70vh;
+  }
+}
