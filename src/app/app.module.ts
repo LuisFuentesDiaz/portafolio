@@ -9,10 +9,11 @@ import { SeccionAModule } from './modules/seccion-a/seccion-a.module';
 import { SeccionCModule } from './modules/seccion-c/seccion-c.module';
 import { NavbarComponent } from './modules/navbar/navbar.component';
 import { SharedModule } from './shared/shared.module';
+import { FooterComponent } from './modules/footer/footer.component';
 
 @NgModule({
   declarations: [
-    AppComponent, DownAndUpComponent, NavbarComponent
+    AppComponent, DownAndUpComponent, NavbarComponent, FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -21,6 +22,7 @@ import { SharedModule } from './shared/shared.module';
     SiderTarjetaModule,
     SeccionBModule,
     SeccionCModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],

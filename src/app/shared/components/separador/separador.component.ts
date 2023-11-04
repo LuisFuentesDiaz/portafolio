@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-separador',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./separador.component.css']
 })
 export class SeparadorComponent implements OnInit {
+
+  @Input() height = 20;
 
   constructor() { }
 

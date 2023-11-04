@@ -1,28 +1,14 @@
-<div *ngIf="izquierda" class="row col-12 container contenedor-proyecto">
-  <div class="col-7 row contenedor-descripcion contenedor-descripcion-left">
-    <img class="descripcion-proyecto" src="/assets/marco-proyecto-izquierda.png">
+<div id="proyecto{{id}}" class="row contenedor-proyecto">
+  <div class="open-modal">
+    <img class="expandir-img" id="expandir-img{{id}}" src="/assets/expandir.png" alt="">
   </div>
-  <div class="col-5 contenedor-capturas">
-    <div class="capturas capturas-left">
-      <div class="contenedor-open-modal">
-        <i class="open-modal-proyectos bi bi-arrows-fullscreen"></i>
-      </div>
-      <div class="contenedor-portada">
-        <img class="portada" src="/assets/proyectos/cca-ccafast/ccafast-1.png" alt="">
-      </div>
-    </div>
+  <div class="difuminado" id="difuminado{{id}}">
   </div>
-</div>
-
-
-
-<div *ngIf="derecha" class="row col-12 container contenedor-proyecto">
-  <div class="col-5 contenedor-capturas">
-    <div class="capturas capturas-right">
-    </div>
+  <div id="contenedor-habilidades{{id}}" class="row contenedor-habilidades col-12">
+    <app-icono-skill class="col habilidad-proyecto" nombre="angular" ancho="50" largo="50"></app-icono-skill>
+    <app-icono-skill class="col habilidad-proyecto" nombre="java" ancho="50" largo="50"></app-icono-skill>
+    <app-icono-skill class="col habilidad-proyecto" nombre="js" ancho="50" largo="50"></app-icono-skill>
+    <app-icono-skill class="col habilidad-proyecto" nombre="gitHub" ancho="50" largo="50"></app-icono-skill>
   </div>
-  <div class="col-7 row contenedor-descripcion contenedor-descripcion-right">
-    <span class="open-modal-proyectos">[ ]</span>
-    <img class="descripcion-proyecto" src="/assets/marco-proyecto-derecha.png">
-  </div>
+  <img id="portada{{id}}" class="portada" [src]="'/assets/proyectos/cca-ccafast/'+img+'.png'" alt="">
 </div>
