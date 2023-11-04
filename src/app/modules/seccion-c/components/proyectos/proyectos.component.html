@@ -1,11 +1,28 @@
-<div class="row col-12 contenedor-proyecto">
-
-  <div class="contenedor-descripcion">
-    <img class="descripcion-proyecto" src="/assets/nave-espacial.png">
-
-
-
+<div *ngIf="izquierda" class="row col-12 container contenedor-proyecto">
+  <div class="col-7 row contenedor-descripcion contenedor-descripcion-left">
+    <img class="descripcion-proyecto" src="/assets/marco-proyecto-izquierda.png">
   </div>
-  <div class="contenedor-capturas">
+  <div class="col-5 contenedor-capturas">
+    <div class="capturas capturas-left">
+      <div class="contenedor-open-modal">
+        <i class="open-modal-proyectos bi bi-arrows-fullscreen"></i>
+      </div>
+      <div class="contenedor-portada">
+        <img class="portada" src="/assets/proyectos/cca-ccafast/ccafast-1.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div *ngIf="derecha" class="row col-12 container contenedor-proyecto">
+  <div class="col-5 contenedor-capturas">
+    <div class="capturas capturas-right">
+    </div>
+  </div>
+  <div class="col-7 row contenedor-descripcion contenedor-descripcion-right">
+    <span class="open-modal-proyectos">[ ]</span>
+    <img class="descripcion-proyecto" src="/assets/marco-proyecto-derecha.png">
   </div>
 </div>
