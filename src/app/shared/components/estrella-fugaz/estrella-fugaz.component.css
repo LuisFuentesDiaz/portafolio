@@ -1,56 +1,21 @@
-@media(min-width:80%) {
-  .estrellaFugaz {
-    rotate: 375deg;
-  }
-}
-
 @media(max-width:400px) {
   .estrellaFugaz {
-    rotate: 355deg;
+    rotate: -37deg;
   }
 }
 
-@media(max-width:637px) {
+@media(min-width:400px) {
   .estrellaFugaz {
-    rotate: 370deg;
+    rotate: -10deg;
   }
 }
 
-@media(max-width:777px) {
+@media(min-width:1001px) {
   .estrellaFugaz {
-    rotate: 372deg;
+    rotate: 0deg;
   }
 }
 
-@media(max-width:900px) {
-  .estrellaFugaz {
-    rotate: 380deg;
-  }
-}
-
-@media(max-width:1200px) {
-  .estrellaFugaz {
-    rotate: 385deg;
-  }
-}
-
-@media(max-width:1500px) {
-  .estrellaFugaz {
-    rotate: 390deg;
-  }
-}
-
-@media(max-width:1500px) {
-  .estrellaFugaz {
-    rotate: 390deg;
-  }
-}
-
-@media(max-width:2000px) {
-  .estrellaFugaz {
-    rotate: 393deg;
-  }
-}
 
 .estrellasFugaces {
   z-index: -1;
@@ -61,19 +26,19 @@
 }
 
 .animacionStart1 {
-  animation: estrellaFugaz1 3s 1;
-}
-
-.animacionStart2 {
-  animation: estrellaFugaz1 2.5s 1;
-}
-
-.animacionStart3 {
   animation: estrellaFugaz1 2s 1;
 }
 
-.animacionStart4 {
+.animacionStart2 {
+  animation: estrellaFugaz1 1.7s 1;
+}
+
+.animacionStart3 {
   animation: estrellaFugaz1 1.5s 1;
+}
+
+.animacionStart4 {
+  animation: estrellaFugaz1 1.3s 1;
 }
 
 .animacionStart5 {
@@ -83,18 +48,13 @@
 
 .contEstrellaFugaz {
   position: absolute;
-
-
 }
-
 
 @keyframes estrellaFugaz1 {
   0% {
     transform: translate(0, 0);
     opacity: 1;
   }
-
-
 
   100% {
     transform: translate(-100vw, 100vh);
