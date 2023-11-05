@@ -1,14 +1,12 @@
 <div id="proyecto{{id}}" class="row contenedor-proyecto">
+  <div class="difuminado" id="difuminado{{id}}">
+  </div>
   <div class="open-modal">
     <img class="expandir-img" id="expandir-img{{id}}" src="/assets/expandir.png" alt="">
   </div>
-  <div class="difuminado" id="difuminado{{id}}">
+
+  <div id="contenedor-habilidades{{id}}" class="row col-md-12 contenedor-habilidades">
+    <app-icono-skill *ngFor="let e of tecnologiasNombre" class="col habilidad-proyecto" noScale=true nombre="{{e}}" ancho="60" largo="60"></app-icono-skill>
   </div>
-  <div id="contenedor-habilidades{{id}}" class="row contenedor-habilidades col-12">
-    <app-icono-skill class="col habilidad-proyecto" nombre="angular" ancho="50" largo="50"></app-icono-skill>
-    <app-icono-skill class="col habilidad-proyecto" nombre="java" ancho="50" largo="50"></app-icono-skill>
-    <app-icono-skill class="col habilidad-proyecto" nombre="js" ancho="50" largo="50"></app-icono-skill>
-    <app-icono-skill class="col habilidad-proyecto" nombre="gitHub" ancho="50" largo="50"></app-icono-skill>
-  </div>
-  <img id="portada{{id}}" class="portada" [src]="'/assets/proyectos/cca-ccafast/'+img+'.png'" alt="">
+  <img id="portada{{id}}" class="portada" [src]="'/assets/proyectos'+img+'.png'" alt="">
 </div>

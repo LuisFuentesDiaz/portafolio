@@ -1,24 +1,50 @@
 .container-seccion-a {
   overflow: hidden;
   width: 100vw;
-  overflow: hidden;
+}
+
+.movil-container-seccion-a {
+  display: none;
 }
 
 .info-cabecera {
   width: 100%;
   height: 100%;
-  align-items: center;
-  display: grid;
 }
 
 @media(max-width: 400px) {
-  .container-seccion-a {
+  .movil-container-seccion-a {
+    display: block;
     height: 100vh;
+  }
+
+  .web-container-seccion-a {
+    display: none;
+  }
+
+  .info-cabecera {
+    top: 25%;
+    position: relative;
   }
 }
 
 @media(min-width: 401px) {
+
   .container-seccion-a {
     height: 70vh;
+  }
+
+  .web-container-seccion-a {
+    display: block;
+  }
+
+  .movil-container-seccion-a {
+    display: none;
+  }
+
+  .info-cabecera {
+    justify-content: center;
+    display: flex;
+    align-items: center;
   }
 }

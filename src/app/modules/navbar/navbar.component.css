@@ -2,14 +2,12 @@
   width: 100%;
   height: 50px;
   position: fixed;
-  color: wheat;
   justify-content: center;
   align-items: center;
   background-color: transparent;
 }
 
 .nav-item {
-  color: white;
   margin: 20px;
   font-size: 1.0rem;
   align-items: center;

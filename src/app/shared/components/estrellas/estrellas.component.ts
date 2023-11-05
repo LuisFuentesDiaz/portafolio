@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, Input } from '@angular/core';
 
 @Component({
   selector: 'app-estrellas',
@@ -6,21 +6,28 @@ import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
   styleUrls: ['./estrellas.component.css']
 })
 export class EstrellasComponent implements OnInit {
+  @Input() id;
+  @Input() height: string = "100";
+  @Input() maxTamaño: string = "5";
+
   estrellas = 150;
   constructor(private el: ElementRef, private renderer: Renderer2) { }
 
   ngOnInit(): void {
     let win = this;
     let tipoEscala = 1;
+
     document.addEventListener("DOMContentLoaded", function () {
       for (let i = 0; i < win.estrellas; i++) {
         if (tipoEscala == 10) {
           tipoEscala = 1;
         }
 
-        let tamaño = Math.random() * (4 - 1) + 1;
+        let tamaño = Math.random() * (parseInt(win.maxTamaño) - 1) + 1;
         let x = 0;
-        let y = Math.random() * (50 - 0) + 0;
+
+
+        let y = Math.random() * (parseInt(win.height) - 0) + 0;
 
         if (i <= (win.estrellas / 4)) {
           x = Math.random() * (25 - 1) + 0;
@@ -41,9 +48,10 @@ export class EstrellasComponent implements OnInit {
         estrella.style.borderRadius = "50px";
         estrella.style.backgroundColor = "white";
         estrella.style.zIndex = "-1";
+        estrella.id = "estrella" + i + win.id
         win.renderer.addClass(estrella, `escalar${tipoEscala}`);
         // win.renderer.appendChild(win.el.nativeElement, estrella);
-        document.getElementById("estrella").appendChild(estrella);
+        document.getElementById("estrella" + win.id).appendChild(estrella);
         tipoEscala++;
       }
     })

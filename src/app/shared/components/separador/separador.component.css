@@ -11,12 +11,13 @@
   rotate: 90deg;
 }
 
-.separador-web {
-  width: 30%;
-}
-
 .contenedor-separador-web {
   background-color: ghostwhite;
   align-items: center;
   justify-content: center;
+  width: 100vw;
+}
+
+.contenedor-separador {
+  width: 30%;
 }

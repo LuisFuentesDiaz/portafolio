@@ -1,23 +1,14 @@
 .articulo-seccion-c {
   position: relative;
   display: flex;
-  width: 100%;
+  width: 100vw;
   height: auto;
-  background-color: ghostwhite;
   justify-content: center;
-
+  padding-bottom: 5%;
 }
 
 .seccion-seccion-c {
   width: 100%;
   position: relative;
-}
-
-
-
-
-@media(min-width:401px) {
-  .web-articulo-seccion-b {
-    display: block;
-  }
+  justify-content: center;
 }

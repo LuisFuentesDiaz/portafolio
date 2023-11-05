@@ -1,6 +1,19 @@
 #estrella {
   overflow: hidden;
-  width: 99%;
+  width: 100%;
+  position: absolute;
+}
+
+@media(min-width: 401px) {
+  #estrella {
+    height: 70vh;
+  }
+}
+
+@media(max-width: 400px) {
+  #estrella {
+    height: 100vh;
+  }
 }
 
 @keyframes escalar1 {

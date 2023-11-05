@@ -6,6 +6,7 @@ body {
   background-image: linear-gradient(to top, #b47820 0%, #5b41b8 60%, #0a17a7 90%);
   background-repeat: repeat;
   overflow-x: hidden;
+  width: 100vw;
 }
 
 .paño {
@@ -13,11 +14,14 @@ body {
 }
 
 .titulo {
-  color: #656faf;
+  color: lightgrey;
 }
 
 .subTituloNormal {
-  background-color: linear-gradient(60deg, #242629 0%, #485563 100%);
+  color: #656faf;
+  font-family: 'Graduate', serif;
+  font-size: 1.5rem;
+  margin-bottom: 5%;
 }
 
 .color-secundario-fondo {
@@ -26,10 +30,10 @@ body {
 
 .tituloInvertido {
   color: black;
-    font-family: 'Graduate', serif;
-    margin-bottom: 5%;
-    font-size: 2.0rem;
-    text-align: center;
+  font-family: 'Graduate', serif;
+  margin-bottom: 5%;
+  font-size: 2.0rem;
+  text-align: center;
 }
 
 .separator {
