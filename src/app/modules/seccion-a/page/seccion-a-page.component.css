@@ -1,6 +1,7 @@
 .container-seccion-a {
   overflow: hidden;
-  width: 100vw;
+  position: relative;
+  width: 100%;
 }
 
 .movil-container-seccion-a {

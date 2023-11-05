@@ -1,21 +1,20 @@
-<div>
+<article class="web-articulo-seccion-c articulo-seccion-c color-secundario-fondo">
   <app-separador height="30"></app-separador>
-  <article class="web-articulo-seccion-c articulo-seccion-c color-secundario-fondo">
-    <section class="row web-seccion-seccion-c seccion-seccion-c container ">
-      <div class="text-center">
-        <h3 class=" subTituloNormal"> Proyectos </h3>
+
+  <section class="row web-seccion-seccion-c seccion-seccion-c container ">
+    <div class="text-center">
+      <h3 class=" subTituloNormal"> Proyectos </h3>
+    </div>
+    <div class="row col-12">
+      <div class="col-lg-4">
+        <app-proyectos [tecnologiasNombre]="['angular','java','sqlServer','azure']" id="1" img="/cca/ccafast/ccafast-1" class=""></app-proyectos>
       </div>
-      <div class="row col-12">
-        <div class="col-lg-4">
-          <app-proyectos [tecnologiasNombre]="['angular','java','ts','azure']" id="1" img="/cca/ccafast/ccafast-1" class=""></app-proyectos>
-        </div>
-        <div class="col-lg-4">
-          <app-proyectos id="2" [tecnologiasNombre]="['react','js','express','gitlab']" img="/cencosud/autoservicio-rrhh/autoservicio-1" class=""></app-proyectos>
-        </div>
-        <div class="col-lg-4">
-          <app-proyectos id="3" img="ccafast-3" class=""></app-proyectos>
-        </div>
+      <div class="col-lg-4">
+        <app-proyectos id="2" [tecnologiasNombre]="['react','js','express','gitlab']" img="/cencosud/autoservicio-rrhh/autoservicio-1" class=""></app-proyectos>
       </div>
-    </section>
-  </article>
-</div>
+      <div class="col-lg-4">
+        <app-proyectos id="3" [tecnologiasNombre]="['angular','spring','mySql','gitHub']" img="/personal/tesis/tesis-1" class=""></app-proyectos>
+      </div>
+    </div>
+  </section>
+</article>

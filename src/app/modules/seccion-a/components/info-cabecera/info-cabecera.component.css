@@ -1,36 +1,7 @@
 h1 {
   font-family: 'Graduate', serif;
-  margin-top: 5px;
   margin-bottom: 5px;
-  font-size: 3.5rem;
   font-weight: bold;
-}
-
-@media(max-width: 400px) {
-  h1 {
-    font-size: 1.5rem;
-    margin-top: 20px;
-  }
-
-  .textoCabecera {
-    margin-top: 25px;
-  }
-
-  .textoCabecera>.h3HextoCabecera {
-    font-size: 1.0rem;
-  }
-
-  .en-linea {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .anillo-planeta {
-    max-width: 100%;
-  }
-}
-
-h1 {
   text-align: center;
   filter: drop-shadow(2px 4px 6px black);
 }
@@ -40,12 +11,6 @@ h1 {
   border-radius: 50%;
   filter: drop-shadow(2px 4px 6px black)grayscale(1);
   max-width: 100%;
-}
-
-.centrado {
-  display: flex;
-  text-align: center;
-  align-items: center;
 }
 
 .en-linea {
@@ -70,10 +35,44 @@ h1 {
 .anillo-planeta {
   position: absolute;
   z-index: 2;
-  max-width: 200%;
   filter: opacity(0.5);
 }
 
 .contenedor-info-seccion-a {
   z-index: 3;
+}
+
+@media(min-width: 401px) {
+  h1 {
+    margin-top: 5px;
+    font-size: 3.5rem;
+  }
+
+  .anillo-planeta {
+    max-width: 200%;
+  }
+}
+
+@media(max-width: 400px) {
+  h1 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+
+  .textoCabecera {
+    margin-top: 25px;
+  }
+
+  .textoCabecera>.h3HextoCabecera {
+    font-size: 1.0rem;
+  }
+
+  .en-linea {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .anillo-planeta {
+    max-width: 85%;
+  }
 }

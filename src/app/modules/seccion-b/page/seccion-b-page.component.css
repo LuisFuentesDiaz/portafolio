@@ -18,16 +18,17 @@
   }
 }
 
-.seccion-seccion-b {
-  width: auto;
-  margin: auto;
-  padding: 5%;
-}
-
 .articulo-seccion-b {
+  position: relative;
   width: 100%;
   height: auto;
   box-shadow: 0px 0px 74px 102px ghostwhite;
   border-top-right-radius: 20%;
   border-top-left-radius: 20%;
+}
+
+.seccion-seccion-b {
+  width: auto;
+  margin: auto;
+  padding: 5%;
 }

@@ -1,14 +1,14 @@
 .articulo-seccion-c {
   position: relative;
-  display: flex;
-  width: 100vw;
+  display: inline-grid;
   height: auto;
   justify-content: center;
   padding-bottom: 5%;
+  width: 100%;
 }
 
 .seccion-seccion-c {
-  width: 100%;
   position: relative;
   justify-content: center;
+  width: 100%;
 }
