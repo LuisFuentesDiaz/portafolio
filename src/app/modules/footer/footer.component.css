@@ -2,5 +2,5 @@
   width: 100%;
   position: relative;
   height: 20vh;
-  background-color: blue;
+ background-image: linear-gradient(to top, #5b41b8 0%, #0a17a7 90%);
 }

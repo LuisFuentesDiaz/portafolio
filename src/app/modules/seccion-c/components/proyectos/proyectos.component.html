@@ -1,12 +1,11 @@
-<div id="proyecto{{id}}" class="row contenedor-proyecto">
+<div id="proyecto{{id}}" class="row contenedor-proyecto" (click)="openModal()">
   <div class="difuminado" id="difuminado{{id}}">
   </div>
   <div class="open-modal">
-    <img class="expandir-img" id="expandir-img{{id}}" src="/assets/expandir.png" alt="">
   </div>
 
   <div id="contenedor-habilidades{{id}}" class="row col-md-12 contenedor-habilidades">
-    <app-icono-skill *ngFor="let e of tecnologiasNombre" class="col habilidad-proyecto" noScale=true nombre="{{e}}" ancho="60" largo="60"></app-icono-skill>
+    <app-icono-skill *ngFor="let e of data.tecnologias" class="col habilidad-proyecto" noScale=true nombre="{{e}}" ancho="60" largo="60"></app-icono-skill>
   </div>
   <img id="portada{{id}}" class="portada" [src]="'/assets/proyectos'+img+'.png'" alt="">
 </div>

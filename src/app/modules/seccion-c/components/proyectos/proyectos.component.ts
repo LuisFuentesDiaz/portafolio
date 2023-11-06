@@ -1,5 +1,7 @@
 import { Component, Input, OnInit, ComponentFactoryResolver, ViewChild, ViewContainerRef } from '@angular/core';
-import { IconoSkillComponent } from 'src/app/shared/components/icono-skill/icono-skill.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalProyectoComponent } from '../modal-proyecto/modal-proyecto.component';
+import { Proyecto } from 'src/app/core/models/proyecto';
 
 @Component({
   selector: 'app-proyectos',
@@ -10,44 +12,23 @@ export class ProyectosComponent implements OnInit {
 
   @Input() img: string = "";
   @Input() id: string = "";
-  @Input() tecnologiasNombre: string[] = [];
-  //@ViewChild('dynamicComponentContainer', { read: ViewContainerRef }) dynamicComponentContainer: ViewContainerRef;
+  @Input() data: Proyecto;
 
 
-  constructor(private componentFactoryResolver: ComponentFactoryResolver) { }
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
     document.addEventListener('DOMContentLoaded', () => {
 
       let proyecto = document.getElementById("proyecto" + this.id);
       let portada = document.getElementById("portada" + this.id);
-      let img = document.getElementById("expandir-img" + this.id);
       let difuminado = document.getElementById("difuminado" + this.id);
       let habilidades = document.getElementById("contenedor-habilidades" + this.id);
-      // const factory = this.componentFactoryResolver.resolveComponentFactory(IconoSkillComponent);
 
-
-      if (proyecto && (portada && portada instanceof HTMLElement) && img && difuminado && habilidades) {
-
-        /*    this.tecnologiasNombre.forEach(e => {
-
-              const componenteRef = factory.create(this.dynamicComponentContainer.parentInjector);
-              this.dynamicComponentContainer.insert(componenteRef.hostView);
-
-              let appHabilidad = componenteRef.instance as IconoSkillComponent;
-              appHabilidad.ancho = 60;
-              appHabilidad.largo = 60;
-              appHabilidad.nombre = e;
-              appHabilidad.noScale = true;
-              appHabilidad.tooltip = e.toUpperCase();
-
-
-              //habilidades.appendChild(appHabilidad);
-            })*/
+      if (proyecto && (portada && portada instanceof HTMLElement) && difuminado && habilidades) {
 
         proyecto.addEventListener('mouseover', () => {
           portada.style.filter = "blur(3px)";
-          img.style.display = "flex";
           difuminado.style.display = "block"
           habilidades.style.display = "flex"
           proyecto.style.transform = "scale(1.2)";
@@ -55,18 +36,9 @@ export class ProyectosComponent implements OnInit {
 
         })
 
-        img.addEventListener('mouseover', () => {
-          img.style.transform = "scale(1.2)";
-        })
-
-        img.addEventListener('mouseout', () => {
-          img.style.transform = "scale(1)";
-        })
-
         proyecto.addEventListener('mouseout', () => {
           portada.style.filter = "blur(0px)";
           difuminado.style.display = "none"
-          img.style.display = "none";
           habilidades.style.display = "none"
           proyecto.style.transform = "scale(1)";
           proyecto.style.zIndex = "1";
@@ -74,5 +46,13 @@ export class ProyectosComponent implements OnInit {
         })
       }
     })
+  }
+
+
+  openModal() {
+    const modalRef = this.modalService.open(ModalProyectoComponent, {
+      size: 'lg',
+    });
+    modalRef.componentInstance.data = this.data;
   }
 }

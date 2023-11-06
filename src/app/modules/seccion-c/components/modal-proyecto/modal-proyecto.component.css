@@ -1,0 +1,47 @@
+.contenedor-modal{
+position: relative;
+height: 100%;
+width: 100%;
+}
+
+.contenedor-superior-modal{
+  height: 50%;
+  position: relative;
+  padding: 5%;
+}
+
+.contenedor-inferior-modal{
+  height: 50%;
+  position: relative;
+  padding: 5%;
+  background-image: linear-gradient(to top, #5b41b8 0%, #0a17a7 100%);
+}
+
+.contenedro-iconos-modal{
+  position: relative;
+  display: flex;
+}
+
+.iconos-modal{
+  display: inline-flex;
+}
+
+.info-proyecto{
+  text-align: justify;
+  font-size: 0.8rem;
+}
+
+.carousel-contenedor{
+
+  width: 70%;
+  margin: auto;
+
+}
+.divididor-info{
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedor-div{
+  background-color: #0d6efd;
+}

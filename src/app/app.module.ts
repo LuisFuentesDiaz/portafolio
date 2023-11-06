@@ -22,8 +22,7 @@ import { FooterComponent } from './modules/footer/footer.component';
     SiderTarjetaModule,
     SeccionBModule,
     SeccionCModule,
-    SharedModule
-
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
