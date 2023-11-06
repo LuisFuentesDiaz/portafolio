@@ -121,7 +121,7 @@
   height: 50px;
   transform: rotate(330deg);
 
-  background-image: url("/src/assets/angular.png");
+  background-image: url("assets/angular.png");
   position: absolute;
   top: 0;
   right: 0;
