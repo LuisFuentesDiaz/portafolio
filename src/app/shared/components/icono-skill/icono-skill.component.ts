@@ -9,7 +9,7 @@ export class IconoSkillComponent implements AfterViewInit {
   @Input() nombre: string = "";
   @Input() ancho: Number = 65;
   @Input() largo: Number = 65;
-  @Input() tooltip: string = '';
+  @Input() tooltip: string = null;
   @Input() noScale: boolean = false;
   @Input() borde: boolean = false;
 
@@ -33,6 +33,9 @@ export class IconoSkillComponent implements AfterViewInit {
         }
         if (this.borde) {
           this.renderer.setStyle(entry.target, 'border', "1px solid black");
+        }
+        if (!this.tooltip) {
+          this.tooltip = this.nombre;
         }
       }
     });
