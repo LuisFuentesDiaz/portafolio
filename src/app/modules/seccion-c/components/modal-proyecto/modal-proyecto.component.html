@@ -1,39 +1,35 @@
 <div class="color-secundario-fondo contenedor-modal">
   <div class="col-12 contenedor-superior-modal">
-    <h3 class="subTituloNormal text-center"> {{data.nombre}} </h3>
+    <h3 class="col subTituloNormal text-center"> {{data.nombre}} </h3>
     <div class="row col-12">
-      <div class="col-5">
-        <div class="row">
+      <div class="col">
+        <div class="row mt-auto">
           <div class="col">
             <p>Consultora:</p>
           </div>
           <div class="col">
             <strong>{{data.consultora}}</strong>
           </div>
-        </div>
-
-        <div class="row">
           <div class="col">
             <p>Empresa:</p>
           </div>
-          <div class="col">
-            <strong>{{data.empresa}}</strong>
-          </div>
+          <p class="col grab" (click)="redirigirAExterno()">
+            <u><strong style="color: blue;">{{data.empresa}}</strong></u>
+          </p>
         </div>
-
-        <div class="row">
-          <div class="col">
+        <div class="row mt-auto">
+          <div class="col-4">
             <p>Tecnologías Utilizadas: </p>
           </div>
-          <div class="col ">
-            <app-icono-skill class="iconos-modal" *ngFor="let e of tecnologias" noScale=true nombre="{{e}}" ancho="40" largo="40"></app-icono-skill>
+          <div class="col col-icono-modal">
+            <app-icono-skill class="iconos-modal" borde=true *ngFor="let e of tecnologias; let i = index" id="modalIcono{{i}}" noScale=true nombre="{{e}}" ancho="40" largo="40"></app-icono-skill>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class=" col-6 info-proyecto">
-        <p>{{data.informacion}}</p>
-      </div>
+    <div class="col info-proyecto mt-3">
+      <p>{{data.informacion}}</p>
     </div>
   </div>
 
@@ -44,5 +40,4 @@
       </ng-template>
     </ngb-carousel>
   </div>
-
 </div>

@@ -22,4 +22,8 @@ export class ModalProyectoComponent implements OnInit {
   ngOnInit() {
     this.tecnologias = this.data.tecnologias;
   }
+
+  redirigirAExterno() {
+    window.open(this.data.url, '_blank');
+  }
 }

@@ -11,6 +11,8 @@ export class IconoSkillComponent implements AfterViewInit {
   @Input() largo: Number = 65;
   @Input() tooltip: string = '';
   @Input() noScale: boolean = false;
+  @Input() borde: boolean = false;
+
   capacidadString: string = '';
 
   constructor(private elementRef: ElementRef, private renderer: Renderer2) { }
@@ -28,6 +30,9 @@ export class IconoSkillComponent implements AfterViewInit {
         if (this.noScale) {
           this.renderer.setStyle(entry.target, 'transform', "none");
           this.renderer.setStyle(entry.target, 'cursor', "auto");
+        }
+        if (this.borde) {
+          this.renderer.setStyle(entry.target, 'border', "1px solid black");
         }
       }
     });

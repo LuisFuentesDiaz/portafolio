@@ -13,11 +13,15 @@ export class ProyectosComponent implements OnInit {
   @Input() img: string = "";
   @Input() id: string = "";
   @Input() data: Proyecto;
+  tecnologias: string[] = [];
 
 
   constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
+
+    this.tecnologias = this.data.tecnologias.slice(0, 4);
+
     document.addEventListener('DOMContentLoaded', () => {
 
       let proyecto = document.getElementById("proyecto" + this.id);

@@ -5,7 +5,7 @@
   </div>
 
   <div id="contenedor-habilidades{{id}}" class="row col-md-12 contenedor-habilidades">
-    <app-icono-skill *ngFor="let e of data.tecnologias" class="col habilidad-proyecto" noScale=true nombre="{{e}}" ancho="60" largo="60"></app-icono-skill>
+    <app-icono-skill *ngFor="let e of tecnologias let i = index" id="iconosSkill-tarjeta-proyecto{{i}}" class="col habilidad-proyecto" noScale=true nombre="{{e}}" ancho="60" largo="60"></app-icono-skill>
   </div>
   <img id="portada{{id}}" class="portada" [src]="'/assets/proyectos'+img+'.png'" alt="">
 </div>
