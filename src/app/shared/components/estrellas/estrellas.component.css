@@ -116,71 +116,10 @@
   animation: escalar4 1.5s ease-in-out infinite;
 }
 
-.estrellaFugaz {
-  width: 200px;
-  height: 50px;
-  transform: rotate(330deg);
-
-  background-image: url("assets/angular.png");
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  overflow: hidden;
-}
-
-
 .animacionPaused {
   animation-play-state: paused;
 }
 
 .animacionStart {
   animation-play-state: running;
-}
-
-.contEstrellaFugaz1 {
-
-  animation: estrellaFugaz1 2s ease-in-out infinite;
-
-}
-
-@keyframes estrellaFugaz1 {
-  0% {
-    transform: translateX(50, 0);
-    opacity: 0;
-  }
-
-  50% {
-    transform: translateX(50, 0);
-    opacity: 100;
-  }
-
-  100% {
-    transform: translate(-100vw, 100vh);
-    opacity: 0;
-  }
-}
-
-@keyframes estrellaFugaz2 {
-  0% {
-    transform: translateX(0, 0);
-    opacity: 1;
-  }
-
-  100% {
-    transform: translate(-100vw, 100vh);
-    opacity: 0;
-  }
-}
-
-@keyframes estrellaFugaz3 {
-  0% {
-    transform: translateX(0, 0);
-    opacity: 1;
-  }
-
-  100% {
-    transform: translate(-100vw, 100vh);
-    opacity: 0;
-  }
 }
