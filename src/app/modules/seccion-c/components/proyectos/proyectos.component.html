@@ -1,11 +1,30 @@
-<div id="proyecto{{id}}" class="row contenedor-proyecto" (click)="openModal()">
-  <div class="difuminado" id="difuminado{{id}}">
+<div id="web-proyecto{{id}}" class="row web-contenedor-proyecto contenedor-proyecto" (click)="openModal()">
+  <div class="web-difuminado" id="web-difuminado{{id}}">
   </div>
-  <div class="open-modal">
+  <div id="web-contenedor-habilidades{{id}}" class="row col-md-12 web-contenedor-habilidades contenedor-habilidades">
+    <app-icono-skill *ngFor="let e of tecnologias let i = index" id="web-iconosSkill-tarjeta-proyecto{{i}}" class="col web-habilidad-proyecto" noScale=true nombre="{{e}}" ancho="60" largo="60"></app-icono-skill>
+  </div>
+  <img id="web-portada{{id}}" class="web-portada portada" [src]="'assets/proyectos'+img+'.png'" alt="">
+</div>
+
+<div class="movil-contenedor-proyecto" id="movil-contenedor-proyecto{{id}}">
+  <div class="col-12 contenedor-inferior-modal">
+    <ngb-carousel>
+      <ng-template *ngFor="let c of data.capturas" ngbSlide>
+        <img class="custom-carousel" src="assets/proyectos/{{data.urlBaseImg}}{{c}}.png" width="100%" alt="Imagen 1">
+      </ng-template>
+    </ngb-carousel>
   </div>
 
-  <div id="contenedor-habilidades{{id}}" class="row col-md-12 contenedor-habilidades">
-    <app-icono-skill *ngFor="let e of tecnologias let i = index" id="iconosSkill-tarjeta-proyecto{{i}}" class="col habilidad-proyecto" noScale=true nombre="{{e}}" ancho="60" largo="60"></app-icono-skill>
+  <!--<img class=" movil-portada" [src]="'assets/proyectos'+img+'.png'" alt="">-->
+  <div class="movil-contenido-proyecto" [style.display]=" isAbierto ? 'flow' : 'none'" id="movil-contenido-proyecto{{id}}">
+    <div class="contenido-superior-movil text-center">
+      <p> <strong>Consultora: </strong> {{data.nombre}}</p>
+      <p><strong>Empresa: </strong>{{data.empresa}}</p>
+      <p><strong>Tecnologías Utilizadas:</strong></p>
+    </div>
+    <div class="row  movil-contenedor-habilidades">
+      <app-icono-skill *ngFor="let e of tecnologias let i = index" id="web-iconosSkill-tarjeta-proyecto{{i}}" class="col web-habilidad-proyecto" noScale=true nombre="{{e}}" ancho="40" largo="40"></app-icono-skill>
+    </div>
   </div>
-  <img id="portada{{id}}" class="portada" [src]="'assets/proyectos'+img+'.png'" alt="">
 </div>
