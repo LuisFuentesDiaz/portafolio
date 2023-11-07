@@ -1,14 +1,37 @@
-.articulo-seccion-c {
-  position: relative;
-  display: inline-grid;
-  height: auto;
-  justify-content: center;
-  padding-bottom: 5%;
-  width: 100%;
+@media(min-width:401px) {
+  .web-articulo-seccion-c {
+    display: inline-grid;
+    justify-content: center;
+    padding-bottom: 5%;
+    width: 100%;
+  }
+
+  .web-seccion-seccion-c {
+    position: relative;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .movil-articulo-seccion-c {
+    display: none;
+  }
 }
 
-.seccion-seccion-c {
-  position: relative;
-  justify-content: center;
-  width: 100%;
+@media(max-width:400px) {
+  .web-articulo-seccion-c {
+    display: none;
+  }
+
+  .movil-articulo-seccion-c {
+    width: 100%;
+  }
+
+  .texto-titulo {
+    font-size: 1.2rem;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+  }
 }
