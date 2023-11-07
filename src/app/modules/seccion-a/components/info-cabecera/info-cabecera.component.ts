@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class InfoCabeceraComponent {
 
-  urlFotoPersonal: String = "/assets/personalFoto.jpg";
+  urlFotoPersonal: String = "assets/personalFoto.jpg";
 
 }
