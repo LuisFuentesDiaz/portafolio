@@ -15,8 +15,7 @@ export class ProyectosComponent implements OnInit {
   @Input() id: string = "";
   @Input() data: Proyecto;
   tecnologias: string[] = [];
-  isAbierto: boolean = false;
-
+  isAbiertoMovile: boolean = false;
 
 
   constructor(private modalService: NgbModal) { }
@@ -28,14 +27,16 @@ export class ProyectosComponent implements OnInit {
       let portada = document.getElementById("web-portada" + this.id);
       let difuminado = document.getElementById("web-difuminado" + this.id);
       let habilidades = document.getElementById("web-contenedor-habilidades" + this.id);
+      let disponibilidad = document.getElementById("web-disponibilidad" + this.id);
 
-      if (proyecto && (portada && portada instanceof HTMLElement) && difuminado && habilidades) {
+      if (proyecto && (portada && portada instanceof HTMLElement) && difuminado && habilidades && disponibilidad) {
         proyecto.addEventListener('mouseover', () => {
           portada.style.filter = "blur(3px)";
           difuminado.style.display = "block"
           habilidades.style.display = "flex"
           proyecto.style.transform = "scale(1.2)";
           proyecto.style.zIndex = "2";
+          disponibilidad.style.display = "block";
         })
         proyecto.addEventListener('mouseout', () => {
           portada.style.filter = "blur(0px)";
@@ -43,16 +44,25 @@ export class ProyectosComponent implements OnInit {
           habilidades.style.display = "none"
           proyecto.style.transform = "scale(1)";
           proyecto.style.zIndex = "1";
+          disponibilidad.style.display = "none";
         })
       }
 
 
       let contenedor = document.getElementById("movil-contenedor-proyecto" + this.id);
       let contenido = document.getElementById("movil-contenido-proyecto" + this.id);
+
       contenedor.addEventListener('click', () => {
 
-        if (contenedor && contenido) {
-          this.isAbierto = !this.isAbierto;
+        if (contenedor && contenido && disponibilidad) {
+          this.isAbiertoMovile = !this.isAbiertoMovile;
+          if (this.isAbiertoMovile) {
+            contenedor.style.borderBottomLeftRadius = "25px";
+            contenedor.style.borderBottomRightRadius = "25px";
+          } else {
+            contenedor.style.borderBottomLeftRadius = "0px";
+            contenedor.style.borderBottomRightRadius = "0px";
+          }
         }
       });
     })

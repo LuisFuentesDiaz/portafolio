@@ -2,6 +2,7 @@
   overflow: hidden;
   position: relative;
   width: 100%;
+  z-index: 1;
 }
 
 .movil-container-seccion-a {

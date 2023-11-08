@@ -19,7 +19,8 @@ export class SeccionCPageComponent {
      También permite activar o desactivar contingencias para pausar las transferencias entre bancos`,
     'cca/ccafast/',
     ['ccafast-1', 'ccafast-2', 'ccafast-3', 'ccafast-4'],
-    "https://www.cca.cl/");
+    "https://www.cca.cl/",
+    false);
 
   proyectoB: Proyecto = new Proyecto(
     "Autoservicio RRHH",
@@ -32,7 +33,8 @@ export class SeccionCPageComponent {
      como consultar sus liquidaciones, solicitar vacaciones, firmar documentos, responder encuestas, entre otras.`,
     'cencosud/autoservicio-rrhh/',
     ['autoservicio-1', 'autoservicio-2', 'autoservicio-3', 'autoservicio-4', 'autoservicio-5'],
-    "https://www.cencosud.com/");
+    "https://www.cencosud.com/",
+    false);
 
   proyectoC: Proyecto = new Proyecto(
     "Rentacar",
@@ -46,7 +48,8 @@ export class SeccionCPageComponent {
      además, permite a los usuarios finales firmar digitalmente los contratos de arrendamiento en tabletas, brindando una experiencia cómoda y eficiente.`,
     'grupo-firma/rentacar/',
     ['rentacar-1', 'rentacar-2', 'rentacar-3', 'rentacar-4'],
-    "https://www.imlchile.cl/");
+    "https://www.imlchile.cl/",
+    false);
 
 
 

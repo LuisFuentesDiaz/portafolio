@@ -8,9 +8,10 @@ export class Proyecto {
   urlBaseImg: string;
   capturas: string[];
   url: string;
+  codigoAbierto: boolean;
 
   constructor(nombre: string, dependiente: boolean, consultora: string, empresa: string, tecnologias: string[], informacion: string,
-    urlBaseImg: string, capturas: string[], url: string) {
+    urlBaseImg: string, capturas: string[], url: string, codigoAbierto: boolean) {
     this.nombre = nombre;
     this.dependiente = dependiente;
     this.consultora = consultora;
@@ -20,5 +21,7 @@ export class Proyecto {
     this.urlBaseImg = urlBaseImg;
     this.capturas = capturas;
     this.url = url;
+    this.codigoAbierto = codigoAbierto;
+
   }
 }

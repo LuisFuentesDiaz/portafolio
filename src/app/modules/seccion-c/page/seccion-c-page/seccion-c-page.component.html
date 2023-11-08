@@ -1,6 +1,5 @@
 <article class="web-articulo-seccion-c  color-secundario-fondo">
   <app-separador height="30"></app-separador>
-
   <section class="row web-seccion-seccion-c seccion-seccion-c container ">
     <div class="text-center">
       <h3 class="subTituloNormal"> Proyectos </h3>
@@ -17,12 +16,18 @@
       </div>
     </div>
   </section>
-  <app-separador height="20"></app-separador>
 </article>
 
 
 <article class="container movil-articulo-seccion-c color-secundario-fondo">
+  <app-separador height="20"></app-separador>
+
   <h3 class="subTituloNormal text-center texto-titulo"> Proyectos </h3>
+  <div class="row text-center">
+    <p class="col" style="color: red;">Privado <i class="bi bi-exclamation-circle-fill" ngbTooltip="Privado"></i></p>
+    <p class="col" style="color: green;">Abierto <i class="bi bi-info-circle-fill" ngbTooltip="Abierto"></i></p>
+  </div>
+
   <app-proyectos class="center" [data]="proyectoA" id="4" img="/cca/ccafast/ccafast-1"></app-proyectos>
   <app-proyectos class="center" [data]="proyectoB" id="5" img="/cencosud/autoservicio-rrhh/autoservicio-1"></app-proyectos>
   <app-proyectos class="center" [data]="proyectoC" id="6" img="/grupo-firma/rentacar/rentacar-1"></app-proyectos>

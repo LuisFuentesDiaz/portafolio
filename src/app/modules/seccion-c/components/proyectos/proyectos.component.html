@@ -1,6 +1,10 @@
 <div id="web-proyecto{{id}}" class="row web-contenedor-proyecto contenedor-proyecto" (click)="openModal()">
   <div class="web-difuminado" id="web-difuminado{{id}}">
   </div>
+  <div id="web-disponibilidad{{id}}" class="web-contenedor-disponibilidad-proyecto contenedor-disponibilidad-proyecto" [style.color]="data.codigoAbierto ? 'green' : 'red'">
+    <i class="bi bi-exclamation-circle-fill" ngbTooltip="Privado" *ngIf="!data.codigoAbierto"></i>
+    <i class="bi bi-info-circle-fill" ngbTooltip="Abierto" *ngIf="data.codigoAbierto"></i>
+  </div>
   <div id="web-contenedor-habilidades{{id}}" class="row col-md-12 web-contenedor-habilidades contenedor-habilidades">
     <app-icono-skill *ngFor="let e of tecnologias let i = index" id="web-iconosSkill-tarjeta-proyecto{{i}}" class="col web-habilidad-proyecto" noScale=true nombre="{{e}}" ancho="60" largo="60"></app-icono-skill>
   </div>
@@ -15,9 +19,11 @@
       </ng-template>
     </ngb-carousel>
   </div>
-
-  <!--<img class=" movil-portada" [src]="'assets/proyectos'+img+'.png'" alt="">-->
-  <div class="movil-contenido-proyecto" [style.display]=" isAbierto ? 'flow' : 'none'" id="movil-contenido-proyecto{{id}}">
+  <div class="movil-contenido-proyecto" [style.display]=" isAbiertoMovile ? 'flow' : 'none'" id="movil-contenido-proyecto{{id}}">
+    <div id="web-disponibilidad{{id}}" class="movil-contenedor-disponibilidad-proyecto contenedor-disponibilidad-proyecto" [style.color]="data.codigoAbierto ? 'green' : 'red'">
+      <i class="bi bi-exclamation-circle-fill" ngbTooltip="Privado" *ngIf="!data.codigoAbierto"></i>
+      <i class="bi bi-info-circle-fill" ngbTooltip="Abierto" *ngIf="data.codigoAbierto"></i>
+    </div>
     <div class="contenido-superior-movil text-center">
       <p> <strong>Consultora: </strong> {{data.nombre}}</p>
       <p><strong>Empresa: </strong>{{data.empresa}}</p>

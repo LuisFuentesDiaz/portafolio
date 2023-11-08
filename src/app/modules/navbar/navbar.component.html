@@ -1,5 +1,6 @@
-<div class="navbar navbar-expand-lg ">
-  <h5 type="button" class="nav-item subTituloNormal" (click)="focus('tabindex1')">Home </h5>
-  <h5 type="button" class="nav-item subTituloNormal" (click)="focus('tabindex2')">Sobre Mi</h5>
-  <h5 type="button" class="nav-item subTituloNormal disabled">Disabled</h5>
+<div class="navbar " [style.top.px]="isScrollArriba === true ? '0' : '-50'">
+  <h5 (click)="focus('tabindex1')" [style.color]="tabIndexVisible ==  'tabindex1' ? 'ghostwhite': '#656faf' " type="button" class="item-navbar-local text-center">Inicio</h5>
+  <h5 (click)="focus('tabindex2')" [style.color]="tabIndexVisible ==  'tabindex2' ? 'ghostwhite': '#656faf' " type="button" class="item-navbar-local ">Sobre mí</h5>
+  <h5 (click)="focus('tabindex3')" [style.color]="tabIndexVisible ==  'tabindex3' ? 'ghostwhite': '#656faf' " type="button" class="item-navbar-local ">Proyectos</h5>
+  <h5 (click)="focus('tabindex4')" [style.color]="tabIndexVisible ==  'tabindex4' ? 'ghostwhite': '#656faf' " type="button" class="item-navbar-local ">Contacto</h5>
 </div>

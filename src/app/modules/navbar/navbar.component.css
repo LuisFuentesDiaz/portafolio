@@ -3,12 +3,39 @@
   height: 50px;
   position: fixed;
   justify-content: center;
-  align-items: center;
-  background-color: transparent;
+  background-image: linear-gradient(to top, #5b41b8 0%, #0a17a7 0%);
+  z-index: 2;
+  transition: 0.5s;
+  cursor: grab;
 }
 
-.nav-item {
-  margin: 20px;
-  font-size: 1.0rem;
+.item-navbar-local {
+  margin-left: 2%;
+  margin-right: 2%;
   align-items: center;
+  display: flex;
+  color: #656faf;
+  font-family: 'Graduate', serif;
+}
+
+
+@media (max-width: 400px) {
+  .item-navbar-local {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 400px) {
+  .navbar>ul:hover {
+    transform: scale(1.2);
+  }
+
+  .navbar {
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+  }
+
+  .item-navbar-local {
+    font-size: 1rem;
+  }
 }

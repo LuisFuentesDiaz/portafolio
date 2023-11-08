@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { PantallaService } from 'src/app/core/util/pantalla.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,21 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public pantalla: PantallaService) { }
+
+  isScrollArriba: boolean = true;
+  tabIndexVisible: string = 'tabIndex1';
+
 
   ngOnInit() {
-
+    this.pantalla.direccionScroll.subscribe(e => {
+      this.isScrollArriba = e.scrollArriba;
+    })
+    this.pantalla.tabIndexVisible.subscribe(e => {
+      this.tabIndexVisible = e.tabId;
+    })
   }
 
 
-  focus(elemento) {
-
-    let seccion = document.getElementById("tabindex2");
-    if (seccion) {
-      console.log("ele ", seccion);
-      seccion.focus();
-
+  focus(elementoId) {
+    let elemento = document.getElementById(elementoId);
+    if (elemento) {
+      elemento.focus();
+      elemento.scrollIntoView({ behavior: "smooth" });
     }
   }
-
 }
