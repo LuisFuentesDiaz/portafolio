@@ -67,4 +67,5 @@ export class PantallaService {
       })
     }
   }
+
 }

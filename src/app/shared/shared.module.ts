@@ -7,12 +7,14 @@ import { ArticuloComponent } from './components/articulo/articulo.component';
 import { EstrellasComponent } from './components/estrellas/estrellas.component';
 import { EstrellaFugazComponent } from './components/estrella-fugaz/estrella-fugaz.component';
 import { SeparadorComponent } from './components/separador/separador.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [IconoSkillComponent, SiderTarjetaComponent,
     SeccionComponent, ArticuloComponent, EstrellaFugazComponent, EstrellasComponent, SeparadorComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    NgbModule
   ],
   exports: [IconoSkillComponent, SiderTarjetaComponent, SeccionComponent, ArticuloComponent,
     EstrellaFugazComponent, EstrellasComponent, SeparadorComponent]

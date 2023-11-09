@@ -17,7 +17,6 @@ export class ProyectosComponent implements OnInit {
   tecnologias: string[] = [];
   isAbiertoMovile: boolean = false;
 
-
   constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
@@ -26,34 +25,36 @@ export class ProyectosComponent implements OnInit {
       let proyecto = document.getElementById("web-proyecto" + this.id);
       let portada = document.getElementById("web-portada" + this.id);
       let difuminado = document.getElementById("web-difuminado" + this.id);
-      let habilidades = document.getElementById("web-contenedor-habilidades" + this.id);
       let disponibilidad = document.getElementById("web-disponibilidad" + this.id);
+      let infoCaja = document.getElementById("web-caja-info" + this.id);
+      let principal = document.getElementById("contenedor-principal" + this.id);
 
-      if (proyecto && (portada && portada instanceof HTMLElement) && difuminado && habilidades && disponibilidad) {
+      if (proyecto && (portada && portada instanceof HTMLElement) && difuminado && disponibilidad) {
         proyecto.addEventListener('mouseover', () => {
           portada.style.filter = "blur(3px)";
-          difuminado.style.display = "block"
-          habilidades.style.display = "flex"
+          difuminado.style.display = "flex"
           proyecto.style.transform = "scale(1.2)";
           proyecto.style.zIndex = "2";
           disponibilidad.style.display = "block";
+          proyecto.style.top = "-250px";
+          infoCaja.style.display = "block"
         })
-        proyecto.addEventListener('mouseout', () => {
+
+        principal.addEventListener('mouseleave', () => {
           portada.style.filter = "blur(0px)";
-          difuminado.style.display = "none"
-          habilidades.style.display = "none"
+          proyecto.style.top = "0px";
           proyecto.style.transform = "scale(1)";
           proyecto.style.zIndex = "1";
+          difuminado.style.display = "none"
           disponibilidad.style.display = "none";
+          infoCaja.style.display = "none"
         })
       }
-
 
       let contenedor = document.getElementById("movil-contenedor-proyecto" + this.id);
       let contenido = document.getElementById("movil-contenido-proyecto" + this.id);
 
       contenedor.addEventListener('click', () => {
-
         if (contenedor && contenido && disponibilidad) {
           this.isAbiertoMovile = !this.isAbiertoMovile;
           if (this.isAbiertoMovile) {
@@ -73,11 +74,5 @@ export class ProyectosComponent implements OnInit {
       size: 'lg',
     });
     modalRef.componentInstance.data = this.data;
-  }
-
-  openInfoMovil() {
-
-
-
   }
 }

@@ -1,14 +1,26 @@
-<div id="web-proyecto{{id}}" class="row web-contenedor-proyecto contenedor-proyecto" (click)="openModal()">
-  <div class="web-difuminado" id="web-difuminado{{id}}">
+<div class="contenedor-principal" id="contenedor-principal{{id}}">
+
+  <div id="web-proyecto{{id}}" class="row web-contenedor-proyecto contenedor-proyecto">
+    <div class="web-difuminado" id="web-difuminado{{id}}">
+      <i class="bi bi-fullscreen icono-ampliar" (click)="openModal()"></i>
+    </div>
+    <div id="web-disponibilidad{{id}}" class="web-contenedor-disponibilidad-proyecto contenedor-disponibilidad-proyecto" [style.color]="data.codigoAbierto ? 'green' : 'red'">
+      <i class="bi bi-exclamation-circle-fill" ngbTooltip="Privado" *ngIf="!data.codigoAbierto"></i>
+      <i class="bi bi-info-circle-fill" ngbTooltip="Abierto" *ngIf="data.codigoAbierto"></i>
+    </div>
+    <img id="web-portada{{id}}" class="web-portada portada" [src]="'assets/proyectos'+img+'.png'" alt="">
+    <div id="web-caja-info{{id}}" class="web-caja-info ">
+      <div class="text-center container mt-2 row col-12">
+        <p> {{data.nombre}}</p>
+        <p> <strong>Consultora: </strong> {{data.consultora}}</p>
+        <p><strong>Empresa: </strong>{{data.empresa}}</p>
+        <p><strong>Tecnologías Utilizadas:</strong></p>
+      </div>
+      <div class="col-12 row">
+        <app-icono-skill *ngFor="let e of tecnologias let i = index" id="web-iconosSkill-tarjeta-proyecto{{i}}" class="col web-habilidad-proyecto" noScale=true nombre="{{e}}" ancho="40" largo="40"></app-icono-skill>
+      </div>
+    </div>
   </div>
-  <div id="web-disponibilidad{{id}}" class="web-contenedor-disponibilidad-proyecto contenedor-disponibilidad-proyecto" [style.color]="data.codigoAbierto ? 'green' : 'red'">
-    <i class="bi bi-exclamation-circle-fill" ngbTooltip="Privado" *ngIf="!data.codigoAbierto"></i>
-    <i class="bi bi-info-circle-fill" ngbTooltip="Abierto" *ngIf="data.codigoAbierto"></i>
-  </div>
-  <div id="web-contenedor-habilidades{{id}}" class="row col-md-12 web-contenedor-habilidades contenedor-habilidades">
-    <app-icono-skill *ngFor="let e of tecnologias let i = index" id="web-iconosSkill-tarjeta-proyecto{{i}}" class="col web-habilidad-proyecto" noScale=true nombre="{{e}}" ancho="60" largo="60"></app-icono-skill>
-  </div>
-  <img id="web-portada{{id}}" class="web-portada portada" [src]="'assets/proyectos'+img+'.png'" alt="">
 </div>
 
 <div class="movil-contenedor-proyecto" id="movil-contenedor-proyecto{{id}}">
@@ -25,7 +37,8 @@
       <i class="bi bi-info-circle-fill" ngbTooltip="Abierto" *ngIf="data.codigoAbierto"></i>
     </div>
     <div class="contenido-superior-movil text-center">
-      <p> <strong>Consultora: </strong> {{data.nombre}}</p>
+      <p> {{data.nombre}}</p>
+      <p> <strong>Consultora: </strong> {{data.consultora}}</p>
       <p><strong>Empresa: </strong>{{data.empresa}}</p>
       <p><strong>Tecnologías Utilizadas:</strong></p>
     </div>
