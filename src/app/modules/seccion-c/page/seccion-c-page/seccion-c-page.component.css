@@ -1,7 +1,8 @@
 @media(min-width:401px) {
   .web-articulo-seccion-c {
-    display: inline-grid;
+    display: flex;
     justify-content: center;
+    margin: auto;
     padding-bottom: 10%;
     width: 100%;
   }
@@ -9,7 +10,7 @@
   .web-seccion-seccion-c {
     position: relative;
     justify-content: center;
-    width: 100%;
+    width: 70%;
   }
 
   .movil-articulo-seccion-c {

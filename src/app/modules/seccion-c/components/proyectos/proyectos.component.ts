@@ -33,7 +33,6 @@ export class ProyectosComponent implements OnInit {
         proyecto.addEventListener('mouseover', () => {
           portada.style.filter = "blur(3px)";
           difuminado.style.display = "flex"
-          proyecto.style.transform = "scale(1.2)";
           proyecto.style.zIndex = "2";
           disponibilidad.style.display = "block";
           proyecto.style.top = "-250px";

@@ -26,11 +26,10 @@
   position: relative;
   width: 100%;
   height: auto;
-
 }
 
 .seccion-seccion-b {
-  width: auto;
+  width: 70%;
   margin: auto;
   padding: 5%;
 }
