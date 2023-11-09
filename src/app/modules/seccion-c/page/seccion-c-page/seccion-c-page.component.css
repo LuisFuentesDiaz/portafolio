@@ -1,4 +1,4 @@
-@media(min-width:401px) {
+@media(min-width: 1001px) {
   .web-articulo-seccion-c {
     display: flex;
     justify-content: center;
@@ -18,13 +18,13 @@
   }
 }
 
-@media(max-width:400px) {
+@media(max-width:1000px) {
   .web-articulo-seccion-c {
     display: none;
   }
 
   .movil-articulo-seccion-c {
-    width: 100%;
+    width: 100vw;
   }
 
   .texto-titulo {

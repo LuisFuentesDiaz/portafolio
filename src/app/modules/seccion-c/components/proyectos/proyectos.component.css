@@ -21,7 +21,7 @@
   font-size: 1.2rem;
 }
 
-@media(max-width:400px) {
+@media(max-width:1000px) {
   .web-contenedor-proyecto {
     display: none;
   }
@@ -49,7 +49,7 @@
   }
 }
 
-@media(min-width:401px) {
+@media(min-width:1001px) {
   .web-contenedor-proyecto {
     position: relative;
     justify-content: center;
