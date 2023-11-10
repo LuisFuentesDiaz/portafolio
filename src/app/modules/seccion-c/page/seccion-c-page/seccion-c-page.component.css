@@ -35,4 +35,8 @@
     display: flex;
     justify-content: center;
   }
+
+  .contenedor-iconos-disponibilidad-codigo {
+    display: flex;
+  }
 }
