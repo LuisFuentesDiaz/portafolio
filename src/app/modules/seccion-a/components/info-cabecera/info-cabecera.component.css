@@ -42,6 +42,13 @@ h1 {
   z-index: 3;
 }
 
+.subtituloCabecera {
+  color: #656faf;
+  font-family: 'Graduate', serif;
+  margin-bottom: 5%;
+  font-size: 1.1rem;
+}
+
 @media(min-width: 401px) {
   h1 {
     margin-top: 5px;

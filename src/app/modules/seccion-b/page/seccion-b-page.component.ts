@@ -1,4 +1,5 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TemaWebService } from 'src/app/core/util/temaWeb.service';
 
 @Component({
   selector: 'app-seccion-b-page',
@@ -7,11 +8,14 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class SeccionBPageComponent implements OnInit {
 
+  isTemaOscuro: boolean = false;
+
+  constructor(public temaWeb: TemaWebService) { }
 
   ngOnInit() {
-
+    this.temaWeb.isTemaOscuro.subscribe(e => {
+      this.isTemaOscuro = e;
+    })
   }
-
-
 
 }

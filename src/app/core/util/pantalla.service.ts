@@ -6,23 +6,27 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class PantallaService {
 
-  private resolucion = new BehaviorSubject<any>({ resolucion: window.innerWidth });
-  public direccionScroll = new BehaviorSubject<any>({ scrollArriba: true });
-  public tabIndexVisible = new BehaviorSubject<any>({ tabId: 'tabindex1' });
+  public resolucion = new BehaviorSubject<any>({ resolucion: window.innerWidth });//Retorna cualquier cambio en la resolucion
+  public direccionScroll = new BehaviorSubject<any>({ scrollArriba: true });//Retorna la direccion en la que se ejecuta el scroll
+  public tabIndexVisible = new BehaviorSubject<any>({ tabId: 'tabindex1' });//retorna el elemento tabIndex que se esta mostrando actualmente
 
 
   constructor() {
     this.tabIndexEnPantalla();
+
+    //Este evento se ejecutara con cualquier movimiento del scroll
     window.addEventListener('scroll', () => {
       this.scrollDirection();
       this.tabIndexEnPantalla();
     });
+
+    //Este servicio retornara cualquier cambio en la resolucion de pantalla
+    window.addEventListener('resize', () => {
+      this.resolucion.next({ resolucion: window.innerWidth });
+    });
   }
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event: Event): void {
-    this.resolucion.next(window.innerWidth);
-  }
+
 
   ultimoScrollPosicion = window.scrollY;
   isUltimoScrollArriba = null;

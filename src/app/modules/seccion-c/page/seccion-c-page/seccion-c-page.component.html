@@ -19,12 +19,23 @@
 
 <article class=" movil-articulo-seccion-c color-secundario-fondo">
   <h3 class="subTituloNormal text-center texto-titulo"> Proyectos </h3>
-  <div class="contenedor-iconos-disponibilidad-codigo text-center">
-    <p class="col" style="color: red;">Privado <i class="bi bi-exclamation-circle-fill" ngbTooltip="Privado"></i></p>
-    <p class="col" style="color: green;">Abierto <i class="bi bi-info-circle-fill" ngbTooltip="Abierto"></i></p>
+  <div>
+    <ngb-carousel>
+      <ng-template ngbSlide>
+        <div class="center">
+          <app-proyectos class="movil-item-carruse-proyectos" style="width: 300px;" [data]="proyectoA" id="4" img="/cca/ccafast/ccafast-1"></app-proyectos>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="center">
+          <app-proyectos class="center" style="width: 300px;" [data]="proyectoB" id="5" img="/cencosud/autoservicio-rrhh/autoservicio-1"></app-proyectos>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="center">
+          <app-proyectos class="center" style="width: 300px;" [data]="proyectoC" id="6" img="/grupo-firma/rentacar/rentacar-1"></app-proyectos>
+        </div>
+      </ng-template>
+    </ngb-carousel>
   </div>
-
-  <app-proyectos class="center" [data]="proyectoA" id="4" img="/cca/ccafast/ccafast-1"></app-proyectos>
-  <app-proyectos class="center" [data]="proyectoB" id="5" img="/cencosud/autoservicio-rrhh/autoservicio-1"></app-proyectos>
-  <app-proyectos class="center" [data]="proyectoC" id="6" img="/grupo-firma/rentacar/rentacar-1"></app-proyectos>
 </article>

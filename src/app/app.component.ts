@@ -1,4 +1,5 @@
-import { Component, ElementRef, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
+import { TemaWebService } from './core/util/temaWeb.service';
 
 @Component({
   selector: 'app-root',
@@ -7,16 +8,18 @@ import { Component, ElementRef, OnInit, AfterViewInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  tab: any[] = [1, 2];
+  isTemaOscuro: boolean = false;
 
-  ngOnInit(): void {
-    //document.body.style.overflow = 'hidden';
+  constructor(public temaWeb: TemaWebService) { }
+
+  ngOnInit() {
+    this.temaWeb.isTemaOscuro.subscribe(e => {
+      this.isTemaOscuro = e;
+      if (e) {
+        document.body.style.backgroundImage = "linear-gradient(to top, #5b41b8 150%, #0a17a7 0%)";
+      } else {
+        document.body.style.backgroundImage = "linear-gradient(to top, ghostwhite 150%, #0a17a7 0%)";
+      }
+    })
   }
-
-  ngAfterViewInit() {
-    window.addEventListener('load', function () {
-      // window.scrollTo(0, 0);
-    });
-  }
-
 }

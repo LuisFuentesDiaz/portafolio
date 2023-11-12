@@ -24,7 +24,7 @@
   }
 
   .movil-articulo-seccion-c {
-    width: 100vw;
+    height: auto;
   }
 
   .texto-titulo {
@@ -33,10 +33,19 @@
 
   .center {
     display: flex;
+    min-height: 450px;
+    align-items: center;
     justify-content: center;
+    top: -10px;
+    position: relative;
   }
 
   .contenedor-iconos-disponibilidad-codigo {
     display: flex;
+  }
+
+  .movil-item-carruse-proyectos {
+    width: 80%;
+    max-width: 500px;
   }
 }

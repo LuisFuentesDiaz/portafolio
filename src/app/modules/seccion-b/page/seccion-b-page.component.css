@@ -4,6 +4,8 @@
     height: 90vh;
     align-items: center;
     padding-top: 10%;
+    border-top-right-radius: 20%;
+    border-top-left-radius: 20%;
   }
 
   .web-articulo-seccion-b {
@@ -22,7 +24,6 @@
 
   .web-articulo-seccion-b {
     display: block;
-    box-shadow: 0px 0px 74px 102px ghostwhite;
     border-top-right-radius: 20%;
     border-top-left-radius: 20%;
     height: auto;
@@ -31,6 +32,16 @@
   .seccion-seccion-b {
     width: 70%;
   }
+
+
+}
+
+.box-shadow-tema-claro {
+  box-shadow: 0px -54px 75px 47px ghostwhite;
+}
+
+.box-shadow-tema-oscuro {
+  box-shadow: 0px -54px 75px 47px #5b41b8;
 }
 
 .articulo-seccion-b {

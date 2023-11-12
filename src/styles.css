@@ -1,7 +1,6 @@
 body {
   background-repeat: repeat;
   max-width: 100%;
-  background-image: linear-gradient(to top, #5b41b8 150%, #0a17a7 0%);
 }
 
 .grab:hover {
@@ -12,8 +11,14 @@ body {
   color: lightgrey;
 }
 
-.subTituloNormal {
-  color: #656faf;
+.subTitulo-tema-iscuro {
+  color: lightgrey;
+  font-family: 'Graduate', serif;
+  margin-bottom: 5%;
+}
+
+.subTitulo-tema-claro {
+  color: black;
   font-family: 'Graduate', serif;
   margin-bottom: 5%;
 }
@@ -30,6 +35,10 @@ body {
   }
 }
 
-.color-secundario-fondo {
+.color-secundario-fondo-claro {
   background-color: ghostwhite;
+}
+
+.color-secundario-fondo-iscuro {
+  background-color: #5b41b8;
 }

@@ -1,6 +1,13 @@
 .footer {
   width: 100%;
   position: relative;
-  height: 5vh;
-  background-image: linear-gradient(to top, #5b41b8 0%, #0a17a7 0%);
+  height: 15vh;
+}
+
+.box-shadow-tema-claro {
+  background-image: linear-gradient(to bottom, ghostwhite 3%, #0a17a7 98%);
+}
+
+.box-shadow-tema-oscuro {
+  background-image: linear-gradient(to bottom, #5B41B9 0%, #0a17a7 91%);
 }

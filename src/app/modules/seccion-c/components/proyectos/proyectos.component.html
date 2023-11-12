@@ -1,28 +1,30 @@
 <div class="contenedor-principal" id="contenedor-principal{{id}}">
-
   <div id="web-proyecto{{id}}" class="row web-contenedor-proyecto contenedor-proyecto">
-    <div class="web-difuminado" id="web-difuminado{{id}}">
-      <i class="bi bi-fullscreen icono-ampliar" (click)="openModal()"></i>
-    </div>
     <div id="web-disponibilidad{{id}}" class="web-contenedor-disponibilidad-proyecto contenedor-disponibilidad-proyecto" [style.color]="data.codigoAbierto ? 'green' : 'red'">
       <i class="bi bi-exclamation-circle-fill" ngbTooltip="Privado" *ngIf="!data.codigoAbierto"></i>
       <i class="bi bi-info-circle-fill" ngbTooltip="Abierto" *ngIf="data.codigoAbierto"></i>
     </div>
-    <img id="web-portada{{id}}" class="web-portada portada" [src]="'assets/proyectos'+img+'.png'" alt="">
+    <div class="contenedor-portada-difuminado">
+      <img id="web-portada{{id}}" class="web-portada portada" [src]="'assets/proyectos'+img+'.png'" alt="">
+      <div class="web-difuminado" id="web-difuminado{{id}}">
+        <i class="bi bi-fullscreen icono-ampliar" (click)="openModal()"></i>
+      </div>
+    </div>
     <div id="web-caja-info{{id}}" class="web-caja-info ">
       <div class="text-center container mt-2 row col-12">
-        <p> {{data.nombre}}</p>
+        <p class="subTituloNormal"> {{data.nombre}}</p>
         <p> <strong>Consultora: </strong> {{data.consultora}}</p>
         <p><strong>Empresa: </strong>{{data.empresa}}</p>
         <p><strong>Tecnologías Utilizadas:</strong></p>
       </div>
-      <div class="col-12 row">
+      <div class="col-12 row pb-2">
         <app-icono-skill *ngFor="let e of tecnologias let i = index" id="web-iconosSkill-tarjeta-proyecto{{i}}" class="col web-habilidad-proyecto" noScale=true nombre="{{e}}" ancho="40" largo="40"></app-icono-skill>
       </div>
     </div>
   </div>
 </div>
 
+<!--
 <div class="movil-contenedor-proyecto" id="movil-contenedor-proyecto{{id}}">
   <div class="col-12 contenedor-inferior-modal">
     <ngb-carousel>
@@ -46,4 +48,4 @@
       <app-icono-skill *ngFor="let e of tecnologias let i = index" id="web-iconosSkill-tarjeta-proyecto{{i}}" class="col web-habilidad-proyecto" noScale=true nombre="{{e}}" ancho="40" largo="40"></app-icono-skill>
     </div>
   </div>
-</div>
+</div>-->

@@ -1,4 +1,4 @@
-<div class="row contenedor-separador color-secundario-fondo" [style.height.vh]="height">
+<div class="row contenedor-separador" [ngStyle]="{'background-color': isTemaOscuro ? '#5b41b8' : 'ghostwhite'}" [style.height.vh]="height">
   <img src="assets/nave.png" class="nave-separador nave-separador-izquierdo  col-sm-auto" alt="">
   <div class="contenedor-separador-hr" [style.maxWidth]="width+'%'">
     <hr class="separador-web col-sm-auto">

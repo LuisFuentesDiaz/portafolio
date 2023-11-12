@@ -3,6 +3,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalProyectoComponent } from '../modal-proyecto/modal-proyecto.component';
 import { Proyecto } from 'src/app/core/models/proyecto';
 import { elementAt } from 'rxjs';
+import { PantallaService } from 'src/app/core/util/pantalla.service';
 
 @Component({
   selector: 'app-proyectos',
@@ -14,12 +15,18 @@ export class ProyectosComponent implements OnInit {
   @Input() img: string = "";
   @Input() id: string = "";
   @Input() data: Proyecto;
+  resolucion;
   tecnologias: string[] = [];
   isAbiertoMovile: boolean = false;
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal, private pantallaUtil: PantallaService) {
+    this.pantallaUtil.resolucion.subscribe(e => {
+      this.resolucion = e.resolucion;
+    })
+  }
 
   ngOnInit() {
+
     this.tecnologias = this.data.tecnologias.slice(0, 4);
     document.addEventListener('DOMContentLoaded', () => {
       let proyecto = document.getElementById("web-proyecto" + this.id);
@@ -33,38 +40,34 @@ export class ProyectosComponent implements OnInit {
         proyecto.addEventListener('mouseover', () => {
           portada.style.filter = "blur(3px)";
           difuminado.style.display = "flex"
-          proyecto.style.zIndex = "2";
           disponibilidad.style.display = "block";
-          proyecto.style.top = "-250px";
-          infoCaja.style.display = "block"
+          proyecto.style.zIndex = "2";
+
+          if (this.resolucion > 1000) {
+            proyecto.style.top = "-250px";
+            infoCaja.style.display = "block"
+          }
         })
 
         principal.addEventListener('mouseleave', () => {
-          portada.style.filter = "blur(0px)";
-          proyecto.style.top = "0px";
-          proyecto.style.transform = "scale(1)";
+          portada.style.filter = "grayScale(1)";
           proyecto.style.zIndex = "1";
-          difuminado.style.display = "none"
-          disponibilidad.style.display = "none";
-          infoCaja.style.display = "none"
+
+          if (this.resolucion > 1000) {
+            proyecto.style.transform = "scale(1)";
+            proyecto.style.top = "0px";
+            difuminado.style.display = "none"
+            disponibilidad.style.display = "none";
+            infoCaja.style.display = "none"
+          }
         })
       }
 
-      let contenedor = document.getElementById("movil-contenedor-proyecto" + this.id);
-      let contenido = document.getElementById("movil-contenido-proyecto" + this.id);
+      /*let contenedor = document.getElementById("movil-contenedor-proyecto" + this.id);
 
       contenedor.addEventListener('click', () => {
-        if (contenedor && contenido && disponibilidad) {
-          this.isAbiertoMovile = !this.isAbiertoMovile;
-          if (this.isAbiertoMovile) {
-            contenedor.style.borderBottomLeftRadius = "25px";
-            contenedor.style.borderBottomRightRadius = "25px";
-          } else {
-            contenedor.style.borderBottomLeftRadius = "0px";
-            contenedor.style.borderBottomRightRadius = "0px";
-          }
-        }
-      });
+
+      });*/
     })
   }
 
