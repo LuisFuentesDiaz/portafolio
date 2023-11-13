@@ -26,8 +26,7 @@ export class EstrellasComponent implements OnInit {
         let tamaño = Math.random() * (parseInt(win.maxTamaño) - 1) + 1;
         let x = 0;
 
-
-        let y = Math.random() * (parseInt(win.height) - 0) + 0;
+        let y = Math.random() * (parseInt("100") - 0) + 0;
 
         if (i <= (win.estrellas / 4)) {
           x = Math.random() * (25 - 1) + 0;

@@ -3,6 +3,8 @@
   position: relative;
   width: 100%;
   z-index: 1;
+  background-image: linear-gradient(to top, #0A17A7 -9%, black);
+  ;
 }
 
 .movil-container-seccion-a {
@@ -21,7 +23,6 @@
   .movil-container-seccion-a {
     display: block;
     height: 100vh;
-    background-image: linear-gradient(to top, #5b41b8 -9%, #0a17a7 45%);
   }
 
   .web-container-seccion-a {
@@ -31,8 +32,7 @@
 
 @media(min-width: 401px) {
   .container-seccion-a {
-    height: 70vh;
-    background-image: linear-gradient(to top, #5b41b8 -9%, #0a17a7 45%);
+    height: 100vh;
     z-index: -1;
   }
 
@@ -45,7 +45,7 @@
   }
 
   .info-cabecera {
-    top: -5%;
+    top: -10%;
     position: relative;
   }
 }

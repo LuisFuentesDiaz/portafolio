@@ -14,13 +14,11 @@ body {
 .subTitulo-tema-iscuro {
   color: lightgrey;
   font-family: 'Graduate', serif;
-  margin-bottom: 5%;
 }
 
 .subTitulo-tema-claro {
   color: black;
   font-family: 'Graduate', serif;
-  margin-bottom: 5%;
 }
 
 @media(max-width: 400px) {

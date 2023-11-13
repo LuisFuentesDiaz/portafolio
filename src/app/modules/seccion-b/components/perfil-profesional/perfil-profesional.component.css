@@ -3,13 +3,6 @@
   text-align: center;
 }
 
-h3 {
-  font-family: 'Graduate', serif;
-  font-size: 1.2rem;
-  text-align: center;
-  margin-bottom: 5%;
-}
-
 @media(max-width:400px) {
   .perfilProfesional>p {
     font-size: 1rem;
@@ -23,4 +16,12 @@ h3 {
     text-align: justify;
 
   }
+}
+
+h1 {
+  font-family: 'Graduate', serif;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+  filter: drop-shadow(2px 4px 6px black);
 }

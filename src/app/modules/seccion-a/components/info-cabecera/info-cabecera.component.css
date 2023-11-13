@@ -11,6 +11,7 @@ h1 {
   border-radius: 50%;
   filter: drop-shadow(2px 4px 6px black)grayscale(1);
   max-width: 100%;
+  animation: moverArribaAbajo 3s ease-in-out infinite;
 }
 
 .en-linea {
@@ -81,5 +82,20 @@ h1 {
 
   .anillo-planeta {
     max-width: 78%;
+  }
+}
+
+
+@keyframes moverArribaAbajo {
+
+  0%,
+  100% {
+    transform: translateY(-10px);
+    /* Posición inicial y final (sin movimiento vertical) */
+  }
+
+  50% {
+    transform: translateY(10px);
+    /* Posición intermedia (movimiento hacia abajo) */
   }
 }
