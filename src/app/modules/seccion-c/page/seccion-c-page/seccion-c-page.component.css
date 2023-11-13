@@ -24,7 +24,7 @@
   }
 
   .movil-articulo-seccion-c {
-    height: auto;
+    height: 80vh;
   }
 
   .texto-titulo {
@@ -48,4 +48,12 @@
     width: 80%;
     max-width: 500px;
   }
+}
+
+h1 {
+  font-family: 'Graduate', serif;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+  filter: drop-shadow(2px 4px 6px black);
 }

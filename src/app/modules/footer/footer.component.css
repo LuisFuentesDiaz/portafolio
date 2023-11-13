@@ -2,12 +2,15 @@
   width: 100%;
   position: relative;
   height: 15vh;
+  background-color: #091597;
 }
 
 .box-shadow-tema-claro {
-  background-image: linear-gradient(to bottom, ghostwhite 3%, #0a17a7 98%);
+  box-shadow: 0px -27px 43px 34px #091597;
+  ;
 }
 
 .box-shadow-tema-oscuro {
-  background-image: linear-gradient(to bottom, #5B41B9 0%, #0a17a7 91%);
+  box-shadow: 0px -27px 43px 34px #091597;
+  ;
 }

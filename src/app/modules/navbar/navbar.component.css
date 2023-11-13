@@ -4,7 +4,7 @@
   position: fixed;
   justify-content: center;
   background-color: #01020D;
-  z-index: 2;
+  z-index: 3;
   transition: 0.5s;
   cursor: grab;
   align-items: baseline;
