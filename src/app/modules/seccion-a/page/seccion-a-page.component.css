@@ -3,8 +3,8 @@
   position: relative;
   width: 100%;
   z-index: 0;
-  background-image: linear-gradient(to top, #0A17A7 -55%, black 109%);
-  box-shadow: 0px 20px 40px 42px #07106D;
+  background-image: linear-gradient(to top, #0A17A7 -9%, black);
+  box-shadow: 0px 20px 40px 42px #091597;
   min-height: 500px;
 }
 
