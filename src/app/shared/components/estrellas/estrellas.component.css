@@ -1,12 +1,14 @@
 #estrella {
   overflow: hidden;
   width: 100%;
+  height: 100%;
   position: absolute;
+  min-height: 500px;
 }
 
 @media(min-width: 401px) {
   #estrella {
-    height: 70vh;
+    height: 70%;
   }
 }
 

@@ -12,6 +12,7 @@ export class IconoSkillComponent implements AfterViewInit {
   @Input() tooltip: string = null;
   @Input() noScale: boolean = false;
   @Input() borde: boolean = false;
+  @Input() margin = 0;
 
   capacidadString: string = '';
 

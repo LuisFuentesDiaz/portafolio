@@ -8,15 +8,16 @@ import { EstrellasComponent } from './components/estrellas/estrellas.component';
 import { EstrellaFugazComponent } from './components/estrella-fugaz/estrella-fugaz.component';
 import { SeparadorComponent } from './components/separador/separador.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HabilidadesEnduranceComponent } from './components/habilidades-endurance/habilidades-endurance.component';
 
 @NgModule({
   declarations: [IconoSkillComponent, SiderTarjetaComponent,
-    SeccionComponent, ArticuloComponent, EstrellaFugazComponent, EstrellasComponent, SeparadorComponent],
+    SeccionComponent, ArticuloComponent, EstrellaFugazComponent, EstrellasComponent, SeparadorComponent, HabilidadesEnduranceComponent],
   imports: [
     CommonModule,
     NgbModule
   ],
   exports: [IconoSkillComponent, SiderTarjetaComponent, SeccionComponent, ArticuloComponent,
-    EstrellaFugazComponent, EstrellasComponent, SeparadorComponent]
+    EstrellaFugazComponent, EstrellasComponent, SeparadorComponent, HabilidadesEnduranceComponent]
 })
 export class SharedModule { }

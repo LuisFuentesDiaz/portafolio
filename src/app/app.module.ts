@@ -10,10 +10,11 @@ import { SeccionCModule } from './modules/seccion-c/seccion-c.module';
 import { NavbarComponent } from './modules/navbar/navbar.component';
 import { SharedModule } from './shared/shared.module';
 import { FooterComponent } from './modules/footer/footer.component';
+import { HabilidadesComponent } from './modules/habilidades/habilidades.component';
 
 @NgModule({
   declarations: [
-    AppComponent, DownAndUpComponent, NavbarComponent, FooterComponent
+    AppComponent, DownAndUpComponent, NavbarComponent, FooterComponent, HabilidadesComponent
   ],
   imports: [
     BrowserModule,

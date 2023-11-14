@@ -91,11 +91,9 @@ h1 {
   0%,
   100% {
     transform: translateY(-10px);
-    /* Posición inicial y final (sin movimiento vertical) */
   }
 
   50% {
     transform: translateY(10px);
-    /* Posición intermedia (movimiento hacia abajo) */
   }
 }

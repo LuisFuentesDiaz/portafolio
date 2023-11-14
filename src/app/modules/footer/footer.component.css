@@ -1,4 +1,4 @@
-.footer {
+footer {
   width: 100%;
   position: relative;
   height: 15vh;
@@ -6,11 +6,11 @@
 }
 
 .box-shadow-tema-claro {
-  box-shadow: 0px -27px 43px 34px #091597;
+  box-shadow: 0px 0px 22px 36px #081494;
   ;
 }
 
 .box-shadow-tema-oscuro {
-  box-shadow: 0px -27px 43px 34px #091597;
+  box-shadow: 0px 0px 22px 36px #081494;
   ;
 }

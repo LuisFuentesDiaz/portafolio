@@ -5,6 +5,7 @@
   z-index: 0;
   background-image: linear-gradient(to top, #0A17A7 -9%, black);
   box-shadow: 0px 20px 40px 42px #091597;
+  min-height: 500px;
 }
 
 .movil-container-seccion-a {
