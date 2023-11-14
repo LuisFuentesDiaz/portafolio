@@ -20,3 +20,13 @@
     transform: translateY(10px);
   }
 }
+
+.gargantua {
+  position: absolute;
+  width: 36%;
+  min-width: 300px;
+  max-width: 500px;
+  right: -10vw;
+  opacity: 36%;
+  rotate: 19deg;
+}

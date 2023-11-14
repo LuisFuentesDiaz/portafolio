@@ -22,6 +22,6 @@ h1 {
   font-family: 'Graduate', serif;
   margin-bottom: 20px;
   font-weight: bold;
-  text-align: center;
+  text-align: justify;
   filter: drop-shadow(2px 4px 6px black);
 }

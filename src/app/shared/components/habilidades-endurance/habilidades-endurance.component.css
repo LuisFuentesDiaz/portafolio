@@ -6,6 +6,7 @@
   align-items: center;
   display: flex;
   z-index: 0;
+  min-width: 400px;
 }
 
 .planeta {

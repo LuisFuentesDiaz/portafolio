@@ -38,7 +38,7 @@
 
   .center {
     display: flex;
-    min-height: 450px;
+    min-height: 500px;
     align-items: center;
     justify-content: center;
     top: -10px;
@@ -53,12 +53,18 @@
     width: 80%;
     max-width: 500px;
   }
+
+  .movil-item-carruse-proyectos {
+    justify-content: center;
+    display: flex;
+    max-width: 350px;
+  }
 }
 
 h1 {
   font-family: 'Graduate', serif;
   margin-bottom: 20px;
   font-weight: bold;
-  text-align: center;
+  text-align: justify;
   filter: drop-shadow(2px 4px 6px black);
 }

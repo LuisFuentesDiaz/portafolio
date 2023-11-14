@@ -1,6 +1,6 @@
 <article class="web-articulo-seccion-c  color-secundario-fondo">
   <section class="row web-seccion-seccion-c seccion-seccion-c container ">
-    <div class="text-center">
+    <div class="row" style="min-width: 856px;">
       <h1> Proyectos </h1>
     </div>
     <div class="row col-12" [style.minWidth.px]="856">
@@ -17,16 +17,18 @@
   </section>
 </article>
 
-<article class=" movil-articulo-seccion-c color-secundario-fondo">
-  <h1> Proyectos </h1>
-  <div>
-    <ngb-carousel>
-      <ng-template ngbSlide>
-        <div class="center">
-          <app-proyectos class="movil-item-carruse-proyectos" style="width: 300px;" [data]="proyectoA" id="4" img="/cca/ccafast/ccafast-1"></app-proyectos>
-        </div>
-      </ng-template>
-      <!--  <ng-template ngbSlide>
+<article class="movil-articulo-seccion-c color-secundario-fondo">
+
+  <div style="width: 350px;  max-width: 350px;  margin: auto;">
+    <h1> Proyectos </h1>
+  </div>
+  <ngb-carousel>
+    <ng-template ngbSlide>
+      <div class="center">
+        <app-proyectos class="movil-item-carruse-proyectos" [data]="proyectoA" id="4" img="/cca/ccafast/ccafast-1"></app-proyectos>
+      </div>
+    </ng-template>
+    <!--  <ng-template ngbSlide>
         <div class="center">
           <app-proyectos class="center" style="width: 300px;" [data]="proyectoB" id="5" img="/cencosud/autoservicio-rrhh/autoservicio-1"></app-proyectos>
         </div>
@@ -36,6 +38,5 @@
           <app-proyectos class="center" style="width: 300px;" [data]="proyectoC" id="6" img="/grupo-firma/rentacar/rentacar-1"></app-proyectos>
         </div>
       </ng-template>-->
-    </ngb-carousel>
-  </div>
+  </ngb-carousel>
 </article>
