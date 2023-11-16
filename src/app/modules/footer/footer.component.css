@@ -14,3 +14,43 @@ footer {
   box-shadow: 0px 0px 22px 36px #081494;
   ;
 }
+
+.texto-footer,
+i {
+  color: white;
+}
+
+.corazon {
+  color: red;
+}
+
+.planeta {
+  position: absolute;
+  width: 36%;
+  min-width: 163px;
+  max-width: 270px;
+  left: -3vw;
+  opacity: 36%;
+  filter: brightness(0.5);
+  rotate: 19deg;
+}
+
+.container-text-footer {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 100%;
+}
+
+@media(max-width:600px) {
+  .container-text-footer {
+    font-size: 0.6rem;
+
+  }
+}
+
+@media(min-width:601px) {
+  .container-text-footer {
+    font-size: 1.0rem;
+  }
+}
