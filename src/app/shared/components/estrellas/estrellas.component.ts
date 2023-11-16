@@ -9,16 +9,18 @@ export class EstrellasComponent implements OnInit {
   @Input() id;
   @Input() height: string = "100";
   @Input() maxTamaño: string = "5";
+  @Input() estrellas = 150;
 
-  estrellas = 150;
   constructor(private el: ElementRef, private renderer: Renderer2) { }
 
   ngOnInit(): void {
     let win = this;
     let tipoEscala = 1;
+    console.log(this.estrellas);
 
     document.addEventListener("DOMContentLoaded", function () {
       for (let i = 0; i < win.estrellas; i++) {
+
         if (tipoEscala == 10) {
           tipoEscala = 1;
         }
@@ -42,8 +44,8 @@ export class EstrellasComponent implements OnInit {
         estrella.style.height = `${tamaño}px`;
         estrella.style.boxShadow = "0px 0px 2px 1px white";
         estrella.style.position = "absolute";
-        estrella.style.left = `${x}vw`;
-        estrella.style.top = `${y}vh`;
+        estrella.style.left = `${x}%`;
+        estrella.style.top = `${y}%`;
         estrella.style.borderRadius = "50px";
         estrella.style.backgroundColor = "white";
         estrella.style.zIndex = "-1";

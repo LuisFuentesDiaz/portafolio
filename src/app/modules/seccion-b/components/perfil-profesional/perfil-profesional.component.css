@@ -8,6 +8,10 @@
     font-size: 1rem;
     text-align: justify;
   }
+
+  h1 {
+    text-align: start;
+  }
 }
 
 @media(min-width:401px) {
@@ -22,6 +26,5 @@ h1 {
   font-family: 'Graduate', serif;
   margin-bottom: 20px;
   font-weight: bold;
-  text-align: center;
   filter: drop-shadow(2px 4px 6px black);
 }

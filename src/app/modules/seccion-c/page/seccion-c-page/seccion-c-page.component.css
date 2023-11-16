@@ -15,21 +15,18 @@
     width: 70%;
   }
 
-  .movil-articulo-seccion-c {
-    display: none;
+  h1 {
+    margin-bottom: 20px;
   }
 }
 
 @media(max-width:1000px) {
-  .web-articulo-seccion-c {
-    display: none;
-  }
 
   .movil-articulo-seccion-c {
-    padding-top: 20%;
-    padding-bottom: 20%;
     height: 100vh;
     min-height: 700px;
+    display: flex;
+    align-items: center;
   }
 
   .texto-titulo {
@@ -41,8 +38,8 @@
     min-height: 450px;
     align-items: center;
     justify-content: center;
-    top: -10px;
     position: relative;
+    padding: 1%;
   }
 
   .contenedor-iconos-disponibilidad-codigo {
@@ -52,13 +49,15 @@
   .movil-item-carruse-proyectos {
     width: 80%;
     max-width: 500px;
+    min-width: 250px;
   }
 }
 
 h1 {
   font-family: 'Graduate', serif;
-  margin-bottom: 20px;
   font-weight: bold;
-  text-align: center;
   filter: drop-shadow(2px 4px 6px black);
+  width: 80%;
+  padding: 0%;
+  text-align: start;
 }

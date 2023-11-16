@@ -11,13 +11,13 @@
       </div>
     </div>
     <div id="web-caja-info{{id}}" class="web-caja-info ">
-      <div class="text-center container mt-2 row col-12">
+      <div class="text-center container mt-2 row col-12" style="margin: auto;">
         <p class="subTituloNormal"> {{data.nombre}}</p>
         <p> <strong>Consultora: </strong> {{data.consultora}}</p>
         <p><strong>Empresa: </strong>{{data.empresa}}</p>
         <p><strong>Tecnologías Utilizadas:</strong></p>
       </div>
-      <div class="col-12 row pb-2">
+      <div class="col-12 row pb-2" style="margin: auto;">
         <app-icono-skill *ngFor="let e of tecnologias let i = index" id="web-iconosSkill-tarjeta-proyecto{{i}}" class="col web-habilidad-proyecto" noScale=true nombre="{{e}}" ancho="40" largo="40"></app-icono-skill>
       </div>
     </div>

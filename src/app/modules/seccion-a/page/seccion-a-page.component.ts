@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PantallaService } from 'src/app/core/util/pantalla.service';
 
 @Component({
   selector: 'app-seccion-a-page',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeccionAPageComponent implements OnInit {
 
-  constructor() { }
+  isMovil: boolean = false;
+
+  constructor(private pantallaService: PantallaService) { }
 
   ngOnInit() {
-  }
+    this.pantallaService.resolucion.subscribe(e => {
+      console.log("re ", e);
 
+      if (e.resolucion > 401) {
+        this.isMovil = false;
+      } else {
+        this.isMovil = true;
+      }
+      console.log(this.isMovil);
+
+    })
+  }
 }

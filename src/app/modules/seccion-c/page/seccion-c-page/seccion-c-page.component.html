@@ -1,4 +1,4 @@
-<article class="web-articulo-seccion-c  color-secundario-fondo">
+<article *ngIf="!isMovil" class="web-articulo-seccion-c  color-secundario-fondo">
   <section class="row web-seccion-seccion-c seccion-seccion-c container ">
     <div class="text-center">
       <h1> Proyectos </h1>
@@ -17,25 +17,25 @@
   </section>
 </article>
 
-<article class=" movil-articulo-seccion-c color-secundario-fondo">
-  <h1> Proyectos </h1>
-  <div>
-    <ngb-carousel>
+<article *ngIf="isMovil" class="col-12 movil-articulo-seccion-c">
+  <div class="row" style="justify-content: center; padding: 0%; margin: 0%;">
+    <h1> Proyectos </h1>
+    <ngb-carousel style="padding: 0%; margin: 0%;">
       <ng-template ngbSlide>
         <div class="center">
-          <app-proyectos class="movil-item-carruse-proyectos" style="width: 300px;" [data]="proyectoA" id="4" img="/cca/ccafast/ccafast-1"></app-proyectos>
-        </div>
-      </ng-template>
-      <!--  <ng-template ngbSlide>
-        <div class="center">
-          <app-proyectos class="center" style="width: 300px;" [data]="proyectoB" id="5" img="/cencosud/autoservicio-rrhh/autoservicio-1"></app-proyectos>
+          <app-proyectos class="movil-item-carruse-proyectos" [data]="proyectoA" id="1" img="/cca/ccafast/ccafast-1"></app-proyectos>
         </div>
       </ng-template>
       <ng-template ngbSlide>
         <div class="center">
-          <app-proyectos class="center" style="width: 300px;" [data]="proyectoC" id="6" img="/grupo-firma/rentacar/rentacar-1"></app-proyectos>
+          <app-proyectos class="movil-item-carruse-proyectos" [data]="proyectoB" id="2" img="/cencosud/autoservicio-rrhh/autoservicio-1"></app-proyectos>
         </div>
-      </ng-template>-->
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="center">
+          <app-proyectos class="movil-item-carruse-proyectos" [data]="proyectoC" id="3" img="/grupo-firma/rentacar/rentacar-1"></app-proyectos>
+        </div>
+      </ng-template>
     </ngb-carousel>
   </div>
 </article>
