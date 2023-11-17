@@ -16,24 +16,8 @@
   color: black;
 }
 
-@media(max-width:400px) {
-  #tabindex2 {
-    border-top-right-radius: 20%;
-    border-top-left-radius: 20%;
-  }
-}
 
-@media(min-width:401px) {
-  .box-shadow-tema-claro {
-    /* box-shadow: 0px -54px 75px 47px ghostwhite; */
-  }
-
-  .box-shadow-tema-oscuro {
-    /* box-shadow: 0px -54px 75px 47px #5b41b8; */
-  }
-
-  #tabindex2 {
-    border-top-right-radius: 20%;
-    border-top-left-radius: 20%;
-  }
+#tabindex1 {
+  z-index: 0;
+  position: relative;
 }

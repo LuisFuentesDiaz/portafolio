@@ -108,7 +108,6 @@ h1 {
 @media(min-width:1001px) {
   .web-contenedor-proyecto {
     position: relative;
-    justify-content: center;
     display: block;
     transition: 0.3s;
     box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
@@ -181,6 +180,12 @@ h1 {
 
   .web-portada {
     filter: grayscale(1);
+    height: 100%;
+  }
+
+  .contenedor-principal {
+    height: 100%;
+    width: 100%;
   }
 }
 

@@ -100,8 +100,4 @@ export class SeccionCPageComponent {
     "https://www.imlchile.cl/",
     false,
     "Mayo 2021 - Enero 2022");
-
-
-
-
 }

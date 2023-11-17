@@ -22,6 +22,7 @@ h1 {
 
 .habilidades-seccion-a {
   display: inline-flex;
+  filter: brightness(0.5);
 }
 
 .contenedor-img-seccion-a {
