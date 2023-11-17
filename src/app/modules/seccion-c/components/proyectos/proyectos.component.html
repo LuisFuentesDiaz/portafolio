@@ -5,16 +5,17 @@
       <i class="bi bi-info-circle-fill" ngbTooltip="Abierto" *ngIf="data.codigoAbierto"></i>
     </div>
     <div class="contenedor-portada-difuminado">
-      <img id="web-portada{{id}}" class="web-portada portada" [src]="'assets/proyectos'+img+'.png'" alt="">
+      <img id="web-portada{{id}}" class="web-portada portada" [src]="'assets/proyectos/'+img+'.png'" alt="">
       <div class="web-difuminado" id="web-difuminado{{id}}">
+        <p style="position: absolute; bottom: 0; color: black;"><strong>{{data.duracionFecha}}</strong></p>
+
         <i class="bi bi-fullscreen icono-ampliar" (click)="openModal()"></i>
       </div>
     </div>
-    <div id="web-caja-info{{id}}" class="web-caja-info ">
+    <div id="web-caja-info{{id}}" class="web-caja-info" style="font-size: 0.9rem;">
       <app-estrellas id="estrellas-caja-info{{id}}" height="100" estrellas=20 maxTamaño="1"></app-estrellas>
-
       <div class="text-center container mt-2 row col-12" style="margin: auto;">
-        <p class="subTituloNormal"> {{data.nombre}}</p>
+        <h1> {{data.nombre}}</h1>
         <p> <strong>Consultora: </strong> {{data.consultora}}</p>
         <p><strong>Empresa: </strong>{{data.empresa}}</p>
         <p><strong>Tecnologías Utilizadas:</strong></p>

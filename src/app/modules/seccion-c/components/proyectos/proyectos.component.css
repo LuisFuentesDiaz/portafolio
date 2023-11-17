@@ -22,8 +22,13 @@
   font-size: 1.2rem;
 }
 
-@media(max-width:1000px) {
+h1 {
+  font-family: 'Graduate', serif;
+  font-weight: bold;
+  font-size: 1rem;
+}
 
+@media(max-width:1000px) {
   .web-contenedor-proyecto {
     position: relative;
     justify-content: center;
@@ -56,6 +61,7 @@
     position: relative;
     transition: height 0.3s;
     bottom: -30%;
+    top: 10%;
     height: 247px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -63,6 +69,7 @@
     cursor: auto;
     z-index: 2;
     display: contents;
+
   }
 
   .contenedor-portada-difuminado {
@@ -151,6 +158,7 @@
     display: none;
     background-image: linear-gradient(to top, #0A17A7 5%, black 114%);
     color: ghostwhite;
+    padding-top: 10%;
   }
 
   .icono-ampliar {

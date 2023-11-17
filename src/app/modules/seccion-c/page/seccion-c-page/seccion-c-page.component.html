@@ -4,14 +4,8 @@
       <h1> Proyectos </h1>
     </div>
     <div class="row col-12" [style.minWidth.px]="856">
-      <div class="col-lg-4">
-        <app-proyectos [data]="proyectoA" id="1" img="/cca/ccafast/ccafast-1" class=""></app-proyectos>
-      </div>
-      <div class="col-lg-4">
-        <app-proyectos [data]="proyectoB" id="2" img="/cencosud/autoservicio-rrhh/autoservicio-1" class=""></app-proyectos>
-      </div>
-      <div class="col-lg-4">
-        <app-proyectos [data]="proyectoC" id="3" img="/grupo-firma/rentacar/rentacar-1" class=""></app-proyectos>
+      <div class="col-lg-4" *ngFor="let proyecto of recientes, let i = index">
+        <app-proyectos [data]="proyecto" [id]="i" [img]="proyecto.urlBaseImg+proyecto.capturas[0]"></app-proyectos>
       </div>
     </div>
   </section>
@@ -21,19 +15,9 @@
   <div class="row" style="justify-content: center; padding: 0%; margin: 0%; width: 100%;">
     <h1 class="col-12" style="width: 80%; max-width: 500px; min-width: 250px;"> Proyectos </h1>
     <ngb-carousel style="padding: 0%; margin: 0%;">
-      <ng-template ngbSlide>
+      <ng-template ngbSlide *ngFor="let proyecto of recientes, let i = index">
         <div class="center">
-          <app-proyectos class="movil-item-carruse-proyectos" [data]="proyectoA" id="1" img="/cca/ccafast/ccafast-1"></app-proyectos>
-        </div>
-      </ng-template>
-      <ng-template ngbSlide>
-        <div class="center">
-          <app-proyectos class="movil-item-carruse-proyectos" [data]="proyectoB" id="2" img="/cencosud/autoservicio-rrhh/autoservicio-1"></app-proyectos>
-        </div>
-      </ng-template>
-      <ng-template ngbSlide>
-        <div class="center">
-          <app-proyectos class="movil-item-carruse-proyectos" [data]="proyectoC" id="3" img="/grupo-firma/rentacar/rentacar-1"></app-proyectos>
+          <app-proyectos class="movil-item-carruse-proyectos" [data]="proyecto" [id]="i" [img]="proyecto.urlBaseImg+proyecto.capturas[0]"></app-proyectos>
         </div>
       </ng-template>
     </ngb-carousel>
