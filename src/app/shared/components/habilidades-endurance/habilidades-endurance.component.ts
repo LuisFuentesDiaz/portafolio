@@ -9,16 +9,11 @@ import { right } from '@popperjs/core';
 export class HabilidadesEnduranceComponent implements OnInit {
 
   @Input() direccion: string = "none";
-
   gradient;
-
-
 
   constructor() { }
 
   ngOnInit() {
-    console.log("dir", this.direccion);
-
     switch (this.direccion) {
       case "right":
         this.gradient = "linear-gradient(to right, #0A17A7 0%, black 51%)";
@@ -30,9 +25,5 @@ export class HabilidadesEnduranceComponent implements OnInit {
         this.gradient = "linear-gradient(to top, #0A17A7 0%, black 51%)";
         break;
     }
-    console.log("grad", this.gradient);
-
-
   }
-
 }

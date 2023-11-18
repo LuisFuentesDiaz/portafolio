@@ -5,13 +5,14 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalProyectoComponent } from './components/modal-proyecto/modal-proyecto.component';
+import * as moment from "moment";
 
 @NgModule({
   declarations: [SeccionCPageComponent, ProyectosComponent, ModalProyectoComponent],
   imports: [
     CommonModule,
     SharedModule,
-    NgbModule
+    NgbModule,
   ],
   exports: [SeccionCPageComponent]
 })

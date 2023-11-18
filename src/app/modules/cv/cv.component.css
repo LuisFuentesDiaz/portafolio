@@ -1,0 +1,45 @@
+.btn-custom {
+  border-radius: 25px;
+  background-color: ghostwhite;
+  animation: moverArribaAbajo 2.4s ease-in-out infinite;
+  transition: transform 0.3s;
+}
+
+.contenedor-cv {
+  color: ghostwhite;
+}
+
+.btn-custom:hover {
+  transform: scale(1.1);
+  color: black;
+}
+
+.btn-custom:not(:hover) {
+  transform: scale(1);
+}
+
+.btn-custom:active {
+  background-color: ghostwhite;
+}
+
+.planetaCV {
+  rotate: 33deg;
+  left: 0%;
+  transform: rotate3d(0, 1, 0, 180deg);
+  position: absolute;
+  filter: brightness(0.5);
+  z-index: -1;
+}
+
+
+@keyframes moverArribaAbajo {
+
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+}

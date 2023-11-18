@@ -29,7 +29,7 @@ i {
   width: 36%;
   min-width: 163px;
   max-width: 270px;
-  left: -3vw;
+  right: -3vw;
   opacity: 36%;
   filter: brightness(0.5);
   rotate: 19deg;

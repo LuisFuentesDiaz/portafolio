@@ -6,6 +6,7 @@ import { ExperienciasPageComponent } from './page/experiencias-page.component';
   imports: [
     CommonModule
   ],
-  declarations: [ExperienciasPageComponent]
+  declarations: [ExperienciasPageComponent],
+  exports: [ExperienciasPageComponent]
 })
 export class ExperienciaModule { }

@@ -7,8 +7,7 @@
     <div class="contenedor-portada-difuminado">
       <img id="web-portada{{id}}" class="web-portada portada" [src]="'assets/proyectos/'+img+'.png'" alt="">
       <div class="web-difuminado" id="web-difuminado{{id}}">
-        <p style="position: absolute; bottom: 0; color: black;"><strong>{{data.duracionFecha}}</strong></p>
-
+        <p style="position: absolute; bottom: 0; color: black;"><strong>{{data.duracionFecha}} Meses {{data.termino ? 'de duración' : ' y contando'}} </strong></p>
         <i class="bi bi-fullscreen icono-ampliar" (click)="openModal()"></i>
       </div>
     </div>

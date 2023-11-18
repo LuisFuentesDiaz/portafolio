@@ -11,10 +11,14 @@ import { NavbarComponent } from './modules/navbar/navbar.component';
 import { SharedModule } from './shared/shared.module';
 import { FooterComponent } from './modules/footer/footer.component';
 import { HabilidadesComponent } from './modules/habilidades/habilidades.component';
+import { CvComponent } from './modules/cv/cv.component';
+import { ExperienciaModule } from './modules/experiencias/experiencia.module';
+import * as moment from "moment";
+
 
 @NgModule({
   declarations: [
-    AppComponent, DownAndUpComponent, NavbarComponent, FooterComponent, HabilidadesComponent
+    AppComponent, DownAndUpComponent, NavbarComponent, FooterComponent, HabilidadesComponent, CvComponent
   ],
   imports: [
     BrowserModule,
@@ -24,8 +28,11 @@ import { HabilidadesComponent } from './modules/habilidades/habilidades.componen
     SeccionBModule,
     SeccionCModule,
     SharedModule,
+    ExperienciaModule
   ],
-  providers: [],
+  providers: [
+    { provide: 'moment', useValue: moment } // Configura Moment.js como un proveedor
+  ],
   bootstrap: [AppComponent],
 
 })
