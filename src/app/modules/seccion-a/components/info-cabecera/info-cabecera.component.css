@@ -18,7 +18,10 @@ h1 {
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
+  top: -5vh;
 }
+
 
 .habilidades-seccion-a {
   display: inline-flex;

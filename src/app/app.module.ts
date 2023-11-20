@@ -7,13 +7,13 @@ import { SiderTarjetaModule } from './modules/sider-tarjeta/sider-tarjeta.module
 import { SeccionBModule } from './modules/seccion-b/seccion-b.module';
 import { SeccionAModule } from './modules/seccion-a/seccion-a.module';
 import { SeccionCModule } from './modules/seccion-c/seccion-c.module';
-import { NavbarComponent } from './modules/navbar/navbar.component';
 import { SharedModule } from './shared/shared.module';
 import { FooterComponent } from './modules/footer/footer.component';
 import { HabilidadesComponent } from './modules/habilidades/habilidades.component';
 import { CvComponent } from './modules/cv/cv.component';
 import { ExperienciaModule } from './modules/experiencias/experiencia.module';
 import * as moment from "moment";
+import { NavbarComponent } from './modules/navbar/navbar.component';
 
 
 @NgModule({
