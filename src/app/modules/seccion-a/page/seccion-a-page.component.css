@@ -3,7 +3,7 @@
   position: relative;
   width: 100%;
   z-index: 0;
-  background-image: linear-gradient(to top, #0A17A7 -9%, black);
+  background-image: linear-gradient(to top, #0A17A7 23%, black 73%);
   min-height: 500px;
   height: 100vh;
 }
@@ -26,6 +26,10 @@
 
 @media(max-width: 400px) {
   .movil-container-seccion-a {}
+
+  .info-cabecera {
+    backdrop-filter: blur(1.5px);
+  }
 }
 
 @media(min-width: 401px) {
@@ -34,7 +38,7 @@
   }
 
   .info-cabecera {
-    top: -10%;
     position: relative;
+    backdrop-filter: blur(3px);
   }
 }
