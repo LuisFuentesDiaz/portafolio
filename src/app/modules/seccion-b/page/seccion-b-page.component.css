@@ -8,11 +8,6 @@
     background-color: ghostwhite;
     z-index: 2;
     margin: auto;
-    border-top-left-radius: 16%;
-    border-top-right-radius: 14%;
-    position: relative;
-    border-left: 13px solid black;
-    border-right: 13px solid black;
   }
 
   .web-articulo-seccion-b {
@@ -28,17 +23,6 @@
   .foto personal {
     margin-bottom: 10%;
   }
-
-  .naveFront {
-    position: relative;
-    bottom: -82px;
-    width: 97%;
-    z-index: 3;
-    margin: auto;
-    justify-content: center;
-    display: flex;
-    filter: grayscale(1);
-  }
 }
 
 @media(min-width:1001px) {
@@ -47,11 +31,10 @@
   }
 
   .web-articulo-seccion-b {
-    height: 80vh;
+    height: 55vh;
     display: flex;
     justify-content: center;
-    width: 60%;
-    border-radius: 10px;
+    width: 100%;
     background-color: ghostwhite;
     margin: auto;
   }
@@ -59,7 +42,6 @@
   .seccion-seccion-b {
     width: 70%;
   }
-
 }
 
 .box-shadow-tema-claro {

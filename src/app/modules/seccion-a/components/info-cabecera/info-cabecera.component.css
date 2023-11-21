@@ -43,6 +43,8 @@ h1 {
 
 .contenedor-info-seccion-a {
   z-index: 3;
+  animation: moverArribaAbajo 3s ease-in-out infinite;
+
 }
 
 .subtituloCabecera {
