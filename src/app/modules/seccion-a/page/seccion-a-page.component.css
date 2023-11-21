@@ -38,7 +38,7 @@
   .container-seccion-a {
     z-index: -1;
     background-image: linear-gradient(to top, #0A17A7 -67%, black 73%);
-    height: 50vh;
+    height: 70vh;
   }
 
   .info-cabecera {
