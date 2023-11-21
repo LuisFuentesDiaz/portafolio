@@ -6,6 +6,8 @@
   min-height: 500px;
 }
 
+
+
 @media(min-width: 401px) {
   #estrella {
     height: 70%;

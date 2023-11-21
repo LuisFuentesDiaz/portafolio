@@ -3,9 +3,8 @@
   position: relative;
   width: 100%;
   z-index: 0;
-  background-image: linear-gradient(to top, #0A17A7 23%, black 73%);
   min-height: 500px;
-  height: 100vh;
+
 }
 
 .estrellas {
@@ -25,7 +24,10 @@
 }
 
 @media(max-width: 400px) {
-  .movil-container-seccion-a {}
+  .web-container-seccion-a {
+    height: 100vh;
+    background-image: linear-gradient(to top, #0A17A7 -67%, black 73%);
+  }
 
   .info-cabecera {
     backdrop-filter: blur(1.5px);
@@ -35,6 +37,8 @@
 @media(min-width: 401px) {
   .container-seccion-a {
     z-index: -1;
+    background-image: linear-gradient(to top, #0A17A7 -67%, black 73%);
+    height: 50vh;
   }
 
   .info-cabecera {
