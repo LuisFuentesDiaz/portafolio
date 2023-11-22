@@ -3,13 +3,18 @@
     <div class="text-center">
       <h1> Proyectos </h1>
     </div>
-    <div class="row col-12" [style.minWidth.px]="856">
+    <app-proyectos-recientes></app-proyectos-recientes>
+    <app-todo-proyecto></app-todo-proyecto>
+
+    <!-- <div class="row col-12" [style.minWidth.px]="856">
       <div class="col-lg-4" *ngFor="let proyecto of recientes, let i = index">
         <app-proyectos [data]="proyecto" [id]="i" [img]="proyecto.urlBaseImg+proyecto.capturas[0]"></app-proyectos>
       </div>
-    </div>
+    </div>-->
+
   </section>
 </article>
+
 
 <article *ngIf="isMovil" class="col-12 movil-articulo-seccion-c">
   <div class="row" style="justify-content: center; padding: 0%; margin: 0%; width: 100%;">

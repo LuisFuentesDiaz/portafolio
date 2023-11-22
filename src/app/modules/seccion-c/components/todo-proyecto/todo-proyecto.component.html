@@ -1,0 +1,5 @@
+<div class="row contenedor-todo-proyecto">
+  <div class="col-lg-4  mt-2 mb-2" *ngFor="let proyecto of proyectos, let i = index">
+    <app-proyectos [data]="proyecto" [id]="i" [img]="proyecto.urlBaseImg+proyecto.capturas[0]"></app-proyectos>
+  </div>
+</div>

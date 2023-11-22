@@ -37,6 +37,7 @@
     width: 100%;
     background-color: ghostwhite;
     margin: auto;
+    min-height: 600px;
   }
 
   .seccion-seccion-b {

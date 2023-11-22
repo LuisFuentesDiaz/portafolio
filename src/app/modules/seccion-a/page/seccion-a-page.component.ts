@@ -14,15 +14,11 @@ export class SeccionAPageComponent implements OnInit {
 
   ngOnInit() {
     this.pantallaService.resolucion.subscribe(e => {
-      console.log("re ", e);
-
       if (e.resolucion > 401) {
         this.isMovil = false;
       } else {
         this.isMovil = true;
       }
-      console.log(this.isMovil);
-
     })
   }
 }

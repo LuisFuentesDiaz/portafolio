@@ -16,7 +16,6 @@ export class EstrellasComponent implements OnInit {
   ngOnInit(): void {
     let win = this;
     let tipoEscala = 1;
-    console.log(this.estrellas);
 
     document.addEventListener("DOMContentLoaded", function () {
       for (let i = 0; i < win.estrellas; i++) {

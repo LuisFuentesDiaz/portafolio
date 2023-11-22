@@ -41,6 +41,5 @@ export class Proyecto {
       termino.add(1, 'month');
     }
     this.duracionFecha = termino.diff(inicio, 'months');
-    console.log(termino.diff(inicio, 'months'));
   }
 }
