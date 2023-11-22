@@ -1,5 +1,5 @@
 <div class="row col-12" [style.minWidth.px]="850">
   <div class="col-lg-4" *ngFor="let proyecto of recientes, let i = index">
-    <app-proyectos [data]="proyecto" [id]="i" [img]="proyecto.urlBaseImg+proyecto.capturas[0]"></app-proyectos>
+    <app-proyectos [data]="proyecto" [id]="'recientes'+i" [img]="proyecto.urlBaseImg+proyecto.capturas[0]"></app-proyectos>
   </div>
 </div>

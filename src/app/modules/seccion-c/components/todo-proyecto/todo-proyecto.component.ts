@@ -14,6 +14,6 @@ export class TodoProyectoComponent implements OnInit {
   constructor(private proyectoService: ProyectosService) { }
 
   ngOnInit() {
-    this.proyectos = this.proyectoService.Proyectos;
+    this.proyectos = this.proyectoService.Proyectos.filter((e: Proyecto) => !e.isReciente);
   }
 }

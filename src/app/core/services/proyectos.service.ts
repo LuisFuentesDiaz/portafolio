@@ -8,7 +8,7 @@ import { Proyecto } from '../models/proyecto';
 })
 export class ProyectosService {
 
-  Proyectos: any[] = [
+  Proyectos: Proyecto[] = [
     new Proyecto(
       "Guachiman",
       false,
@@ -25,7 +25,8 @@ export class ProyectosService {
       "https://www.cca.cl/",
       false,
       moment("2023-02-01"),
-      null
+      null,
+      true
     ),
 
     new Proyecto(
@@ -43,6 +44,7 @@ export class ProyectosService {
       false,
       moment("2022-07-01"),
       moment("2023-02-01"),
+      true
     ),
 
     new Proyecto(
@@ -60,6 +62,7 @@ export class ProyectosService {
       false,
       moment("2022-02-01"),
       moment("2022-06-30"),
+      true
     ),
     new Proyecto(
       "Rentacar",
@@ -76,8 +79,29 @@ export class ProyectosService {
       "https://www.imlchile.cl/",
       false,
       moment("2021-05-01"),
-      moment("2022-01-31")
-    )
+      moment("2022-01-31"),
+      false
+    ),
+    new Proyecto(
+      "Sistema Evidencias (Tesis)",
+      false,
+      "Universidad Católica",
+      "Universidad Católica del Maule",
+      ['angular', 'java', 'spring', 'git', 'hibernate', , 'rest', 'postgreSql'],
+      `El Sistema de Evidencias (SE) es una aplicación web que busca mejorar el proceso de acreditación de las carreras de la UCM.
+       Desarrollado con Angular y Spring Boot, permite registrar y gestionar las debilidades identificadas en este proceso.
+      Con módulos para registro, aprobación y estadísticas, el SE facilita la identificación de falencias,
+      su revisión por roles específicos y proporciona datos para mejorar la calidad educativa.
+      El objetivo principal es centralizar y agilizar la gestión de falencias, usando tecnologías modernas y garantizando la seguridad de los datos.
+     .`,
+      'personal/tesis/',
+      ['tesis-1'],
+      "https://portal.ucm.cl/",
+      false,
+      moment("2019-09-01"),
+      moment("2020-02-29"),
+      false
+    ),
   ]
 
 

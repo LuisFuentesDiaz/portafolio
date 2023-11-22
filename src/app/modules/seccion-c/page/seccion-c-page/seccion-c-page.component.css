@@ -7,6 +7,8 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 1;
     background-color: ghostwhite;
   }
 
@@ -64,4 +66,14 @@ h1 {
   width: 80%;
   padding: 0%;
   text-align: start;
+}
+
+.masMenosProyectos {
+  font-size: 50px;
+  color: gray;
+}
+
+.masMenosProyectos:hover {
+  scale: 1.3;
+  cursor: grab;
 }

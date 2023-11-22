@@ -14,9 +14,10 @@ export class Proyecto {
   inicio: moment.Moment;
   termino: moment.Moment;
   duracionFecha: Number;
+  isReciente: boolean;
 
   constructor(nombre: string, dependiente: boolean, consultora: string, empresa: string, tecnologias: string[], informacion: string,
-    urlBaseImg: string, capturas: string[], url: string, codigoAbierto: boolean, inicio: moment.Moment, termino: moment.Moment) {
+    urlBaseImg: string, capturas: string[], url: string, codigoAbierto: boolean, inicio: moment.Moment, termino: moment.Moment, isReciente: boolean) {
     this.nombre = nombre;
     this.dependiente = dependiente;
     this.consultora = consultora;
@@ -30,6 +31,7 @@ export class Proyecto {
     this.inicio = inicio;
     this.termino = termino;
     this.calcularDuracion(inicio, termino);
+    this.isReciente = isReciente;
   }
 
 
