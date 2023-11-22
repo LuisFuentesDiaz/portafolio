@@ -16,15 +16,7 @@
       <i *ngIf="!verTodos" class="bi bi-plus-circle masMenosProyectos" (click)="verTodos = !verTodos"></i>
       <i *ngIf="verTodos" class="bi bi-dash-circle masMenosProyectos" (click)="verTodos = !verTodos"></i>
     </div>
-
     <app-todo-proyecto *ngIf="verTodos"></app-todo-proyecto>
-
-    <!-- <div class="row col-12" [style.minWidth.px]="856">
-      <div class="col-lg-4" *ngFor="let proyecto of recientes, let i = index">
-        <app-proyectos [data]="proyecto" [id]="i" [img]="proyecto.urlBaseImg+proyecto.capturas[0]"></app-proyectos>
-      </div>
-    </div>-->
-
   </section>
 </article>
 

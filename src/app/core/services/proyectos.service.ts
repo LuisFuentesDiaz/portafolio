@@ -87,7 +87,7 @@ export class ProyectosService {
       false,
       "Universidad Católica",
       "Universidad Católica del Maule",
-      ['angular', 'java', 'spring', 'git', 'hibernate', , 'rest', 'postgreSql'],
+      ['angular', 'java', 'spring', 'git', 'hibernate', 'ApiRest', 'postgreSql'],
       `El Sistema de Evidencias (SE) es una aplicación web que busca mejorar el proceso de acreditación de las carreras de la UCM.
        Desarrollado con Angular y Spring Boot, permite registrar y gestionar las debilidades identificadas en este proceso.
       Con módulos para registro, aprobación y estadísticas, el SE facilita la identificación de falencias,
