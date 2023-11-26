@@ -1,22 +1,24 @@
 @media(min-width: 1001px) {
   .web-articulo-seccion-c {
     margin: auto;
-    padding-top: 3%;
-    padding-bottom: 5%;
-    width: 100%;
+    width: 80%;
     display: flex;
     height: auto;
     justify-content: center;
     align-items: center;
     position: relative;
     z-index: 1;
-    background-color: ghostwhite;
+    backdrop-filter: blur(5px);
   }
 
   .web-seccion-seccion-c {
     position: relative;
     justify-content: center;
-    width: 90%;
+    width: 80%;
+    z-index: 3;
+    color: ghostwhite;
+    padding-top: 3%;
+    padding-bottom: 3%;
   }
 
   h1 {
@@ -70,4 +72,13 @@ h1 {
   align-items: center;
   display: flex;
   justify-content: center;
+}
+
+.difuminado {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: gray;
+  z-index: 2;
+  opacity: 28%;
 }
