@@ -30,5 +30,7 @@ export class SeccionCPageComponent {
         this.isMovil = true;
       }
     })
+    console.log("2", this.isMovil);
+
   }
 }

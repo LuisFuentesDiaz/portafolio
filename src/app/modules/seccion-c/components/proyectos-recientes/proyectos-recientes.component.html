@@ -1,5 +1,13 @@
-<div class="row col-12" [style.minWidth.px]="850">
+<div *ngIf="!isMovil" class="row col-12" [style.minWidth.px]="850">
   <div class="col-lg-4" *ngFor="let proyecto of recientes, let i = index">
     <app-proyectos [data]="proyecto" [id]="'recientes'+i" [img]="proyecto.urlBaseImg+proyecto.capturas[0]"></app-proyectos>
   </div>
 </div>
+
+<ngb-carousel *ngIf="isMovil" style="padding: 0%; margin: 0%;">
+  <ng-template ngbSlide *ngFor="let proyecto of recientes, let i = index">
+    <div class="center">
+      <app-proyectos class="movil-item-carruse-proyectos" [data]="proyecto" [id]="i" [img]="proyecto.urlBaseImg+proyecto.capturas[0]"></app-proyectos>
+    </div>
+  </ng-template>
+</ngb-carousel>

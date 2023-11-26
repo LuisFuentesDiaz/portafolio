@@ -1,35 +1,29 @@
-<article *ngIf="!isMovil" class="web-articulo-seccion-c  color-secundario-fondo">
-  <section class="row web-seccion-seccion-c seccion-seccion-c container ">
-    <div class="text-center">
-      <h1> Proyectos </h1>
+<ng-container *ngIf="!isMovil">
+  <article class="web-articulo-seccion-c  color-secundario-fondo">
+    <section class="row web-seccion-seccion-c seccion-seccion-c container ">
+      <div class="text-center">
+        <h1> Proyectos Recientes</h1>
+      </div>
+      <app-proyectos-recientes [isMovil]="isMovil"></app-proyectos-recientes>
+      <div class="contenedor-masMenos-proyectos">
+        <i *ngIf="!verTodos" class="bi bi-plus-circle masMenosProyectos" (click)="verTodos = !verTodos"></i>
+        <i *ngIf="verTodos" class="bi bi-dash-circle masMenosProyectos" (click)="verTodos = !verTodos"></i>
+      </div>
+      <app-todo-proyecto [isMovil]="isMovil" *ngIf="verTodos"></app-todo-proyecto>
+    </section>
+  </article>
+</ng-container>
+
+<ng-container *ngIf="isMovil">
+  <article class="col-12 movil-articulo-seccion-c">
+    <div class="row" style="justify-content: center; padding: 0%; margin: 0%; width: 100%;">
+      <h1 class="col-12" style="width: 80%; max-width: 500px; min-width: 250px;"> Proyectos </h1>
+      <app-proyectos-recientes [isMovil]="isMovil"></app-proyectos-recientes>
+      <div class="contenedor-masMenos-proyectos">
+        <i *ngIf="!verTodos" class="bi bi-plus-circle masMenosProyectos" (click)="verTodos = !verTodos"></i>
+        <i *ngIf="verTodos" class="bi bi-dash-circle masMenosProyectos" (click)="verTodos = !verTodos"></i>
+      </div>
+      <app-todo-proyecto [isMovil]="isMovil" *ngIf="verTodos"></app-todo-proyecto>
     </div>
-    <app-proyectos-recientes></app-proyectos-recientes>
-
-    <div class="" style="
-    width: 90%;
-    height: 100px;
-    position: relative;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    ">
-      <i *ngIf="!verTodos" class="bi bi-plus-circle masMenosProyectos" (click)="verTodos = !verTodos"></i>
-      <i *ngIf="verTodos" class="bi bi-dash-circle masMenosProyectos" (click)="verTodos = !verTodos"></i>
-    </div>
-    <app-todo-proyecto *ngIf="verTodos"></app-todo-proyecto>
-  </section>
-</article>
-
-
-<article *ngIf="isMovil" class="col-12 movil-articulo-seccion-c">
-  <div class="row" style="justify-content: center; padding: 0%; margin: 0%; width: 100%;">
-    <h1 class="col-12" style="width: 80%; max-width: 500px; min-width: 250px;"> Proyectos </h1>
-    <ngb-carousel style="padding: 0%; margin: 0%;">
-      <ng-template ngbSlide *ngFor="let proyecto of recientes, let i = index">
-        <div class="center">
-          <app-proyectos class="movil-item-carruse-proyectos" [data]="proyecto" [id]="i" [img]="proyecto.urlBaseImg+proyecto.capturas[0]"></app-proyectos>
-        </div>
-      </ng-template>
-    </ngb-carousel>
-  </div>
-</article>
+  </article>
+</ng-container>

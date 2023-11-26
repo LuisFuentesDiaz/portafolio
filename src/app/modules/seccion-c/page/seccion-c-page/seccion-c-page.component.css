@@ -25,9 +25,8 @@
 }
 
 @media(max-width:1000px) {
-
   .movil-articulo-seccion-c {
-    height: 100vh;
+    height: auto;
     min-height: 700px;
     display: flex;
     align-items: center;
@@ -40,23 +39,8 @@
     font-size: 1.2rem;
   }
 
-  .center {
-    display: flex;
-    min-height: 450px;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 1%;
-  }
-
   .contenedor-iconos-disponibilidad-codigo {
     display: flex;
-  }
-
-  .movil-item-carruse-proyectos {
-    width: 80%;
-    max-width: 500px;
-    min-width: 250px;
   }
 }
 
@@ -77,4 +61,13 @@ h1 {
 .masMenosProyectos:hover {
   scale: 1.3;
   cursor: grab;
+}
+
+.contenedor-masMenos-proyectos {
+  width: 90%;
+  height: 100px;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }

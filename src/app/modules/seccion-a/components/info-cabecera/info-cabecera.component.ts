@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-info-cabecera',
@@ -6,12 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./info-cabecera.component.css']
 })
 export class InfoCabeceraComponent {
-
+  @Input() isMovil: boolean = false;
   urlFotoPersonal: String = "assets/personalFoto.jpg";
 
   descargarImagen(): void {
-    console.log("aa");
-
     const rutaImagen = 'assets/gmail.png'; // Ruta a la imagen en tu proyecto Angular
     const nombreArchivo = 'gmail.png';
 
