@@ -2,8 +2,9 @@ import { Component, Input, OnInit, ComponentFactoryResolver, ViewChild, ViewCont
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalProyectoComponent } from '../modal-proyecto/modal-proyecto.component';
 import { Proyecto } from 'src/app/core/models/proyecto';
-import { elementAt } from 'rxjs';
 import { PantallaService } from 'src/app/core/util/pantalla.service';
+import { Habilidad } from 'src/app/core/models/habilidad';
+import { ProyectoDirectorioBase } from 'src/app/core/enum/directorio.enum';
 
 @Component({
   selector: 'app-proyectos',
@@ -15,8 +16,10 @@ export class ProyectosComponent implements OnInit, AfterViewInit {
   @Input() img: string = "";
   @Input() id: string = "";
   @Input() data: Proyecto;
+  urlBase = ProyectoDirectorioBase.ASSETS
+
   resolucion;
-  tecnologias: string[] = [];
+  tecnologias: Habilidad[] = [];
   isAbiertoMovile: boolean = false;
 
   constructor(private modalService: NgbModal, private pantallaUtil: PantallaService) {
@@ -62,6 +65,8 @@ export class ProyectosComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.tecnologias = this.data.tecnologias.slice(0, 4);
+    console.log("tex", this.tecnologias);
+
   }
 
   ngOnDestroy(): void {

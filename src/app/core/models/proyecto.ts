@@ -1,11 +1,12 @@
 import * as moment from "moment";
+import { Habilidad } from "./habilidad";
 
 export class Proyecto {
   nombre: string;
   dependiente: boolean;
   consultora: string;
   empresa: string;
-  tecnologias: string[];
+  tecnologias: Habilidad[];
   informacion: string;
   urlBaseImg: string;
   capturas: string[];
@@ -16,7 +17,7 @@ export class Proyecto {
   duracionFecha: Number;
   isReciente: boolean;
 
-  constructor(nombre: string, dependiente: boolean, consultora: string, empresa: string, tecnologias: string[], informacion: string,
+  constructor(nombre: string, dependiente: boolean, consultora: string, empresa: string, tecnologias: Habilidad[], informacion: string,
     urlBaseImg: string, capturas: string[], url: string, codigoAbierto: boolean, inicio: moment.Moment, termino: moment.Moment, isReciente: boolean) {
     this.nombre = nombre;
     this.dependiente = dependiente;

@@ -16,9 +16,6 @@ export class ProyectosRecientesComponent implements OnInit {
   constructor(private proyectoService: ProyectosService) { }
 
   ngOnInit() {
-    console.log(this.isMovil);
-
     this.recientes = this.proyectoService.Proyectos.filter((e: Proyecto) => e.isReciente);
-
   }
 }

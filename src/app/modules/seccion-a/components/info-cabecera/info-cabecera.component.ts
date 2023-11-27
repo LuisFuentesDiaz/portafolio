@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { TG } from 'src/app/core/const/tipos-habilidades';
 
 @Component({
   selector: 'app-info-cabecera',
@@ -7,6 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class InfoCabeceraComponent {
   @Input() isMovil: boolean = false;
+  Habilidad = TG;
   urlFotoPersonal: String = "assets/personalFoto.jpg";
 
   descargarImagen(): void {

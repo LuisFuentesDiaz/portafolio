@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Proyecto } from 'src/app/core/models/proyecto';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { Habilidad } from 'src/app/core/models/habilidad';
 
 @Component({
   selector: 'app-modal-proyecto',
@@ -10,7 +11,7 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 export class ModalProyectoComponent implements OnInit {
 
   @Input() data: Proyecto = null;
-  @Input() tecnologias: string[] = [];
+  @Input() tecnologias: Habilidad[] = [];
 
   constructor(config: NgbCarouselConfig) {
     config.interval = 3000; // Intervalo de cambio de diapositivas en milisegundos (3 segundos en este ejemplo)

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TG } from 'src/app/core/const/tipos-habilidades';
 
 @Component({
   selector: 'app-habilidades',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HabilidadesComponent implements OnInit {
 
+  habilidades = TG;
   constructor() { }
 
   ngOnInit() {

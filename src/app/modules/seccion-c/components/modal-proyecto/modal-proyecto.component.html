@@ -22,7 +22,7 @@
             <strong>Tecnologías Utilizadas:</strong>
           </div>
           <div class="col col-icono-modal">
-            <app-icono-skill class="iconos-modal" borde=true *ngFor="let e of tecnologias; let i = index" id="modalIcono{{i}}" noScale=true nombre="{{e}}" ancho="40" largo="40"></app-icono-skill>
+            <app-icono-skill class="iconos-modal" borde=true *ngFor="let tg of tecnologias; let i = index" id="modalIcono{{i}}" noScale=true [data]="tg"></app-icono-skill>
           </div>
         </div>
       </div>
@@ -36,7 +36,7 @@
   <div class="col-12 contenedor-inferior-modal">
     <ngb-carousel>
       <ng-template *ngFor="let c of data.capturas" ngbSlide>
-        <img class="custom-carousel" src="assets/proyectos/{{data.urlBaseImg}}{{c}}.png" width="100%" alt="Imagen 1">
+        <img class="custom-carousel" src="{{data.urlBaseImg+c}}.png" width="100%" alt="Imagen 1">
       </ng-template>
     </ngb-carousel>
   </div>
