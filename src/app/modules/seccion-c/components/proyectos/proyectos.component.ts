@@ -16,7 +16,6 @@ export class ProyectosComponent implements OnInit, AfterViewInit {
   @Input() img: string = "";
   @Input() id: string = "";
   @Input() data: Proyecto;
-  urlBase = ProyectoDirectorioBase.ASSETS
 
   resolucion;
   tecnologias: Habilidad[] = [];

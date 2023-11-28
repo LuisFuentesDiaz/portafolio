@@ -1,5 +1,4 @@
 export enum ProyectoDirectorioBase {
-  ASSETS = "assets/",
   PROYECTO = "assets/proyectos/",
   CCA = `${ProyectoDirectorioBase.PROYECTO}cca/`,
   CENCOSUD = `${ProyectoDirectorioBase.PROYECTO}cencosud/`,
