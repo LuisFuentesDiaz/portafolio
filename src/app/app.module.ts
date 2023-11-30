@@ -11,7 +11,6 @@ import { SharedModule } from './shared/shared.module';
 import { FooterComponent } from './modules/footer/footer.component';
 import { HabilidadesComponent } from './modules/habilidades/habilidades.component';
 import { CvComponent } from './modules/cv/cv.component';
-import * as moment from "moment";
 import { NavbarComponent } from './modules/navbar/navbar.component';
 
 
@@ -29,7 +28,7 @@ import { NavbarComponent } from './modules/navbar/navbar.component';
     SharedModule
   ],
   providers: [
-    { provide: 'moment', useValue: moment } // Configura Moment.js como un proveedor
+
   ],
   bootstrap: [AppComponent],
 
