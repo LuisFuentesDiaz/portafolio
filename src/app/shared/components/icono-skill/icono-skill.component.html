@@ -1,3 +1,3 @@
 <div class="skill skillContenedor" ngbTooltip="{{data.alt}}" [id]="'skillContenedor'+data.id" [style.minHeight.px]="data.getWidth()" [style.maxWidth.px]="data.getWidth()" [style.marginRight.px]="margin" [style.marginLeft.px]="margin">
-  <img [src]="data.getRuta()" width="90%" height="90%" alt="">
+  <img [src]="data.getRuta()" loading="lazy" width="90%" height="90%" alt="habilidad {{data.nombre}}">
 </div>

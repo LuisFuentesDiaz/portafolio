@@ -24,7 +24,8 @@ export class EstrellaFugazComponent implements OnInit {
       const spanFugaz = win.renderer.createElement('div');
       const estrella = win.renderer.createElement('img');
       estrella.id = "estrellaFugaz" + win.id;
-      estrella.src = "assets/estrellaFugaz.png"
+      estrella.src = "assets/estrellaFugaz.png";
+      estrella.alt = "modelo estrella fugaz";
       win.renderer.addClass(estrella, `estrellaFugaz`);
       win.renderer.addClass(spanFugaz, `contEstrellaFugaz1`);
       spanFugaz.style.display = "none";

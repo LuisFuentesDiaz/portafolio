@@ -16,6 +16,6 @@ export class TodoProyectoComponent implements OnInit {
   ngOnInit() {
     console.log("que pasaa " + this.isMovil);
 
-    this.proyectos = this.proyectoService.Proyectos.filter((e: Proyecto) => !e.isReciente);
+    this.proyectos = this.proyectoService.Proyectos;
   }
 }

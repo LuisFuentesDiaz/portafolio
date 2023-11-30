@@ -1,10 +1,10 @@
 <div class="navbar " [style.top.px]="isScrollArriba === true ? '0' : '-50'">
-  <h5 (click)="focus('tabindex1')" [style.color]="tabIndexVisible ==  'tabindex1' ? 'ghostwhite': '#656faf' " type="button" class="item-navbar-local text-center">Inicio</h5>
-  <h5 (click)="focus('tabindex2')" [style.color]="tabIndexVisible ==  'tabindex2' ? 'ghostwhite': '#656faf' " type="button" class="item-navbar-local ">Sobre mí</h5>
-  <h5 (click)="focus('tabindex3')" [style.color]="tabIndexVisible ==  'tabindex3' ? 'ghostwhite': '#656faf' " type="button" class="item-navbar-local ">Proyectos</h5>
-  <h5 (click)="focus('tabindex4')" [style.color]="tabIndexVisible ==  'tabindex4' ? 'ghostwhite': '#656faf' " type="button" class="item-navbar-local ">Contacto</h5>
+  <h5 (click)="focus('tabindex1')" type="button" class="item-navbar-local {{tabIndexVisible == 'tabindex1' ? 'scale' : 'noScale'}}">Inicio</h5>
+  <h5 (click)="focus('tabindex2')" type="button" class="item-navbar-local {{tabIndexVisible == 'tabindex2' ? 'scale' : 'noScale'}}">Sobre mí</h5>
+  <h5 (click)="focus('tabindex3')" type="button" class="item-navbar-local {{tabIndexVisible == 'tabindex3' ? 'scale' : 'noScale'}}">Proyectos</h5>
+  <h5 (click)="focus('tabindex4')" type="button" class="item-navbar-local {{tabIndexVisible == 'tabindex4' ? 'scale' : 'noScale'}}">Contacto</h5>
 
   <div class="cambioTemaBtn">
-    <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip on bottom" href="assets/cv/Luis_Felipe_Fuentes_Diaz_CV.pdf" target="_blank"><i style="font-size: 20px;" class="bi bi-download"></i> </a>
+    <a data-bs-toggle="tooltip" aria-label="descargar CV" [style.color]="'ghostwhite'" data-bs-placement="bottom" data-bs-title="Tooltip on bottom" href="assets/cv/Luis_Felipe_Fuentes_Diaz_CV.pdf" target="_blank"><i style="font-size: 20px;" class="bi bi-download"></i> </a>
   </div>
 </div>

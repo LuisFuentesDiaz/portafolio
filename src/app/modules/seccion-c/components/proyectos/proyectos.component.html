@@ -1,4 +1,4 @@
-<div class="contenedor-principal" id="contenedor-principal{{id}}">
+<!--<div class="contenedor-principal" id="contenedor-principal{{id}}">
   <div id="web-proyecto{{id}}" class="row web-contenedor-proyecto contenedor-proyecto">
     <div id="web-disponibilidad{{id}}" class="web-contenedor-disponibilidad-proyecto contenedor-disponibilidad-proyecto" [style.color]="data.codigoAbierto ? 'green' : 'red'">
       <i class="bi bi-exclamation-circle-fill" ngbTooltip="Privado" *ngIf="!data.codigoAbierto"></i>
@@ -22,6 +22,22 @@
       <div class="col-12 row pb-2" style="margin: auto;">
         <app-icono-skill *ngFor="let tg of tecnologias let i = index" id="web-iconosSkill-tarjeta-proyecto{{i}}" class="col web-habilidad-proyecto" noScale=true [data]="tg"></app-icono-skill>
       </div>
+    </div>
+  </div>
+</div>-->
+
+<div class="proyecto">
+  <div class="card-inner">
+    <div class="card-front">
+      <img [src]="img+'.png'" loading="lazy" alt="screen proyecto {{img}}">
+      Frontal
+    </div>
+    <div class="card-back">
+      <div id="web-disponibilidad{{id}}" class="contenedor-disponibilidad-proyecto" [style.color]="data.codigoAbierto ? 'green' : 'red'">
+        <i class="bi bi-exclamation-circle-fill" ngbTooltip="Privado" *ngIf="!data.codigoAbierto"></i>
+        <i class="bi bi-info-circle-fill" ngbTooltip="Abierto" *ngIf="data.codigoAbierto"></i>
+      </div>
+      <i class="bi bi-fullscreen icono-ampliar" (click)="openModal()"></i>
     </div>
   </div>
 </div>

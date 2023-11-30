@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { IconoSkillComponent } from './components/icono-skill/icono-skill.component';
 import { SiderTarjetaComponent } from './components/sider-tarjeta/sider-tarjeta.component';
 import { SeccionComponent } from './components/seccion/seccion.component';
@@ -15,7 +15,7 @@ import { HabilidadesEnduranceComponent } from './components/habilidades-enduranc
     SeccionComponent, ArticuloComponent, EstrellaFugazComponent, EstrellasComponent, SeparadorComponent, HabilidadesEnduranceComponent],
   imports: [
     CommonModule,
-    NgbModule
+    NgbModule, NgOptimizedImage
   ],
   exports: [IconoSkillComponent, SiderTarjetaComponent, SeccionComponent, ArticuloComponent,
     EstrellaFugazComponent, EstrellasComponent, SeparadorComponent, HabilidadesEnduranceComponent]

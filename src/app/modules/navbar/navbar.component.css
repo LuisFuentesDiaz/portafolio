@@ -15,10 +15,19 @@
   margin-right: 2%;
   align-items: center;
   display: flex;
-  color: #656faf;
+  color: ghostwhite;
   font-family: 'Graduate', serif;
 }
 
+.scale {
+  transform: scale(1.2);
+  color: gray;
+}
+
+.noScale {
+  transform: scale(1.0);
+  color: ghostwhite;
+}
 
 @media (max-width: 400px) {
   .item-navbar-local {

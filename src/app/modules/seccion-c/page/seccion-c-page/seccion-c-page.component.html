@@ -1,4 +1,4 @@
-<ng-container *ngIf="!isMovil">
+<!--<ng-container *ngIf="!isMovil">
   <article class="web-articulo-seccion-c  color-secundario-fondo">
     <div class="difuminado"></div>
 
@@ -27,5 +27,15 @@
       </div>
       <app-todo-proyecto [isMovil]="isMovil" *ngIf="verTodos"></app-todo-proyecto>
     </div>
+  </article>
+</ng-container> -->
+
+<ng-container>
+  <article>
+    <div class="difuminado"></div>
+    <section>
+      <h1>Proyectos</h1>
+      <app-todo-proyecto [isMovil]=false></app-todo-proyecto>
+    </section>
   </article>
 </ng-container>

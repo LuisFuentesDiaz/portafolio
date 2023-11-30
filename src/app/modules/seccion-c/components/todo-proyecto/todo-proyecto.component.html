@@ -1,4 +1,4 @@
-<ng-container *ngIf="!isMovil">
+<!--<ng-container *ngIf="!isMovil">
   <div class="row col-12 contenedor-todo-proyecto">
     <div class="col-lg-4  mt-2 mb-2" *ngFor="let proyecto of proyectos, let i = index">
       <app-proyectos [data]="proyecto" [id]="'todos'+i" [img]="proyecto.urlBaseImg+proyecto.capturas[0]"></app-proyectos>
@@ -14,4 +14,11 @@
       </div>
     </ng-template>
   </ngb-carousel>
-</ng-container>
+</ng-container>-->
+
+
+<div class="contenedor-todo-proyectos">
+  <div *ngFor="let proyecto of proyectos, let i = index" class="contenedor-proyectos">
+    <app-proyectos [data]="proyecto" [id]="'todos'+i" [img]="proyecto.urlBaseImg+proyecto.capturas[0]"></app-proyectos>
+  </div>
+</div>

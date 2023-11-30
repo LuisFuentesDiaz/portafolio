@@ -91,5 +91,7 @@ export class ProyectosService {
     ),
   ]
 
-
+  getProyectos() {
+    return this.Proyectos;
+  }
 }

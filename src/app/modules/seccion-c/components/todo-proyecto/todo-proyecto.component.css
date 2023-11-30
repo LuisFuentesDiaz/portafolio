@@ -1,16 +1,16 @@
-@media(max-width:1000px) {
-  .center {
-    display: flex;
-    min-height: 450px;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 1%;
-  }
+.contenedor-todo-proyectos {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 3;
+  gap: 30px;
+  justify-content: center;
+}
 
-  .movil-item-carruse-proyectos {
-    width: 80%;
-    max-width: 500px;
-    min-width: 250px;
-  }
+.contenedor-proyectos {
+  width: 350px;
+  height: 200px;
+  z-index: 4;
 }
