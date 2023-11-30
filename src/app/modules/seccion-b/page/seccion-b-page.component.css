@@ -53,6 +53,7 @@
     background-color: gray;
     z-index: 2;
     opacity: 28%;
+    box-shadow: 0px 0px 37px 12px white;
   }
 }
 
