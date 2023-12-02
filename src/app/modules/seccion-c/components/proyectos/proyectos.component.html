@@ -1,21 +1,21 @@
 <ng-container>
   <div #proyecto modalAnimacion class="proyecto animacionFlip " id="proyecto{{id}}">
-    <div #cardInner class="card-inner ">
+    <div #cardInner class="card-inner card-inner-animacion-modal">
       <div class="card-front">
         <img [src]="img+'.png'" loading="lazy" alt="screen proyecto {{img}}">
         Frontal
       </div>
-      <div #cardBack class="card-back" id="card-back{{id}}">
+      <div #cardBack class="card-back card-back-animacion-modal" id="card-back{{id}}">
         <div id="web-disponibilidad{{id}}" class="contenedor-disponibilidad-proyecto" [style.color]="data.codigoAbierto ? 'green' : 'red'">
           <i class="bi bi-exclamation-circle-fill" ngbTooltip="Privado" *ngIf="!data.codigoAbierto"></i>
           <i class="bi bi-info-circle-fill" ngbTooltip="Abierto" *ngIf="data.codigoAbierto"></i>
         </div>
-        <i class="bi bi-fullscreen icono-ampliar" (click)="ampliar()"></i>
+        <i class="bi bi-fullscreen icono-ampliar evento-click-animacion-modal"></i>
         <div class="col-12 row pb-2" style="margin: auto; bottom: 0%; position: absolute;">
           <app-icono-skill *ngFor="let tg of tecnologias let i = index" id="web-iconosSkill-tarjeta-proyecto{{i}}" class="col web-habilidad-proyecto" noScale=true [data]="tg"></app-icono-skill>
         </div>
       </div>
-      <div #cardModal class="card-modal">
+      <div #cardModal class="card-modal-animacion-modal">
         aaaaaaaaaaaaaaaaaaaaaaaa
       </div>
     </div>

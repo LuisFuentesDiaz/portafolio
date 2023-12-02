@@ -97,12 +97,12 @@ img {
 @keyframes mostrarModal {
 
   10% {
-    scale: 0.3;
+    scale: 0.0;
     z-index: 1;
   }
 
   50% {
-    left: 5vw;
+    left: 1vw;
     width: 10vw;
     height: 5vh;
   }

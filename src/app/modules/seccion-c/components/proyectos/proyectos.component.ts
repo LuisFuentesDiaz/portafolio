@@ -4,11 +4,15 @@ import { ModalProyectoComponent } from '../modal-proyecto/modal-proyecto.compone
 import { Proyecto } from 'src/app/core/models/proyecto';
 import { PantallaService } from 'src/app/core/util/pantalla.service';
 import { Habilidad } from 'src/app/core/models/habilidad';
+import { NgFor, NgIf } from '@angular/common';
+import { ModalDirective } from 'src/app/core/directive';
 
 @Component({
   selector: 'app-proyectos',
   templateUrl: './proyectos.component.html',
-  styleUrls: ['./proyectos.component.css']
+  styleUrls: ['./proyectos.component.css'],
+  standalone: true,
+  imports: [ModalDirective, NgFor, NgIf]
 })
 export class ProyectosComponent implements OnInit {
 
@@ -19,12 +23,8 @@ export class ProyectosComponent implements OnInit {
   resolucion;
   tecnologias: Habilidad[] = [];
 
-  @ViewChild("proyecto", { static: true }) proyecto: ElementRef;
-  @ViewChild("cardInner", { static: true }) cardInner: ElementRef;
-  @ViewChild("cardModal", { static: true }) cardModal: ElementRef;
-  @ViewChild('cardBack', { static: true }) cardBack: ElementRef;
 
-  constructor(private modalService: NgbModal, private pantallaUtil: PantallaService, private render: Renderer2) {
+  constructor(private pantallaUtil: PantallaService) {
     this.pantallaUtil.resolucion.subscribe(e => {
       this.resolucion = e.resolucion;
     })
@@ -32,46 +32,7 @@ export class ProyectosComponent implements OnInit {
 
   ngOnInit() {
     this.tecnologias = this.data.tecnologias.slice(0, 4);
+    console.log(this.tecnologias);
 
   }
-
-  openModal() {
-    const modalRef = this.modalService.open(ModalProyectoComponent, {
-      size: 'lg',
-    });
-    modalRef.componentInstance.data = this.data;
-  }
-
-  ampliar(): void {
-    /*const proyectoElemento = this.proyecto.nativeElement;
-    const proyectoPropiedades = proyectoElemento.getBoundingClientRect();
-    const cardModal = this.cardModal.nativeElement;
-    const cardInner = this.cardInner.nativeElement;
-    const cardBack = this.cardBack.nativeElement;
-
-    this.render.setStyle(proyectoElemento, "position", "fixed");
-    this.render.setStyle(proyectoElemento, "margin", "auto");
-    this.render.setStyle(proyectoElemento, "width", `${proyectoPropiedades.width}px`);
-    this.render.setStyle(proyectoElemento, "height", `${proyectoPropiedades.height}px`);
-    this.render.setStyle(proyectoElemento, "top", `${proyectoPropiedades.y}px`);
-    this.render.setStyle(proyectoElemento, "left", `${proyectoPropiedades.x}px`);
-    this.render.setStyle(proyectoElemento, "transition", "transform 2s");
-    this.render.setStyle(proyectoElemento, "animation", "mostrarModal 5s infinity");
-
-    proyectoElemento.classList.add('mostrarModal');
-    proyectoElemento.classList.remove('animacionFlip');
-    this.render.setStyle(cardInner, "transform", "rotateY(180deg)");
-    this.render.setStyle(cardBack, "display", "none");
-
-
-    this.render.listen(proyectoElemento, 'animationend', (event: AnimationEvent) => {
-      if (event.animationName.includes("mostrarModal")) {
-        this.render.setStyle(cardModal, "opacity", "100%");
-        console.log(event);
-
-      }
-    })*/
-  }
-
-
 }
