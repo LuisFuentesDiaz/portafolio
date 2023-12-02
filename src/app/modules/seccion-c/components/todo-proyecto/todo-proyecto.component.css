@@ -4,7 +4,6 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  z-index: 3;
   gap: 30px;
   justify-content: center;
 }
@@ -12,5 +11,4 @@
 .contenedor-proyectos {
   width: 350px;
   height: 200px;
-  z-index: 4;
 }
