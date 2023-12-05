@@ -1,18 +1,18 @@
-import { Component, Input, OnInit, ViewChild, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { ModalProyectoComponent } from '../modal-proyecto/modal-proyecto.component';
+import { Component, Input, OnInit } from '@angular/core';
 import { Proyecto } from 'src/app/core/models/proyecto';
 import { PantallaService } from 'src/app/core/util/pantalla.service';
 import { Habilidad } from 'src/app/core/models/habilidad';
 import { NgFor, NgIf } from '@angular/common';
-import { ModalDirective } from 'src/app/core/directive';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModalProyectoComponent } from '../modal-proyecto/modal-proyecto.component';
 
 @Component({
   selector: 'app-proyectos',
   templateUrl: './proyectos.component.html',
   styleUrls: ['./proyectos.component.css'],
   standalone: true,
-  imports: [ModalDirective, NgFor, NgIf]
+  imports: [NgFor, NgIf, SharedModule, NgbModule]
 })
 export class ProyectosComponent implements OnInit {
 
@@ -24,7 +24,7 @@ export class ProyectosComponent implements OnInit {
   tecnologias: Habilidad[] = [];
 
 
-  constructor(private pantallaUtil: PantallaService) {
+  constructor(private pantallaUtil: PantallaService, private modalService: NgbModal) {
     this.pantallaUtil.resolucion.subscribe(e => {
       this.resolucion = e.resolucion;
     })
@@ -35,4 +35,12 @@ export class ProyectosComponent implements OnInit {
     console.log(this.tecnologias);
 
   }
+
+  openModal() {
+    const modalRef = this.modalService.open(ModalProyectoComponent, {
+      size: 'md',
+    });
+    modalRef.componentInstance.data = this.data;
+  }
+
 }

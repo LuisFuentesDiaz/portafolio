@@ -5,6 +5,8 @@ article {
   justify-content: center;
   display: flex;
   align-items: center;
+  backdrop-filter: blur(4px);
+  z-index: 1;
 }
 
 section {
@@ -14,9 +16,8 @@ section {
   padding-bottom: 10%;
 }
 
-
 h1 {
-  font-family: 'Graduate', serif;
+  font-family: "Graduate", serif;
   margin-bottom: 20px;
   font-weight: bold;
   filter: drop-shadow(2px 4px 6px black);
@@ -28,12 +29,11 @@ h1 {
   height: 100%;
   position: absolute;
   background-color: gray;
-  z-index: 2;
   opacity: 28%;
   box-shadow: 0px 0px 37px 12px white;
 }
 
-@media (max-Width:400px) {
+@media (max-width: 400px) {
   section {
     width: 90%;
   }
@@ -43,12 +43,12 @@ h1 {
   }
 }
 
-@media (min-Width:401px) {
+@media (min-width: 401px) {
   section {
-    width: 80%;
+    width: 90%;
   }
 
   article {
-    width: 80%;
+    width: 70%;
   }
 }

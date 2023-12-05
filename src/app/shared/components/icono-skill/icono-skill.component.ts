@@ -9,31 +9,33 @@ import { Habilidad } from 'src/app/core/models/habilidad';
 export class IconoSkillComponent implements AfterViewInit {
   @Input() data: Habilidad
   @Input() ancho: Number = 65;
-
+  @Input() id: string;
   @Input() noScale: boolean = false;
   @Input() borde: boolean = false;
   @Input() margin = 0;
 
   capacidadString: string = '';
 
-  constructor(private elementRef: ElementRef, private renderer: Renderer2) { }
+  constructor(private elementRef: ElementRef, private render: Renderer2) { }
 
   ngAfterViewInit(): void {
-    const elemento = this.elementRef.nativeElement.querySelector('#skillContenedor' + this.data.id);
-    this.observeElementResize(elemento);
+    console.log("sca ", this.noScale, this.data);
+
+    const elemento = this.elementRef.nativeElement.querySelector('#skillContenedor' + this.data.id + this.id);
+    this.tamanoDeElemento(elemento);
   }
 
-  observeElementResize(element: HTMLElement) {
+  tamanoDeElemento(element: HTMLElement) {
     const observer = new ResizeObserver(entries => {
       for (const entry of entries) {
-        const computedStyles = getComputedStyle(entry.target);
-        this.renderer.setStyle(entry.target, 'min-height', computedStyles.width);
+        const estilos = getComputedStyle(entry.target);
+        this.render.setStyle(entry.target, 'min-height', estilos.width);
         if (this.noScale) {
-          this.renderer.setStyle(entry.target, 'transform', "none");
-          this.renderer.setStyle(entry.target, 'cursor', "auto");
+          this.render.setStyle(entry.target, 'transform', "none");
+          this.render.setStyle(entry.target, 'cursor', "auto");
         }
         if (this.borde) {
-          this.renderer.setStyle(entry.target, 'border', "1px solid black");
+          this.render.setStyle(entry.target, 'border', "1px solid black");
         }
       }
     });

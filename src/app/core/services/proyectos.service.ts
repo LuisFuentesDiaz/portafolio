@@ -77,8 +77,8 @@ export class ProyectosService {
     new Proyecto(
       "Sistema Evidencias (Tesis)",
       false,
-      "Universidad Católica",
-      "Universidad Católica del Maule",
+      "UCM",
+      "UCM",
       [TG.ANGULAR, TG.JAVA, TG.SPRINGBOOT, TG.GIT, TG.HIBERNATE, TG.APRIREST, TG.POSTGRESQL],
       DescripcionProyecto.TESIS,
       UrlPERSONAL.TESIS,

@@ -12,6 +12,7 @@ import { FooterComponent } from './modules/footer/footer.component';
 import { HabilidadesComponent } from './modules/habilidades/habilidades.component';
 import { CvComponent } from './modules/cv/cv.component';
 import { NavbarComponent } from './modules/navbar/navbar.component';
+import { SeccionDModule } from './modules/seccion-d/seccion-d.module';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { NavbarComponent } from './modules/navbar/navbar.component';
     SiderTarjetaModule,
     SeccionBModule,
     SeccionCModule,
-    SharedModule
+    SharedModule,
+    SeccionDModule
   ],
   providers: [
 

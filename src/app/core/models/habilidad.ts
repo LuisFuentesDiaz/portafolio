@@ -15,7 +15,6 @@ export class Habilidad {
     this.id = alt.replaceAll(" ", "");
   }
 
-
   public getRuta(): String {
     return this.ruta;
   }

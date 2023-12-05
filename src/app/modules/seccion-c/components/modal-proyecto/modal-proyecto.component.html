@@ -1,37 +1,43 @@
-<!--<div class="color-secundario-fondo contenedor-modal">
+<div class="color-secundario-fondo contenedor-modal">
+  <i class="bi bi-x-square-fill icono-cerrar-modal" (click)="cerrarModal()"></i>
+  <h1 class="col subTituloNormal text-center mt-3"> {{data.nombre}} </h1>
   <div class="col-12 contenedor-superior-modal">
-    <h3 class="col subTituloNormal text-center"> {{data.nombre}} </h3>
-    <div class="row col-12">
+    <div class="row col-6">
+      <div class="col-5">
+        <strong>Consultora:</strong>
+      </div>
       <div class="col">
-        <div class="row mt-auto">
-          <div class="col">
-            <strong>Consultora:</strong>
-          </div>
-          <div class="col">
-            <p>{{data.consultora}}</p>
-          </div>
-          <div class="col">
-            <strong> Empresa:</strong>
-          </div>
-          <p class="col grab" (click)="redirigirAExterno()">
-            <u style="color: blue;">{{data.empresa}}</u>
-          </p>
-        </div>
-        <div class="row mt-auto">
-          <div class="col-4">
-            <strong>Tecnologías Utilizadas:</strong>
-          </div>
-          <div class="col col-icono-modal">
-            <app-icono-skill class="iconos-modal" borde=true *ngFor="let tg of tecnologias; let i = index" id="modalIcono{{i}}" noScale=true [data]="tg"></app-icono-skill>
-          </div>
-        </div>
+        <a>{{data.consultora}}</a>
       </div>
     </div>
 
-    <div class="col info-proyecto mt-3">
-      <p>{{data.informacion}}</p>
+
+    <div class="row col-6">
+      <div class="col-4" style="display: flex; flex-wrap: wrap;">
+        <strong> Empresa:</strong>
+      </div>
+      <div class="col">
+        <a class="grab" (click)="redirigirAExterno()">
+          <u style="color: blue;">{{data.empresa}}</u>
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <strong>Tecnologías Utilizadas:</strong>
+      </div>
+      <div class="col col-iconos-modal">
+        <app-icono-skill class="iconos-modal" borde=true *ngFor="let tg of tecnologias; let i = index" id="modalIcono{{i}}" noScale=true [data]="tg"></app-icono-skill>
+      </div>
+    </div>
+
+    <div class="row info-proyecto mt-3">
+      <p> <strong>Descripción :</strong> {{data.informacion}}</p>
     </div>
   </div>
+
+
 
   <div class="col-12 contenedor-inferior-modal">
     <ngb-carousel>
@@ -40,4 +46,4 @@
       </ng-template>
     </ngb-carousel>
   </div>
-</div>-->
+</div>

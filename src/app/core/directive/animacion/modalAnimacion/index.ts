@@ -1,1 +1,1 @@
-export * from './modal.directive';
+

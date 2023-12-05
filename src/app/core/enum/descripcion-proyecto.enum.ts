@@ -22,7 +22,6 @@ export enum DescripcionProyecto {
   Desarrollado con Angular y Spring Boot, permite registrar y gestionar las debilidades identificadas en este proceso.
  Con módulos para registro, aprobación y estadísticas, el SE facilita la identificación de falencias,
  su revisión por roles específicos y proporciona datos para mejorar la calidad educativa.
- El objetivo principal es centralizar y agilizar la gestión de falencias, usando tecnologías modernas y garantizando la seguridad de los datos.
-.`
+ El objetivo principal es centralizar y agilizar la gestión de falencias, usando tecnologías modernas y garantizando la seguridad de los datos.`
 
 }

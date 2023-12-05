@@ -1,0 +1,36 @@
+article {
+  position: relative;
+  height: 50vh;
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  z-index: 1;
+  width: 70%;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 5%;
+}
+
+.difuminado {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: gray;
+  opacity: 28%;
+  box-shadow: 0px 0px 37px 12px white;
+}
+
+h1 {
+  font-family: "Graduate", serif;
+  margin-bottom: 20px;
+  font-weight: bold;
+  filter: drop-shadow(2px 4px 6px black);
+  color: ghostwhite;
+}
