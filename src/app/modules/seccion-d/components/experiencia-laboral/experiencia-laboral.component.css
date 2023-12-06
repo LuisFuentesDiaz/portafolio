@@ -1,0 +1,16 @@
+.contenedor-proyecto {
+  width: 100%;
+  height: 100%;
+  background-color: ghostwhite;
+  border-radius: 20px;
+}
+
+h1 {
+  font-family: "Graduate", serif;
+  margin-bottom: 20px;
+  font-weight: bold;
+  filter: drop-shadow(2px 4px 6px black);
+  color: ghostwhite;
+  padding-top: 1%;
+  font-size: 1.3rem;
+}

@@ -1,6 +1,6 @@
 article {
   position: relative;
-  height: 50vh;
+  height: auto;
   margin: auto;
   justify-content: center;
   display: flex;

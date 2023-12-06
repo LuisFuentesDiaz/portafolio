@@ -1,7 +1,7 @@
 <ng-container>
   <div class="contenedor-toda-experiencia">
-    <div class="contenedor-experiencia">
-      <app-experiencia-laboral></app-experiencia-laboral>
+    <div class="contenedor-experiencia" *ngFor="let data of experiencias">
+      <app-experiencia-laboral [data]="data"></app-experiencia-laboral>
     </div>
   </div>
 </ng-container>

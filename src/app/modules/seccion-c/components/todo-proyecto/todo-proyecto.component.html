@@ -1,22 +1,3 @@
-<!--<ng-container *ngIf="!isMovil">
-  <div class="row col-12 contenedor-todo-proyecto">
-    <div class="col-lg-4  mt-2 mb-2" *ngFor="let proyecto of proyectos, let i = index">
-      <app-proyectos [data]="proyecto" [id]="'todos'+i" [img]="proyecto.urlBaseImg+proyecto.capturas[0]"></app-proyectos>
-    </div>
-  </div>
-</ng-container>
-
-<ng-container *ngIf="isMovil">
-  <ngb-carousel style="padding: 0%; margin: 0%;">
-    <ng-template ngbSlide *ngFor="let proyecto of proyectos, let i = index">
-      <div class="center">
-        <app-proyectos class="movil-item-carruse-proyectos" [data]="proyecto" [id]="'todos'+i" [img]="proyecto.urlBaseImg+proyecto.capturas[0]"></app-proyectos>
-      </div>
-    </ng-template>
-  </ngb-carousel>
-</ng-container>-->
-
-
 <div class="contenedor-todo-proyectos">
   <div *ngFor="let proyecto of proyectos, let i = index" class="contenedor-proyectos">
     <app-proyectos [data]="proyecto" [id]="'todos'+i" [img]="proyecto.urlBaseImg+proyecto.capturas[0]"></app-proyectos>
