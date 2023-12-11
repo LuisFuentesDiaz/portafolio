@@ -1,11 +1,53 @@
-<div class="contenedor-proyecto container">
-  <h1 class="text-center">{{data.nombre}}</h1>
-  <div class="row col-12">
-    <div class="col">
-      <strong>Rubro</strong>
+<div class="contenedor-proyecto animacionFlip container">
+  <div class="inner">
+    <div class="front">
+      <img width="90%" src="{{data.nombreLogo}}.png" alt="">
     </div>
-    <div class="col">
-      {{data.rubro}}
+    <div class="back">
+      <div class="difuminado"></div>
+      <h1 class="text-center">{{data.nombre}}</h1>
+      <div class="row col-12">
+        <div class="text-center mb-3 col-4 ">
+          <strong>Rubro:</strong>
+        </div>
+        <div class="text-center mb-3 col-8">
+          {{data.rubro}}
+        </div>
+      </div>
+      <div class="row col-12">
+        <div class="text-center mb-3 col-4">
+          <strong>Tiempo:</strong>
+        </div>
+        <div class="text-center mb-3 col-8">
+          {{data.duracion| mesesAFecha }}
+        </div>
+      </div>
+      <div class="row col-12">
+        <div class="text-center mb-3 col-4">
+          <strong>Desde:</strong>
+        </div>
+        <div class="text-center mb-3 col-8">
+          {{data.inicio | fecha }}
+        </div>
+      </div>
+      <div class="row col-12">
+        <div class="text-center mb-3 col-4">
+          <strong>Hasta:</strong>
+        </div>
+        <div class="text-center mb-3 col-8">
+          {{data.fin | fecha }}
+        </div>
+      </div>
+      <div class="row col-12">
+        <div class="text-center mb-3 col-4">
+          <strong>Cargo:</strong>
+        </div>
+        <div class="text-center mb-3 col-8">
+          {{data.cargo }}
+        </div>
+      </div>
+
+
     </div>
   </div>
 </div>

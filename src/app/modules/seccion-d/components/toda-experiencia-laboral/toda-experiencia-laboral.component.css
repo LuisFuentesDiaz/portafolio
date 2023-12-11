@@ -9,6 +9,17 @@
 }
 
 .contenedor-experiencia {
-  width: 350px;
-  height: 350px;
+  height: 280px;
+}
+
+@media (max-width: 400px) {
+  .contenedor-experiencia {
+    width: 80%;
+  }
+}
+
+@media (min-width: 400px) {
+  .contenedor-experiencia {
+    width: 350px;
+  }
 }

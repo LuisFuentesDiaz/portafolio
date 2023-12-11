@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Experiencia } from '../models/experiencia';
 import { Cargo } from '../enum/cargo.enum';
-import * as moment from 'moment';
 import { Rubro } from '../enum/rubro.enum';
+import * as dayjs from 'dayjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +10,8 @@ import { Rubro } from '../enum/rubro.enum';
 export class ExperienciaLaboralDataService {
 
   experiencias: Experiencia[] = [
-    new Experiencia("Pleyasoft", moment("2022-02-01"), null, Cargo.SOFTWARE_ENGINEER, Rubro.TECNOLOGICO),
-    new Experiencia("Grupo Firma", moment("2021-05-03"), moment("2022-1-31"), Cargo.PROGRAMADOR, Rubro.TECNOLOGICO)
+    new Experiencia("Pleyasoft", dayjs("2022-02-01"), null, Cargo.SOFTWARE_ENGINEER, Rubro.TECNOLOGICO, "pleyasoft-logo"),
+    new Experiencia("Grupo Firma", dayjs("2021-05-02"), dayjs("2022-01-31"), Cargo.PROGRAMADOR, Rubro.TECNOLOGICO, "gf-logo")
   ]
 
   getExperiencias(): Experiencia[] {

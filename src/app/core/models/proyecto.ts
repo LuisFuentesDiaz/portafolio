@@ -1,5 +1,5 @@
-import * as moment from "moment";
 import { Habilidad } from "./habilidad";
+import * as dayjs from 'dayjs';
 
 export class Proyecto {
   nombre: string;
@@ -12,13 +12,13 @@ export class Proyecto {
   capturas: string[];
   url: string;
   codigoAbierto: boolean;
-  inicio: moment.Moment;
-  termino: moment.Moment;
+  inicio: dayjs.Dayjs;
+  termino: dayjs.Dayjs;
   duracionFecha: Number;
   isReciente: boolean;
 
   constructor(nombre: string, dependiente: boolean, consultora: string, empresa: string, tecnologias: Habilidad[], informacion: string,
-    urlBaseImg: string, capturas: string[], url: string, codigoAbierto: boolean, inicio: moment.Moment, termino: moment.Moment, isReciente: boolean) {
+    urlBaseImg: string, capturas: string[], url: string, codigoAbierto: boolean, inicio: dayjs.Dayjs, termino: dayjs.Dayjs, isReciente: boolean) {
     this.nombre = nombre;
     this.dependiente = dependiente;
     this.consultora = consultora;
@@ -36,9 +36,9 @@ export class Proyecto {
   }
 
 
-  calcularDuracion(inicio: moment.Moment, termino: moment.Moment) {
+  calcularDuracion(inicio: dayjs.Dayjs, termino: dayjs.Dayjs) {
     if (!termino) {
-      termino = moment(new Date());
+      termino = dayjs();
     }
     if (termino.date() > 15 && termino.date() <= 31) {
       termino.add(1, 'month');

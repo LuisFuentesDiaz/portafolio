@@ -23,7 +23,6 @@ export class ProyectosComponent implements OnInit {
   resolucion;
   tecnologias: Habilidad[] = [];
 
-
   constructor(private pantallaUtil: PantallaService, private modalService: NgbModal) {
     this.pantallaUtil.resolucion.subscribe(e => {
       this.resolucion = e.resolucion;
@@ -32,8 +31,6 @@ export class ProyectosComponent implements OnInit {
 
   ngOnInit() {
     this.tecnologias = this.data.tecnologias.slice(0, 4);
-    console.log(this.tecnologias);
-
   }
 
   openModal() {

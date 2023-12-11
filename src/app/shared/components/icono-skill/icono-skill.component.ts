@@ -19,8 +19,6 @@ export class IconoSkillComponent implements AfterViewInit {
   constructor(private elementRef: ElementRef, private render: Renderer2) { }
 
   ngAfterViewInit(): void {
-    console.log("sca ", this.noScale, this.data);
-
     const elemento = this.elementRef.nativeElement.querySelector('#skillContenedor' + this.data.id + this.id);
     this.tamanoDeElemento(elemento);
   }

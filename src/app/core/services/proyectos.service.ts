@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
-import * as moment from "moment";
 import { Proyecto } from '../models/proyecto';
 import { TG } from 'src/app/core/const/tipos-habilidades';
 import { DescripcionProyecto } from '../enum/descripcion-proyecto.enum';
 import { UrlCCA, UrlCENCOSUD, UrlGRUPOFIRMA, UrlPERSONAL } from '../enum/directorio.enum';
 import { WebUrl } from '../enum/web-url.enum';
+import * as dayjs from 'dayjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +24,7 @@ export class ProyectosService {
       ['guachiman-1'],
       WebUrl.CCA,
       false,
-      moment("2023-02-01"),
+      dayjs("2023-02-01"),
       null,
       true
     ),
@@ -39,8 +40,8 @@ export class ProyectosService {
       ['ccafast-1', 'ccafast-2', 'ccafast-3', 'ccafast-4'],
       WebUrl.CCA,
       false,
-      moment("2022-07-01"),
-      moment("2023-02-01"),
+      dayjs("2022-07-01"),
+      dayjs("2023-02-01"),
       true
     ),
 
@@ -55,8 +56,8 @@ export class ProyectosService {
       ['autoservicio-1', 'autoservicio-2', 'autoservicio-3', 'autoservicio-4', 'autoservicio-5'],
       WebUrl.CENCOSUD,
       false,
-      moment("2022-02-01"),
-      moment("2022-06-30"),
+      dayjs("2022-02-01"),
+      dayjs("2022-06-30"),
       true
     ),
     new Proyecto(
@@ -70,8 +71,8 @@ export class ProyectosService {
       ['rentacar-1', 'rentacar-2', 'rentacar-3', 'rentacar-4'],
       WebUrl.GRUPOFIRMA,
       false,
-      moment("2021-05-01"),
-      moment("2022-01-31"),
+      dayjs("2021-05-01"),
+      dayjs("2022-01-31"),
       false
     ),
     new Proyecto(
@@ -85,8 +86,8 @@ export class ProyectosService {
       ['tesis-1'],
       WebUrl.UCM,
       false,
-      moment("2019-09-01"),
-      moment("2020-02-29"),
+      dayjs("2019-09-01"),
+      dayjs("2020-02-29"),
       false
     ),
   ]

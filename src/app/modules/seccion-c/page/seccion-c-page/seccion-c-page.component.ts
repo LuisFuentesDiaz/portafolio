@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-import { Proyecto } from 'src/app/core/models/proyecto';
 import { PantallaService } from 'src/app/core/util/pantalla.service';
-import * as moment from "moment";
 
 @Component({
   selector: 'app-seccion-c-page',
