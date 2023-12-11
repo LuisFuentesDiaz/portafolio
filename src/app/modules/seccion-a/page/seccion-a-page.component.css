@@ -22,10 +22,10 @@
   align-items: center;
 }
 
-@media(max-width: 400px) {
+@media (max-width: 400px) {
   .web-container-seccion-a {
     height: 100vh;
-    background-image: linear-gradient(to top, #0A17A7 -67%, black 73%);
+    background-image: linear-gradient(to top, #0a17a7 -67%, black 73%);
   }
 
   .info-cabecera {
@@ -33,10 +33,10 @@
   }
 }
 
-@media(min-width: 401px) {
+@media (min-width: 401px) {
   .container-seccion-a {
     z-index: -1;
-    background-image: linear-gradient(to top, #0A17A7 -67%, black 73%);
+    background-image: linear-gradient(to top, #0a17a7 -67%, black 73%);
     height: 70vh;
   }
 
