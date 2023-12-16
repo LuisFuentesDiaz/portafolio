@@ -20,5 +20,6 @@ export const TG = {
   EXPRESSJS: new Habilidad("express.png", "Express JS"),
   MICROSERVICIOS: new Habilidad("microservicios.png", "Microservicios"),
   POSTMAN: new Habilidad("postman.png", "Postman"),
-  APRIREST: new Habilidad("ApiRest.png", "Api Rest")
+  APRIREST: new Habilidad("ApiRest.png", "Api Rest"),
+  NULL: new Habilidad("null.png", "Limpiar")
 }

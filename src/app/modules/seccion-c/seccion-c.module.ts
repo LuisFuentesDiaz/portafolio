@@ -6,9 +6,10 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalProyectoComponent } from './components/modal-proyecto/modal-proyecto.component';
 import { TodoProyectoComponent } from './components/todo-proyecto/todo-proyecto.component';
+import { HabilidadesComponent } from '../habilidades/habilidades.component';
 
 @NgModule({
-  declarations: [SeccionCPageComponent, ModalProyectoComponent, TodoProyectoComponent],
+  declarations: [SeccionCPageComponent, ModalProyectoComponent, TodoProyectoComponent, HabilidadesComponent],
   imports: [
     CommonModule,
     SharedModule,

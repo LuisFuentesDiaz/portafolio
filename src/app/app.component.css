@@ -3,7 +3,7 @@
   background-color: #5b41b8;
 }
 
-.pTemaOScuro>p {
+.pTemaOScuro > p {
   color: lightgrey;
 }
 
@@ -12,20 +12,16 @@
   background-color: ghostwhite;
 }
 
-.pTemaClaro>p {
+.pTemaClaro > p {
   color: black;
 }
 
-
 #tabindex1 {
-  z-index: 0;
   position: relative;
 }
 
-
-
 .tab-index {
-  background-color: #050C56;
+  background-color: #050c56;
 }
 
 .estrellas {

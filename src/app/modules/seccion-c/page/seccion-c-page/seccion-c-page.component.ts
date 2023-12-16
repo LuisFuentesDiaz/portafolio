@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { Habilidad } from 'src/app/core/models';
 import { PantallaService } from 'src/app/core/util/pantalla.service';
 
 @Component({
@@ -11,6 +12,7 @@ export class SeccionCPageComponent {
 
   isMovil: boolean = false;
   verTodos: boolean = false;
+  filtro: Habilidad = null;
 
   constructor(private pantallaService: PantallaService, config: NgbCarouselConfig) {
     config.interval = 2400; // Intervalo de cambio de diapositivas en milisegundos (3 segundos en este ejemplo)
@@ -28,5 +30,11 @@ export class SeccionCPageComponent {
         this.isMovil = true;
       }
     })
+  }
+
+  filtrar(event): void {
+    console.log("filtrando", event);
+
+
   }
 }

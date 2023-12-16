@@ -1,10 +1,14 @@
-<div class="navbar " [style.top.px]="isScrollArriba === true ? '0' : '-50'">
-  <h5 (click)="focus('tabindex1')" type="button" class="item-navbar-local {{tabIndexVisible == 'tabindex1' ? 'scale' : 'noScale'}}">Inicio</h5>
-  <h5 (click)="focus('tabindex2')" type="button" class="item-navbar-local {{tabIndexVisible == 'tabindex2' ? 'scale' : 'noScale'}}">Sobre mí</h5>
-  <h5 (click)="focus('tabindex3')" type="button" class="item-navbar-local {{tabIndexVisible == 'tabindex3' ? 'scale' : 'noScale'}}">Proyectos</h5>
-  <h5 (click)="focus('tabindex4')" type="button" class="item-navbar-local {{tabIndexVisible == 'tabindex4' ? 'scale' : 'noScale'}}">Contacto</h5>
-
-  <div class="cambioTemaBtn">
-    <a data-bs-toggle="tooltip" aria-label="descargar CV" [style.color]="'ghostwhite'" data-bs-placement="bottom" data-bs-title="Tooltip on bottom" href="assets/cv/Luis_Felipe_Fuentes_Diaz_CV.pdf" target="_blank"><i style="font-size: 20px;" class="bi bi-download"></i> </a>
-  </div>
+<div class="navbar">
+  <ng-container>
+    <h5 (click)="focus('tabindex1')" type="button" class="item-movil item-navbar-local {{tabIndexVisible == 'tabindex1' ? 'scale' : 'noScale'}}"><i class="bi bi-house-door-fill"></i></h5>
+    <h5 (click)="focus('tabindex2')" type="button" class="item-movil item-navbar-local {{tabIndexVisible == 'tabindex2' ? 'scale' : 'noScale'}}"><i class="bi bi-file-person-fill"></i></h5>
+    <h5 (click)="focus('tabindex3')" type="button" class="item-movil item-navbar-local {{tabIndexVisible == 'tabindex3' ? 'scale' : 'noScale'}}"><i class="bi bi-briefcase-fill"></i></h5>
+    <h5 (click)="focus('tabindex4')" type="button" class="item-movil item-navbar-local {{tabIndexVisible == 'tabindex4' ? 'scale' : 'noScale'}}"><i class="bi bi-hammer"></i></h5>
+  </ng-container>
+  <ng-container>
+    <h5 (click)="focus('tabindex1')" type="button" class="item-web item-navbar-local {{tabIndexVisible == 'tabindex1' ? 'scale' : 'noScale'}}">Menu</h5>
+    <h5 (click)="focus('tabindex2')" type="button" class="item-web item-navbar-local {{tabIndexVisible == 'tabindex2' ? 'scale' : 'noScale'}}">Sobre Mí</h5>
+    <h5 (click)="focus('tabindex3')" type="button" class="item-web item-navbar-local {{tabIndexVisible == 'tabindex3' ? 'scale' : 'noScale'}}">Proyectos</h5>
+    <h5 (click)="focus('tabindex4')" type="button" class="item-web item-navbar-local {{tabIndexVisible == 'tabindex4' ? 'scale' : 'noScale'}}">Experiencia</h5>
+  </ng-container>
 </div>

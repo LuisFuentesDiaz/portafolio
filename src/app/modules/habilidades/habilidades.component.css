@@ -1,25 +1,50 @@
 .endurance-con-habilidades {
   display: flex;
   flex-wrap: wrap;
-  gap: 23px;
   align-items: center;
-  width: 100%;
-  height: 50%;
   justify-content: center;
-  animation: moverArribaAbajo 2.4s ease-in-out infinite;
-  filter: grayscale(1);
   z-index: 1;
 }
 
+.gray {
+  filter: grayscale(10);
+}
+
+@media (max-width: 400px) {
+  .endurance-con-habilidades {
+    height: 100%;
+    gap: 10px;
+    margin: auto;
+    width: 100%;
+    backdrop-filter: blur(4px);
+  }
+
+  .difuminado {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: gray;
+    opacity: 28%;
+    box-shadow: 0px 0px 37px 12px white;
+  }
+}
+
+@media (min-width: 400px) {
+  .endurance-con-habilidades {
+    animation: moverArribaAbajo 2.4s ease-in-out infinite;
+    width: 70%;
+    margin: auto;
+    gap: 23px;
+  }
+}
 
 @keyframes moverArribaAbajo {
-
   0%,
   100% {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
   }
 
   50% {
-    transform: translateY(10px);
+    transform: translateY(5px);
   }
 }

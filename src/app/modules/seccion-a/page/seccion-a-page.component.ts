@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TG } from 'src/app/core/const/tipos-habilidades';
 import { PantallaService } from 'src/app/core/util/pantalla.service';
 
 @Component({
@@ -9,6 +10,7 @@ import { PantallaService } from 'src/app/core/util/pantalla.service';
 export class SeccionAPageComponent implements OnInit {
 
   isMovil: boolean = false;
+  Habilidad = TG;
 
   constructor(private pantallaService: PantallaService) { }
 

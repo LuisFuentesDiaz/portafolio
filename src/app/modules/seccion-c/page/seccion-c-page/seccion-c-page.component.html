@@ -1,34 +1,4 @@
-<!--<ng-container *ngIf="!isMovil">
-  <article class="web-articulo-seccion-c  color-secundario-fondo">
-    <div class="difuminado"></div>
-
-    <section class="row web-seccion-seccion-c seccion-seccion-c container ">
-      <div class="text-center">
-        <h1> Proyectos Recientes</h1>
-      </div>
-      <app-proyectos-recientes [isMovil]="isMovil"></app-proyectos-recientes>
-      <div class="contenedor-masMenos-proyectos">
-        <i *ngIf="!verTodos" class="bi bi-plus-circle masMenosProyectos" (click)="verTodos = !verTodos"></i>
-        <i *ngIf="verTodos" class="bi bi-dash-circle masMenosProyectos" (click)="verTodos = !verTodos"></i>
-      </div>
-      <app-todo-proyecto [isMovil]="isMovil" *ngIf="verTodos"></app-todo-proyecto>
-    </section>
-  </article>
-</ng-container>
-
-<ng-container *ngIf="isMovil">
-  <article class="col-12 movil-articulo-seccion-c">
-    <div class="row" style="justify-content: center; padding: 0%; margin: 0%; width: 100%;">
-      <h1 class="col-12" style="width: 80%; max-width: 500px; min-width: 250px;"> Proyectos </h1>
-      <app-proyectos-recientes [isMovil]="isMovil"></app-proyectos-recientes>
-      <div class="contenedor-masMenos-proyectos">
-        <i *ngIf="!verTodos" class="bi bi-plus-circle masMenosProyectos" (click)="verTodos = !verTodos"></i>
-        <i *ngIf="verTodos" class="bi bi-dash-circle masMenosProyectos" (click)="verTodos = !verTodos"></i>
-      </div>
-      <app-todo-proyecto [isMovil]="isMovil" *ngIf="verTodos"></app-todo-proyecto>
-    </div>
-  </article>
-</ng-container> -->
+<app-habilidades (filtro)="filtro=$event"></app-habilidades>
 
 <ng-container>
   <article>
@@ -37,8 +7,7 @@
       <div class="row">
         <h1>Proyectos</h1>
       </div>
-
-      <app-todo-proyecto [isMovil]=false></app-todo-proyecto>
+      <app-todo-proyecto [filtro]="filtro" [isMovil]=false></app-todo-proyecto>
     </section>
   </article>
 </ng-container>

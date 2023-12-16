@@ -17,7 +17,7 @@ import { SeccionDModule } from './modules/seccion-d/seccion-d.module';
 
 @NgModule({
   declarations: [
-    AppComponent, DownAndUpComponent, NavbarComponent, FooterComponent, HabilidadesComponent, CvComponent
+    AppComponent, DownAndUpComponent, NavbarComponent, FooterComponent, CvComponent
   ],
   imports: [
     BrowserModule,
