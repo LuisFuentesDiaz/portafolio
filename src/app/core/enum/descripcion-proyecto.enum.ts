@@ -22,6 +22,9 @@ export enum DescripcionProyecto {
   Desarrollado con Angular y Spring Boot, permite registrar y gestionar las debilidades identificadas en este proceso.
  Con módulos para registro, aprobación y estadísticas, el SE facilita la identificación de falencias,
  su revisión por roles específicos y proporciona datos para mejorar la calidad educativa.
- El objetivo principal es centralizar y agilizar la gestión de falencias, usando tecnologías modernas y garantizando la seguridad de los datos.`
+ El objetivo principal es centralizar y agilizar la gestión de falencias, usando tecnologías modernas y garantizando la seguridad de los datos.`,
+
+  PORTAFOLIO = `Mi portafolio personal es más que una simple exhibición de trabajos; es el reflejo de mi pasión por la programación y el desarrollo web.
+  Desarrollado meticulosamente con Angular 16, HTML, CSS y potenciado con Bootstrap`
 
 }

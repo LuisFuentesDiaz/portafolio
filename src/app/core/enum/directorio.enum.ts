@@ -21,4 +21,5 @@ export enum UrlGRUPOFIRMA {
 
 export enum UrlPERSONAL {
   TESIS = `${ProyectoDirectorioBase.PERSONAL}tesis/`,
+  PORTAFOLIO = `${ProyectoDirectorioBase.PERSONAL}portafolio/`,
 }

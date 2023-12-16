@@ -4,7 +4,7 @@ export const TG = {
   ANGULAR: new Habilidad("angular.png", "Angular"),
   SPRINGBOOT: new Habilidad("spring.png", "Spring Boot"),
   JAVASCRIPT: new Habilidad("js.png", "JavaScript"),
-  TYPESCRIPT: new Habilidad("ts.png", "TypeSCript"),
+  TYPESCRIPT: new Habilidad("ts.png", "TypeScript"),
   JAVA: new Habilidad("java.png", "Java"),
   REACTJS: new Habilidad("react.png", "React JS"),
   GIT: new Habilidad("git.png", "Git"),
@@ -21,5 +21,8 @@ export const TG = {
   MICROSERVICIOS: new Habilidad("microservicios.png", "Microservicios"),
   POSTMAN: new Habilidad("postman.png", "Postman"),
   APRIREST: new Habilidad("ApiRest.png", "Api Rest"),
+  BOOTSTRAP: new Habilidad("Bootstrap.png", "Bootstrap"),
+  HTML: new Habilidad("html.png", "HTML"),
+  CSS: new Habilidad("css.png", "CSS"),
   NULL: new Habilidad("null.png", "Limpiar")
 }

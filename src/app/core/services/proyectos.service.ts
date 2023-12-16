@@ -90,6 +90,21 @@ export class ProyectosService {
       dayjs("2020-02-29"),
       false
     ),
+    new Proyecto(
+      "Portafolio",
+      false,
+      "Sin Consultora",
+      "",
+      [TG.ANGULAR, TG.TYPESCRIPT, TG.CSS, TG.HTML, TG.BOOTSTRAP],
+      DescripcionProyecto.TESIS,
+      UrlPERSONAL.PORTAFOLIO,
+      ['portafolio-1', 'portafolio-2', 'portafolio-3', 'portafolio-4'],
+      WebUrl.UCM,
+      false,
+      dayjs("2023-10-18"),
+      dayjs("2020-11-25"),
+      false
+    ),
   ]
 
   getProyectos() {
