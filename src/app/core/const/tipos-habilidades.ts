@@ -21,7 +21,7 @@ export const TG = {
   MICROSERVICIOS: new Habilidad("microservicios.png", "Microservicios"),
   POSTMAN: new Habilidad("postman.png", "Postman"),
   APRIREST: new Habilidad("ApiRest.png", "Api Rest"),
-  BOOTSTRAP: new Habilidad("Bootstrap.png", "Bootstrap"),
+  BOOTSTRAP: new Habilidad("bootstrap.png", "Bootstrap"),
   HTML: new Habilidad("html.png", "HTML"),
   CSS: new Habilidad("css.png", "CSS"),
   NULL: new Habilidad("null.png", "Limpiar")

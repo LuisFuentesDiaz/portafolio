@@ -93,14 +93,14 @@ export class ProyectosService {
     new Proyecto(
       "Portafolio",
       false,
-      "Sin Consultora",
-      "",
+      null,
+      null,
       [TG.ANGULAR, TG.TYPESCRIPT, TG.CSS, TG.HTML, TG.BOOTSTRAP],
       DescripcionProyecto.TESIS,
       UrlPERSONAL.PORTAFOLIO,
       ['portafolio-1', 'portafolio-2', 'portafolio-3', 'portafolio-4'],
-      WebUrl.UCM,
-      false,
+      null,
+      "https://github.com/LuisFuentesDiaz/portafolio.git",
       dayjs("2023-10-18"),
       dayjs("2020-11-25"),
       false

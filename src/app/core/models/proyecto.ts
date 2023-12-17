@@ -11,14 +11,14 @@ export class Proyecto {
   urlBaseImg: string;
   capturas: string[];
   url: string;
-  codigoAbierto: boolean;
+  codigoAbierto: any;
   inicio: dayjs.Dayjs;
   termino: dayjs.Dayjs;
   duracionFecha: Number;
   isReciente: boolean;
 
   constructor(nombre: string, dependiente: boolean, consultora: string, empresa: string, tecnologias: Habilidad[], informacion: string,
-    urlBaseImg: string, capturas: string[], url: string, codigoAbierto: boolean, inicio: dayjs.Dayjs, termino: dayjs.Dayjs, isReciente: boolean) {
+    urlBaseImg: string, capturas: string[], url: string, codigoAbierto: any, inicio: dayjs.Dayjs, termino: dayjs.Dayjs, isReciente: boolean) {
     this.nombre = nombre;
     this.dependiente = dependiente;
     this.consultora = consultora;

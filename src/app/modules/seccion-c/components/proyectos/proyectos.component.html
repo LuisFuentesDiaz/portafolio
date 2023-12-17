@@ -6,9 +6,16 @@
         Frontal
       </div>
       <div class="card-back" id="card-back{{id}}">
-        <div id="web-disponibilidad{{id}}" class="contenedor-disponibilidad-proyecto" [style.color]="data.codigoAbierto ? 'green' : 'red'">
-          <i class="bi bi-exclamation-circle-fill" ngbTooltip="Privado" *ngIf="!data.codigoAbierto"></i>
-          <i class="bi bi-info-circle-fill" ngbTooltip="Abierto" *ngIf="data.codigoAbierto"></i>
+        <div id="web-disponibilidad{{id}}" [ngSwitch]="data.codigoAbierto" class="contenedor-disponibilidad-proyecto" [style.color]="data.codigoAbierto ? 'green' : 'red'">
+          <ng-container *ngSwitchCase="false">
+            <i class="bi bi-exclamation-circle-fill" ngbTooltip="Privado"></i>
+          </ng-container>
+
+          <ng-container *ngSwitchDefault>
+            <a [href]="data.codigoAbierto" target="_blank">
+              <i class="bi bi-box-arrow-up-right grab" ngbTooltip="Abierto"></i>
+            </a>
+          </ng-container>
         </div>
         <i class="bi bi-fullscreen icono-ampliar " (click)="openModal()"></i>
         <div class="col-12 row pb-2" style="margin: auto; bottom: 0%; position: absolute;">

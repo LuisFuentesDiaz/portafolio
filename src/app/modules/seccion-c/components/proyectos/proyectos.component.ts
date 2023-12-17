@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Proyecto } from 'src/app/core/models/proyecto';
 import { PantallaService } from 'src/app/core/util/pantalla.service';
 import { Habilidad } from 'src/app/core/models/habilidad';
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalProyectoComponent } from '../modal-proyecto/modal-proyecto.component';
@@ -12,7 +12,7 @@ import { ModalProyectoComponent } from '../modal-proyecto/modal-proyecto.compone
   templateUrl: './proyectos.component.html',
   styleUrls: ['./proyectos.component.css'],
   standalone: true,
-  imports: [NgFor, NgIf, SharedModule, NgbModule]
+  imports: [NgFor, NgIf, SharedModule, NgbModule, NgSwitch, NgSwitchCase, NgSwitchDefault]
 })
 export class ProyectosComponent implements OnInit {
 

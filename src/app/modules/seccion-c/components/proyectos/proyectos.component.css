@@ -61,6 +61,7 @@ img {
   display: none;
   z-index: 4;
   font-size: 1.5rem;
+  top: 0;
 }
 
 .icono-ampliar {
