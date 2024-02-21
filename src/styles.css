@@ -13,32 +13,24 @@ body {
 
 .subTitulo-tema-iscuro {
   color: lightgrey;
-  font-family: 'Graduate', serif;
+  font-family: "Graduate", serif;
 }
 
 .subTitulo-tema-claro {
   color: black;
-  font-family: 'Graduate', serif;
+  font-family: "Graduate", serif;
 }
 
-@media(max-width: 400px) {
+@media (max-width: 400px) {
   .subTituloNormal {
     font-size: 1rem;
   }
 }
 
-@media(min-width: 401px) {
+@media (min-width: 401px) {
   .subTituloNormal {
     font-size: 1.2rem;
   }
-}
-
-.color-secundario-fondo-claro {
-  background-color: ghostwhite;
-}
-
-.color-secundario-fondo-iscuro {
-  background-color: #5b41b8;
 }
 
 ::-webkit-scrollbar {
@@ -52,4 +44,26 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: #888;
   border-radius: 5px;
+}
+
+h1 {
+  font-family: "Graduate", serif;
+  margin-bottom: 5px;
+  font-weight: bold;
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+.filtro-gray {
+  filter: grayscale(10);
+}
+
+@keyframes moverArribaAbajo {
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
 }

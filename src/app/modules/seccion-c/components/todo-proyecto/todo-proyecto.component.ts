@@ -1,7 +1,7 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Habilidad } from 'src/app/core/models';
-import { Proyecto } from 'src/app/core/models/proyecto';
-import { ProyectosService } from 'src/app/core/services/proyectos.service';
+import { Proyecto } from 'src/app/core/models';
+import { ProyectosService } from 'src/app/core/services';
 
 @Component({
   selector: 'app-todo-proyecto',

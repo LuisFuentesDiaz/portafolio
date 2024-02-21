@@ -37,14 +37,3 @@
     gap: 23px;
   }
 }
-
-@keyframes moverArribaAbajo {
-  0%,
-  100% {
-    transform: translateY(-15px);
-  }
-
-  50% {
-    transform: translateY(5px);
-  }
-}

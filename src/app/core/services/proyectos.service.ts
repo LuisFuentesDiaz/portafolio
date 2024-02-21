@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Proyecto } from '../models/proyecto';
+import { Proyecto } from '../models';
 import { TG } from 'src/app/core/const/tipos-habilidades';
-import { DescripcionProyecto } from '../enum/descripcion-proyecto.enum';
-import { UrlCCA, UrlCENCOSUD, UrlGRUPOFIRMA, UrlPERSONAL } from '../enum/directorio.enum';
-import { WebUrl } from '../enum/web-url.enum';
+import { DescripcionProyecto } from '../enum';
+import { UrlCCA, UrlCENCOSUD, UrlGRUPOFIRMA, UrlPERSONAL } from '../enum';
+import { WebUrl } from '../enum';
 import * as dayjs from 'dayjs';
 
 

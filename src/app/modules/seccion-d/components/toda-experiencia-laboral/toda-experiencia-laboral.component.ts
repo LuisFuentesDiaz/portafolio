@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Experiencia } from 'src/app/core/models';
-import { ExperienciaLaboralDataService } from 'src/app/core/services/experienciaLaboralData.service';
+import { ExperienciaLaboralDataService } from 'src/app/core/services';
 
 @Component({
   selector: 'app-toda-experiencia-laboral',

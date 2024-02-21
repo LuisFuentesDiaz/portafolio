@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Experiencia } from '../models/experiencia';
-import { Cargo } from '../enum/cargo.enum';
-import { Rubro } from '../enum/rubro.enum';
+import { Experiencia } from '../models';
+import { Cargo } from '../enum';
+import { Rubro } from '../enum';
 import * as dayjs from 'dayjs';
 
 @Injectable({

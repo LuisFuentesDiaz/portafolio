@@ -13,6 +13,7 @@ import { HabilidadesComponent } from './modules/habilidades/habilidades.componen
 import { CvComponent } from './modules/cv/cv.component';
 import { NavbarComponent } from './modules/navbar/navbar.component';
 import { SeccionDModule } from './modules/seccion-d/seccion-d.module';
+import { SeccionEModule } from './modules/seccion-e/seccion-e.module';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { SeccionDModule } from './modules/seccion-d/seccion-d.module';
     SeccionBModule,
     SeccionCModule,
     SharedModule,
-    SeccionDModule
+    SeccionDModule,
+    SeccionEModule
   ],
   providers: [
 

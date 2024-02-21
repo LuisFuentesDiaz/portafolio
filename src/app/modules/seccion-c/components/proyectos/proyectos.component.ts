@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Proyecto } from 'src/app/core/models/proyecto';
+import { Proyecto } from 'src/app/core/models';
 import { PantallaService } from 'src/app/core/util/pantalla.service';
-import { Habilidad } from 'src/app/core/models/habilidad';
+import { Habilidad } from 'src/app/core/models';
 import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';

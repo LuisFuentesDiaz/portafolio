@@ -1,6 +1,6 @@
 import * as dayjs from 'dayjs';
-import { Cargo } from "../enum/cargo.enum";
-import { Rubro } from "../enum/rubro.enum";
+import { Cargo } from "../enum";
+import { Rubro } from "../enum";
 export class Experiencia {
   nombre: string;
   inicio: dayjs.Dayjs;

@@ -1,7 +1,6 @@
 .btn-custom {
   border-radius: 25px;
   background-color: ghostwhite;
-  animation: moverArribaAbajo 2.4s ease-in-out infinite;
   transition: transform 0.3s;
 }
 
@@ -14,6 +13,7 @@
   display: flex;
   flex-flow: row;
   flex-direction: column;
+  animation: moverArribaAbajo 2.4s ease-in-out infinite;
 }
 
 .btn-custom:hover {
@@ -58,16 +58,5 @@
   .btn-custom {
     width: 40%;
     height: 40px;
-  }
-}
-
-@keyframes moverArribaAbajo {
-  0%,
-  100% {
-    transform: translateY(-10px);
-  }
-
-  50% {
-    transform: translateY(10px);
   }
 }

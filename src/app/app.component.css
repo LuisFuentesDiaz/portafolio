@@ -1,21 +1,3 @@
-.pTemaOScuro {
-  color: lightgrey;
-  background-color: #5b41b8;
-}
-
-.pTemaOScuro > p {
-  color: lightgrey;
-}
-
-.pTemaClaro {
-  color: black;
-  background-color: ghostwhite;
-}
-
-.pTemaClaro > p {
-  color: black;
-}
-
 #tabindex1 {
   position: relative;
 }

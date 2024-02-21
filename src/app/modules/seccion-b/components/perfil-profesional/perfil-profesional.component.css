@@ -1,10 +1,10 @@
-.perfilProfesional>p {
-  font-family: 'Playfair Display';
+.perfilProfesional > p {
+  font-family: "Playfair Display";
   text-align: center;
 }
 
-@media(max-width:400px) {
-  .perfilProfesional>p {
+@media (max-width: 400px) {
+  .perfilProfesional > p {
     font-size: 1rem;
     text-align: justify;
   }
@@ -14,17 +14,9 @@
   }
 }
 
-@media(min-width:401px) {
-  .perfilProfesional>p {
+@media (min-width: 401px) {
+  .perfilProfesional > p {
     font-size: 1rem;
     text-align: justify;
-
   }
-}
-
-h1 {
-  font-family: 'Graduate', serif;
-  margin-bottom: 20px;
-  font-weight: bold;
-  filter: drop-shadow(2px 4px 6px black);
 }

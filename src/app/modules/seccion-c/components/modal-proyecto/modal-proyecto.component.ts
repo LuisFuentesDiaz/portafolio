@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Proyecto } from 'src/app/core/models/proyecto';
+import { Proyecto } from 'src/app/core/models';
 import { NgbActiveModal, NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-import { Habilidad } from 'src/app/core/models/habilidad';
+import { Habilidad } from 'src/app/core/models';
 
 @Component({
   selector: 'app-modal-proyecto',

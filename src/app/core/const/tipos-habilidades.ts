@@ -1,4 +1,4 @@
-import { Habilidad } from "../models/habilidad";
+import { Habilidad } from "../models";
 
 export const TG = {
   ANGULAR: new Habilidad("angular.png", "Angular"),

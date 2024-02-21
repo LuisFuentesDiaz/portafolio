@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, Renderer2, AfterViewInit } from '@angular/core';
-import { Habilidad } from 'src/app/core/models/habilidad';
+import { Habilidad } from 'src/app/core/models';
 
 @Component({
   selector: 'app-icono-skill',
