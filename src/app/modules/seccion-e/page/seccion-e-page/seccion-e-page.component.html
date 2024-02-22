@@ -1,10 +1,23 @@
-<app-habilidades-endurance></app-habilidades-endurance>
+<app-habilidades-endurance direccion="left">
+  <div class="container-text-footer">
+    <div class="contenedor-contacto">
+      <h1>Contacto</h1>
+      <div class="iconos-contacto">
+        <a href="a"><img width="80px" class="filtro-gray" src="assets/instagram.png" alt="instagram"></a>
+
+        <a href="https://www.linkedin.com/in/luis-felipe-fuentes-díaz" target="_blank"> <img width="80px" class="filtro-gray" src="assets/linkedin.png" alt="LinkedIn"> </a>
+      </div>
+    </div>
+  </div>
+</app-habilidades-endurance>
 <article>
   <div class="difuminado"></div>
   <section>
     <h1>Certificaciones</h1>
     <div class="certificaciones">
-      <app-certificaciones url="https://cursos.desafiolatam.com/certificates/ef1dm1wove" nombre="Bases de Git y Github" certificado="git_y_github_17-12-2023.png"></app-certificaciones>
+      <app-certificaciones url="https://cursos.desafiolatam.com/certificates/ef1dm1wove" [habilidad]="[tg.GIT, tg.GITHUB]" nombre="Bases de Git y Github" certificado="git_y_github_17-12-2023.png"></app-certificaciones>
+      <app-certificaciones url="https://superskill.pro/diploma/5okXTSDLd2_q6mjDMJkubPV3f81dUG-f" [habilidad]="[tg.ANGULAR]" nombre="Angular Inicial" certificado="certificacion_angular_inicial.png"></app-certificaciones>
+      <app-certificaciones url="https://superskill.pro/diploma/VdGEfIqsvIvO2jEIcUBz7mSD5A8BAJ57" [habilidad]="[tg.TYPESCRIPT]" nombre="TypeScript Inicial" certificado="certificacion_typescript_inicial.png"></app-certificaciones>
     </div>
   </section>
 </article>

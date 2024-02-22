@@ -3,6 +3,7 @@
   position: relative;
   width: 100%;
   min-height: 500px;
+  z-index: 2;
 }
 
 .contenedor-img-seccion-a {
@@ -11,7 +12,7 @@
   justify-content: center;
   display: flex;
   align-items: center;
-  z-index: 1;
+  z-index: 2;
 }
 
 .fotoPersonal {
@@ -75,7 +76,6 @@ h1 {
 @media (max-width: 550px) {
   .container-seccion-a {
     height: 100vh;
-    background-image: linear-gradient(to top, #0a17a7 -67%, black 73%);
   }
 
   h1 {
@@ -100,7 +100,6 @@ h1 {
 
 @media (min-width: 551px) {
   .container-seccion-a {
-    background-image: linear-gradient(to top, #0a17a7 -67%, black 73%);
     height: 70vh;
   }
 

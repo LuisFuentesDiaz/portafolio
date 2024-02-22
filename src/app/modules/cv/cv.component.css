@@ -29,11 +29,20 @@
   background-color: ghostwhite;
 }
 
+h1 {
+  font-family: "Graduate", serif;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  filter: drop-shadow(2px 4px 6px black);
+  color: ghostwhite;
+}
+
 @media (max-width: 400px) {
   .contenedor-cv {
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(1px);
   }
   .btn-custom {
     width: 30%;

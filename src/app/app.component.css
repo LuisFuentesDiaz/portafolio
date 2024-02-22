@@ -1,5 +1,15 @@
 #tabindex1 {
   position: relative;
+  background-image: linear-gradient(to top, #0a17a7 -67%, black 73%);
+}
+
+@media (max-width: 600px) {
+  #tabindex5 {
+    margin-bottom: 49px;
+  }
+}
+
+@media (min-width: 551px) {
 }
 
 .tab-index {

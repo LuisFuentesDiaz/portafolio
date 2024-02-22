@@ -1,7 +1,7 @@
 footer {
   width: 100%;
   position: relative;
-  height: 50vh;
+  height: 25vh;
   background-color: #050c56;
   align-items: center;
   display: flex;
@@ -58,6 +58,9 @@ h1 {
 @media (max-width: 600px) {
   .container-text-footer {
     font-size: 0.6rem;
+  }
+  footer {
+    display: none;
   }
 }
 

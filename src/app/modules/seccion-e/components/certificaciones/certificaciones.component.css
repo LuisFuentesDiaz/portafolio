@@ -1,24 +1,33 @@
 .contenedor-certificado {
-  width: 25%;
+  width: 100%;
   position: relative;
   z-index: 1;
   transition: transform 0.3s;
-}
-
-.certificado-img {
-  position: relative;
-  width: 100%;
+  filter: drop-shadow(2px 4px 6px black);
 }
 
 .marco-certificado {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 230px;
+  height: 170px;
   top: 0;
   left: 0;
   z-index: 1;
+  filter: grayscale(1);
+}
+.certificado-img {
+  filter: grayscale(1);
 }
 
 .contenedor-certificado:hover {
   transform: scale(1.1);
+  z-index: 4;
+}
+
+.habilidades {
+  display: flex;
+  bottom: -10%;
+  right: -10%;
+  position: absolute;
+  z-index: 5;
 }

@@ -24,7 +24,7 @@
   color: ghostwhite;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .item-navbar-local {
     font-size: 1.5rem;
   }
@@ -42,7 +42,7 @@
   }
 }
 
-@media (min-width: 451px) {
+@media (min-width: 600px) {
   .navbar > ul:hover {
     transform: scale(1.2);
   }
