@@ -75,7 +75,7 @@ section {
   font-size: 2rem;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 10%;
+  gap: 5%;
 }
 
 .container-text-footer {

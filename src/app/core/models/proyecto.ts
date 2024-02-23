@@ -16,6 +16,7 @@ export class Proyecto {
   termino: dayjs.Dayjs;
   duracionFecha: Number;
   isReciente: boolean;
+  extension: string;
 
   constructor(nombre: string, dependiente: boolean, consultora: string, empresa: string, tecnologias: Habilidad[], informacion: string,
     urlBaseImg: string, capturas: string[], url: string, codigoAbierto: any, inicio: dayjs.Dayjs, termino: dayjs.Dayjs, isReciente: boolean) {
@@ -33,6 +34,7 @@ export class Proyecto {
     this.termino = termino;
     this.calcularDuracion(inicio, termino);
     this.isReciente = isReciente;
+    this.extension = ".jpg";
   }
 
 
