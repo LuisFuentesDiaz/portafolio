@@ -67,7 +67,7 @@ h1 {
 }
 
 .subtituloCabecera {
-  color: #656faf;
+  color: whitesmoke;
   font-family: "Graduate", serif;
   margin-bottom: 5%;
   font-size: 1.1rem;
@@ -90,6 +90,15 @@ h1 {
   .contenedor-info-seccion-a {
     top: -5vh;
   }
+  .aurora {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    rotate: 10deg;
+    opacity: 70%;
+    filter: blur(20px);
+  }
 }
 
 @media (min-width: 1001px) {
@@ -106,5 +115,16 @@ h1 {
   h1 {
     margin-top: 5px;
     font-size: 3.5rem;
+  }
+
+  .aurora {
+    position: absolute;
+    z-index: 0;
+    width: 80vw;
+    height: 80%;
+    top: 15%;
+    left: 10%;
+    opacity: 70%;
+    filter: blur(20px);
   }
 }
