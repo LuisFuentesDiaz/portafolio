@@ -4,10 +4,11 @@ import { SeccionEPageComponent } from './page/seccion-e-page/seccion-e-page.comp
 import { SharedModule } from 'src/app/shared/shared.module';
 import { CertificacionesComponent } from './components/certificaciones/certificaciones.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CopiadoDirective } from 'src/app/core/directive';
 
 @NgModule({
   imports: [
-    CommonModule, SharedModule, NgbModule
+    CommonModule, SharedModule, NgbModule, CopiadoDirective
   ],
   declarations: [SeccionEPageComponent, CertificacionesComponent],
   exports: [SeccionEPageComponent]

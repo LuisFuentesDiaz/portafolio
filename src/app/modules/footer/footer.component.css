@@ -2,10 +2,11 @@ footer {
   width: 100%;
   position: relative;
   height: 25vh;
-  background-color: #050c56;
   align-items: center;
   display: flex;
   color: white;
+  z-index: 0;
+  background-color: inherit;
 }
 
 p {

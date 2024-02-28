@@ -1,6 +1,6 @@
 #tabindex1 {
   position: relative;
-  background-image: linear-gradient(to top, #0a17a7 -67%, black 73%);
+  background-image: linear-gradient(to top, #0a17a7 -67%, black 30%);
 }
 
 @media (max-width: 600px) {
@@ -34,8 +34,9 @@
   }
 }
 
-.tab-index {
-  background-color: #050c56;
+.tab-index,
+.fondoGlobal {
+  background-color: #030731;
 }
 
 .estrellas {

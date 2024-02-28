@@ -14,6 +14,7 @@ import { CvComponent } from './modules/cv/cv.component';
 import { NavbarComponent } from './modules/navbar/navbar.component';
 import { SeccionDModule } from './modules/seccion-d/seccion-d.module';
 import { SeccionEModule } from './modules/seccion-e/seccion-e.module';
+import { CopiadoDirective } from './core/directive/tooltips/copiado/copiado.directive';
 
 
 @NgModule({

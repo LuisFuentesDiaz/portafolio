@@ -14,16 +14,5 @@ export class HabilidadesEnduranceComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    switch (this.direccion) {
-      case "right":
-        this.gradient = "linear-gradient(to right, rgb(5, 12, 86) 11%, black 55%, rgb(5, 12, 86) 91%)";
-        break;
-      case "left":
-        this.gradient = "linear-gradient(to right, rgb(5, 12, 86) 11%, black 55%, rgb(5, 12, 86) 91%)";
-        break;
-      default:
-        this.gradient = "linear-gradient(to right, rgb(5, 12, 86) 11%, black 55%, rgb(5, 12, 86) 91%)";
-        break;
-    }
   }
 }

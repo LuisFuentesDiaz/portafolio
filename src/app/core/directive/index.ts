@@ -1,1 +1,1 @@
-export * from './animacion'
+export * from './tooltips'
