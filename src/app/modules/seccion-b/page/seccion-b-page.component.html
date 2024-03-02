@@ -8,8 +8,7 @@
 
 <article *ngIf="isMovil" class="movil-articulo-seccion-b articulo-seccion-b {{isTemaOscuro ? 'box-shadow-tema-oscuro':'box-shadow-tema-claro'}}">
   <div class="difuminado"></div>
-  <section class="movil-seccion-seccion-b seccion-seccion-b container">
-    <app-foto-personal *ngIf="!isMovil" class="col foto personal"></app-foto-personal>
-    <app-perfil-profesional class="perfilProfesionalApp col-perfil-profesional"></app-perfil-profesional>
+  <section class="movil-seccion-seccion-b seccion-seccion-b">
+    <app-perfil-profesional></app-perfil-profesional>
   </section>
 </article>
