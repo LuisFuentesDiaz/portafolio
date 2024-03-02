@@ -19,6 +19,7 @@ article {
   background-color: gray;
   opacity: 28%;
   z-index: 1;
+  border-radius: 20px;
 }
 
 .certificaciones {

@@ -21,6 +21,11 @@
   .foto personal {
     margin-bottom: 10%;
   }
+  .difuminado {
+    border-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
 }
 
 @media (min-width: 1001px) {
@@ -44,6 +49,7 @@
 
   .difuminado {
     box-shadow: 0px 0px 37px 12px white;
+    border-radius: 20px;
   }
 }
 

@@ -23,6 +23,7 @@ section {
   position: absolute;
   background-color: gray;
   opacity: 28%;
+  border-radius: 20px;
 }
 
 h1 {

@@ -27,8 +27,8 @@
   position: absolute;
   z-index: 2;
   filter: opacity(0.5);
-  width: 40vh;
-  max-width: 40vh;
+  width: 50vw;
+  max-width: 389px;
   min-width: 290px;
 }
 

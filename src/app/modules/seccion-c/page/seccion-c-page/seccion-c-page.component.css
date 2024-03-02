@@ -40,6 +40,11 @@ h1 {
   article {
     width: 100%;
   }
+  .difuminado {
+    border-radius: 20px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -65,5 +70,6 @@ h1 {
 
   .difuminado {
     box-shadow: 0px 0px 37px 12px white;
+    border-radius: 20px;
   }
 }
