@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { TG } from 'src/app/core/const/tipos-habilidades';
+import { WebUrl } from 'src/app/core/enum';
 
 @Component({
   selector: 'app-seccion-e-page',
@@ -10,6 +11,7 @@ export class SeccionEPageComponent implements AfterViewInit {
   // @ViewChild('gmail', { static: false }) gmailContacto: ElementRef;
 
   tg = TG;
+  wbURLEnum = WebUrl
   constructor() { }
 
   ngAfterViewInit() {

@@ -11,7 +11,7 @@ export class EstrellasComponent implements OnInit {
   @Input() maxTamaño: string = "5";
   @Input() estrellas = 150;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
     let win = this;

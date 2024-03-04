@@ -1,22 +1,20 @@
-import { HostListener, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PantallaService {
+  ultimoTabIndexEnPantalla = null;
 
   public resolucion = new BehaviorSubject<any>({ resolucion: window.innerWidth });//Retorna cualquier cambio en la resolucion
-  public direccionScroll = new BehaviorSubject<any>({ scrollArriba: true });//Retorna la direccion en la que se ejecuta el scroll
   public tabIndexVisible = new BehaviorSubject<any>({ tabId: 'tabindex1' });//retorna el elemento tabIndex que se esta mostrando actualmente
-
 
   constructor() {
     this.tabIndexEnPantalla();
 
     //Este evento se ejecutara con cualquier movimiento del scroll
     window.addEventListener('scroll', () => {
-      this.scrollDirection();
       this.tabIndexEnPantalla();
     });
 
@@ -26,27 +24,6 @@ export class PantallaService {
     });
   }
 
-
-
-  ultimoScrollPosicion = window.scrollY;
-  isUltimoScrollArriba = null;
-  scrollDirection() {
-    const actualScrollPosicion = window.scrollY;
-    if (actualScrollPosicion > this.ultimoScrollPosicion) {
-      if (this.isUltimoScrollArriba || this.isUltimoScrollArriba == null) {
-        this.direccionScroll.next({ scrollArriba: false });
-        this.isUltimoScrollArriba = false;
-      }
-    } else if (actualScrollPosicion < this.ultimoScrollPosicion) {
-      if (!this.isUltimoScrollArriba || this.isUltimoScrollArriba == null) {
-        this.direccionScroll.next({ scrollArriba: true });
-        this.isUltimoScrollArriba = true;
-      }
-    }
-    this.ultimoScrollPosicion = actualScrollPosicion;
-  }
-
-  ultimoTabIndexEnPantalla = null;
   tabIndexEnPantalla() {
     let elementosTabIndex = document.querySelectorAll('.tab-index');
     if (elementosTabIndex.length > 0) {
