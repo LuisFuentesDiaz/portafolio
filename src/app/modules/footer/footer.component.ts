@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TemaWebService } from 'src/app/core/util/temaWeb.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,14 +7,10 @@ import { TemaWebService } from 'src/app/core/util/temaWeb.service';
 })
 export class FooterComponent implements OnInit {
 
-  isTemaOscuro: boolean = false;
-
-  constructor(public temaWeb: TemaWebService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.temaWeb.isTemaOscuro.subscribe(e => {
-      this.isTemaOscuro = e;
-    })
+
   }
 
 }

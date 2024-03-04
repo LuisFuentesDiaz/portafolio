@@ -1,6 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { PantallaService } from 'src/app/core/util/pantalla.service';
-import { TemaWebService } from 'src/app/core/util/temaWeb.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +8,7 @@ import { TemaWebService } from 'src/app/core/util/temaWeb.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(public pantalla: PantallaService, public temaWebService: TemaWebService) { }
+  constructor(public pantalla: PantallaService) { }
   tabIndexVisible: string = 'tabIndex1';
   ngOnInit() {
     this.pantalla.tabIndexVisible.subscribe(e => {
