@@ -53,11 +53,7 @@
 }
 
 h1 {
-  font-family: "Graduate", serif;
-  margin-bottom: 20px;
-  font-weight: bold;
-  filter: drop-shadow(2px 4px 6px black);
-  color: black;
+  color: black !important;
 }
 
 @media (max-width: 400px) {

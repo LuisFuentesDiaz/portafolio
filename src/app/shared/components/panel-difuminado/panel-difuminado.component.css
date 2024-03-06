@@ -1,0 +1,29 @@
+@media (max-width: 1000px) {
+  .borde-abajo {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .borde-arriba {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+}
+
+@media (min-width: 1001px) {
+  .panel-difuminado {
+    box-shadow: 0px 0px 37px 12px white;
+    border-radius: 20px;
+  }
+}
+
+.panel-difuminado {
+  height: 100%;
+  position: absolute;
+  background-color: gray;
+  z-index: 2;
+  opacity: 28%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}

@@ -12,10 +12,6 @@ export class TodaExperienciaLaboralComponent implements OnInit {
   constructor(private experienciaService: ExperienciaLaboralDataService) { }
 
   ngOnInit() {
-
     this.experiencias = this.experienciaService.getExperiencias();
-    console.log(this.experiencias);
-
   }
-
 }

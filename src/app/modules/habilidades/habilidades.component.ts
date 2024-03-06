@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { TG } from 'src/app/core/const/tipos-habilidades';
 import { Habilidad } from 'src/app/core/models';
 
@@ -7,16 +7,12 @@ import { Habilidad } from 'src/app/core/models';
   templateUrl: './habilidades.component.html',
   styleUrls: ['./habilidades.component.css']
 })
-export class HabilidadesComponent implements OnInit {
+export class HabilidadesComponent {
   @Output() filtro = new EventEmitter<Habilidad>;
   habilidades = TG;
   constructor() { }
 
-  ngOnInit() {
-  }
-
   click(tipo: Habilidad): void {
     this.filtro.emit(tipo);
   }
-
 }

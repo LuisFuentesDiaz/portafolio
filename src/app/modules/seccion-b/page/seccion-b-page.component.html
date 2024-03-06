@@ -1,5 +1,5 @@
 <article *ngIf="!isMovil" class="web-articulo-seccion-b articulo-seccion-b">
-  <div class="difuminado"></div>
+  <app-panel-difuminado></app-panel-difuminado>
   <section class="row web-seccion-seccion-b seccion-seccion-b container ">
     <app-perfil-profesional class=" perfilProfesionalApp col col-perfil-profesional"></app-perfil-profesional>
     <app-foto-personal class="col"></app-foto-personal>
@@ -7,7 +7,7 @@
 </article>
 
 <article *ngIf="isMovil" class="movil-articulo-seccion-b articulo-seccion-b">
-  <div class="difuminado"></div>
+  <app-panel-difuminado [isBordeAbajo]="false"></app-panel-difuminado>
   <section class="movil-seccion-seccion-b seccion-seccion-b">
     <app-perfil-profesional></app-perfil-profesional>
   </section>

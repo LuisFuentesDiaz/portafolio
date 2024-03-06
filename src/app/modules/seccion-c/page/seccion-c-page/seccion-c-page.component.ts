@@ -31,10 +31,4 @@ export class SeccionCPageComponent {
       }
     })
   }
-
-  filtrar(event): void {
-    console.log("filtrando", event);
-
-
-  }
 }
