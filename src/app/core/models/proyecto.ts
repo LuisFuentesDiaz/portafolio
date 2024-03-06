@@ -10,6 +10,7 @@ export class Proyecto {
   informacion: string;
   urlBaseImg: string;
   capturas: string[];
+  imgPreview: string;
   url: string;
   codigoAbierto: any;
   inicio: dayjs.Dayjs;
@@ -19,7 +20,7 @@ export class Proyecto {
   extension: string;
 
   constructor(nombre: string, dependiente: boolean, consultora: string, empresa: string, tecnologias: Habilidad[], informacion: string,
-    urlBaseImg: string, capturas: string[], url: string, codigoAbierto: any, inicio: dayjs.Dayjs, termino: dayjs.Dayjs, isReciente: boolean) {
+    urlBaseImg: string, capturas: string[], imgPreview: string, url: string, codigoAbierto: any, inicio: dayjs.Dayjs, termino: dayjs.Dayjs, isReciente: boolean) {
     this.nombre = nombre;
     this.dependiente = dependiente;
     this.consultora = consultora;
@@ -28,6 +29,7 @@ export class Proyecto {
     this.informacion = informacion;
     this.urlBaseImg = urlBaseImg;
     this.capturas = capturas;
+    this.imgPreview = imgPreview;
     this.url = url;
     this.codigoAbierto = codigoAbierto;
     this.inicio = inicio;
