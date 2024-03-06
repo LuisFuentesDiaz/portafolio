@@ -6,6 +6,7 @@ import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/c
 import { SharedModule } from 'src/app/shared/shared.module';
 import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalProyectoComponent } from '../modal-proyecto/modal-proyecto.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-proyectos',
@@ -23,7 +24,7 @@ export class ProyectosComponent implements OnInit {
   resolucion;
   tecnologias: Habilidad[] = [];
 
-  constructor(private pantallaUtil: PantallaService, private modalService: NgbModal) {
+  constructor(private pantallaUtil: PantallaService, private modalService: NgbModal, private router: Router) {
     this.pantallaUtil.resolucion.subscribe(e => {
       this.resolucion = e.resolucion;
     })
@@ -34,10 +35,11 @@ export class ProyectosComponent implements OnInit {
   }
 
   openModal() {
-    const modalRef = this.modalService.open(ModalProyectoComponent, {
+    /*const modalRef = this.modalService.open(ModalProyectoComponent, {
       size: 'md',
     });
-    modalRef.componentInstance.data = this.data;
+    modalRef.componentInstance.data = this.data;*/
+    this.router.navigate(['/detalle-proyecto/' + this.data.id]);
   }
 
 }

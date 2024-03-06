@@ -1,14 +1,3 @@
-#tabindex1 {
-  position: relative;
-  background-image: linear-gradient(to top, #0a17a7 -67%, black 30%);
-}
-
-@media (max-width: 600px) {
-  #tabindex5 {
-    margin-bottom: 49px;
-  }
-}
-
 @media (max-width: 551px) {
   .aurora {
     position: fixed;
@@ -34,7 +23,6 @@
   }
 }
 
-.tab-index,
 .fondoGlobal {
   background-color: #030731;
 }

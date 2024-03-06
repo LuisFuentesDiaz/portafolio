@@ -2,6 +2,7 @@ import { Habilidad } from "./habilidad";
 import * as dayjs from 'dayjs';
 
 export class Proyecto {
+  id: number;
   nombre: string;
   dependiente: boolean;
   consultora: string;
@@ -19,8 +20,9 @@ export class Proyecto {
   isReciente: boolean;
   extension: string;
 
-  constructor(nombre: string, dependiente: boolean, consultora: string, empresa: string, tecnologias: Habilidad[], informacion: string,
+  constructor(id: number, nombre: string, dependiente: boolean, consultora: string, empresa: string, tecnologias: Habilidad[], informacion: string,
     urlBaseImg: string, capturas: string[], imgPreview: string, url: string, codigoAbierto: any, inicio: dayjs.Dayjs, termino: dayjs.Dayjs, isReciente: boolean) {
+    this.id = id;
     this.nombre = nombre;
     this.dependiente = dependiente;
     this.consultora = consultora;

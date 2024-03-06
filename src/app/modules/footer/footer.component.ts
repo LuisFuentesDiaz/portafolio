@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -7,6 +8,15 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
-  constructor() { }
+  isDetalle: boolean = false;
+
+  constructor(private router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        if (event.url.includes("detalle-proyecto")) this.isDetalle = true;
+        else this.isDetalle = false;
+      }
+    })
+  }
 
 }

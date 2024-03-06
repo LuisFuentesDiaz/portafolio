@@ -12,8 +12,9 @@ import * as dayjs from 'dayjs';
 })
 export class ProyectosService {
 
-  Proyectos: Proyecto[] = [
+  private Proyectos: Proyecto[] = [
     new Proyecto(
+      1,
       "Guachiman",
       false,
       "Pleyasoft",
@@ -31,6 +32,7 @@ export class ProyectosService {
     ),
 
     new Proyecto(
+      2,
       "CCA CCAfast",
       true,
       "Pleyasoft",
@@ -48,6 +50,7 @@ export class ProyectosService {
     ),
 
     new Proyecto(
+      3,
       "Autoservicio RRHH",
       true,
       "Pleyasoft",
@@ -64,6 +67,7 @@ export class ProyectosService {
       true
     ),
     new Proyecto(
+      4,
       "Rentacar",
       false,
       "Grupo Firma",
@@ -80,6 +84,7 @@ export class ProyectosService {
       false
     ),
     new Proyecto(
+      5,
       "Sistema Evidencias (Tesis)",
       false,
       "UCM",
@@ -96,6 +101,7 @@ export class ProyectosService {
       false
     ),
     new Proyecto(
+      6,
       "Portafolio",
       false,
       null,
@@ -113,7 +119,7 @@ export class ProyectosService {
     ),
   ]
 
-  getProyectos() {
+  getProyectos(): Proyecto[] {
     return this.Proyectos;
   }
 }

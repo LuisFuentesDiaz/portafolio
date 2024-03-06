@@ -1,12 +1,19 @@
 footer {
   width: 100%;
   position: relative;
-  height: 25vh;
   align-items: center;
   display: flex;
   color: white;
   z-index: 0;
   background-color: inherit;
+}
+
+.heightDetalle {
+  height: 5vh;
+}
+
+.heightCompleto {
+  height: 25vh;
 }
 
 p {
