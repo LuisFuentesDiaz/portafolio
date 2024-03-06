@@ -5,10 +5,11 @@ import { TodaExperienciaLaboralComponent } from './components/toda-experiencia-l
 import { ExperienciaLaboralComponent } from './components/experiencia-laboral/experiencia-laboral.component';
 import { FechaFormatoPipe } from 'src/app/core/pipe';
 import { MesesAFechaPipe } from 'src/app/core/pipe';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule, SharedModule
   ],
   declarations: [SeccionDPageComponent, TodaExperienciaLaboralComponent, ExperienciaLaboralComponent, FechaFormatoPipe, MesesAFechaPipe],
   exports: [SeccionDPageComponent]

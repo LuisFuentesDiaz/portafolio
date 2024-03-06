@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Experiencia } from 'src/app/core/models';
 
 @Component({
@@ -6,11 +6,8 @@ import { Experiencia } from 'src/app/core/models';
   templateUrl: './experiencia-laboral.component.html',
   styleUrls: ['./experiencia-laboral.component.css']
 })
-export class ExperienciaLaboralComponent implements OnInit {
+export class ExperienciaLaboralComponent {
   @Input() data: Experiencia
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

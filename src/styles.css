@@ -48,9 +48,10 @@ body {
 
 h1 {
   font-family: "Graduate", serif;
-  margin-bottom: 5px;
-  font-weight: bold;
+  margin-bottom: 5px !important;
+  font-weight: bold !important;
   filter: drop-shadow(2px 4px 6px black);
+  color: ghostwhite !important;
 }
 
 .filtro-gray {

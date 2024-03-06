@@ -58,14 +58,6 @@
   display: flex;
 }
 
-h1 {
-  font-family: "Graduate", serif;
-  margin-bottom: 5px;
-  font-weight: bold;
-  text-align: center;
-  filter: drop-shadow(2px 4px 6px black);
-}
-
 .subtituloCabecera {
   color: whitesmoke;
   font-family: "Graduate", serif;

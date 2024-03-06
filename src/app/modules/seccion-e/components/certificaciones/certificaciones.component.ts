@@ -7,14 +7,10 @@ import { Habilidad } from 'src/app/core/models';
   templateUrl: './certificaciones.component.html',
   styleUrls: ['./certificaciones.component.css']
 })
-export class CertificacionesComponent implements OnInit {
+export class CertificacionesComponent {
   @Input() nombre: string;
   @Input() url: string;
   @Input() certificado: string;
   @Input() habilidad: Habilidad[] = [];
   constructor() { }
-
-  ngOnInit() {
-  }
-
 }
