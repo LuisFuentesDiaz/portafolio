@@ -2,14 +2,166 @@ article {
   position: relative;
   display: flex;
   width: 100%;
-  height: 95vh;
-  padding: 5%;
+  height: 100%;
+  min-height: 95vh;
+  padding: 10%;
   background-color: #030731;
   justify-content: center;
+  align-items: center;
 }
 
 section {
   width: 90%;
-  height: 100%;
+  height: auto;
   position: relative;
+  overflow: hidden;
+  z-index: 1;
+  backdrop-filter: blur(4px);
+}
+
+h1 {
+  padding-bottom: 3%;
+  order: 1;
+  min-width: 100%;
+}
+
+main {
+  display: flex;
+  padding: 5%;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  position: relative;
+  z-index: 3;
+  color: ghostwhite;
+  height: 100%;
+}
+
+.contenedor-detalle {
+  align-items: center;
+}
+
+.informacion-detalle {
+  min-width: 500px;
+  max-width: 100%;
+  flex: 1 0;
+  gap: 25px;
+  order: 2;
+}
+
+.columna {
+  gap: 2%;
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.flex-carrusel {
+  min-width: 500px;
+  max-width: 100%;
+  flex: 1 0;
+  order: 3;
+}
+
+.descripcion {
+  order: 4;
+  text-align: justify;
+}
+
+.custom-carousel {
+  position: relative;
+  width: 100%;
+}
+
+@media (max-width: 1550px) {
+  article {
+    padding: 100px;
+  }
+
+  .informacion-detalle {
+    gap: 3px;
+  }
+
+  .columna {
+    gap: 5px;
+  }
+
+  .descripcion {
+    order: 3;
+    padding-bottom: 2%;
+  }
+
+  .flex-carrusel {
+    order: 4;
+  }
+}
+
+@media (max-width: 800px) {
+  article {
+    padding: 0;
+    height: 100vh;
+  }
+
+  section {
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+  }
+
+  main {
+    padding: 0;
+    overflow: auto;
+  }
+
+  .flex-carrusel {
+    order: 1;
+    min-width: 100% !important;
+  }
+
+  h1 {
+    order: 2;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-right: 5%;
+  }
+
+  .informacion-detalle {
+    min-width: 100% !important;
+    flex: 0 0;
+    gap: 5px;
+    order: 3;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .descripcion {
+    order: 4;
+    margin-bottom: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 800px) {
+  section {
+    padding-top: 5%;
+    font-size: calc(1rem - 2px);
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    padding-top: 5%;
+  }
+
+  section {
+    padding-top: 0%;
+  }
 }

@@ -13,6 +13,7 @@ import { SeccionEModule } from './modules/seccion-e/seccion-e.module';
 import { DetalleProyectoComponent } from './modules/detalle-proyecto/detalle-proyecto.component';
 import { HomeComponent } from './modules/home/home.component';
 import { HomeModule } from './modules/home/home.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HomeModule } from './modules/home/home.module';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    HomeModule
+    HomeModule,
+    NgbModule
   ],
   providers: [
 

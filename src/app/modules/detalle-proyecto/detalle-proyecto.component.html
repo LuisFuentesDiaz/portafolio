@@ -1,7 +1,41 @@
 <article>
   <section>
-    <app-panel-difuminado></app-panel-difuminado>
-    <h1>{{data.nombre}}</h1>
+    <app-panel-difuminado [isBordeAbajo]="false" [isBordeSuperior]="false"></app-panel-difuminado>
+    <main>
+      <div class="contenedor-detalle flex-row">
+        <h1>{{data.nombre}}</h1>
 
+        <div class="informacion-detalle flex-col">
+          <div class="columna flex-row">
+            <label> <strong> Consultora: </strong> </label>
+            <label> {{data.consultora}} </label>
+          </div>
+          <div class="columna flex-row">
+            <label> <strong> Empresa: </strong> </label>
+            <label> {{data.empresa}}: </label>
+          </div>
+          <div class="columna flex-row">
+            <label> <strong> Tecnologías: </strong> </label>
+            <div class="flex-row">
+              <app-icono-skill borde=true *ngFor="let tg of data.tecnologias; let i = index" id="modalIcono{{i}}" noScale=true [data]="tg"></app-icono-skill>
+            </div>
+          </div>
+        </div>
+        <div class="flex-carrusel flex-row">
+          <div class="carrusel">
+            <ngb-carousel>
+              <ng-template *ngFor="let c of data.capturas" ngbSlide>
+                <img class="custom-carousel" loading="lazy" src="{{data.urlBaseImg+c}}.jpg" alt="Imagen 1">
+              </ng-template>
+            </ngb-carousel>
+          </div>
+        </div>
+        <div class="columna descripcion flex-row">
+          <label> <strong> Descripción: </strong> </label>
+          <label> {{data.informacion}} </label>
+        </div>
+      </div>
+
+    </main>
   </section>
 </article>
