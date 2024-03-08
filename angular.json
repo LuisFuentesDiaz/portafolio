@@ -30,7 +30,7 @@
               "node_modules/bootstrap-icons/font/bootstrap-icons.css"
             ],
             "scripts": [],
-            "baseHref": "/portafolio"
+            "baseHref": "/portafolio/"
           },
           "configurations": {
             "production": {
