@@ -6,6 +6,7 @@ import { ProyectosService } from '../services';
   providedIn: 'root'
 })
 export class Utiles {
+
   router: Router = inject(Router);
   route: ActivatedRoute = inject(ActivatedRoute);
   proyectosService: ProyectosService = inject(ProyectosService);
