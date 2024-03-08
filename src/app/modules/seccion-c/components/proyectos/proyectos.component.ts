@@ -5,7 +5,6 @@ import { Habilidad } from 'src/app/core/models';
 import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ModalProyectoComponent } from '../modal-proyecto/modal-proyecto.component';
 import { Router } from '@angular/router';
 
 @Component({
@@ -35,10 +34,6 @@ export class ProyectosComponent implements OnInit {
   }
 
   openModal() {
-    /*const modalRef = this.modalService.open(ModalProyectoComponent, {
-      size: 'md',
-    });
-    modalRef.componentInstance.data = this.data;*/
     this.router.navigate(['/detalle-proyecto/' + this.data.id]);
   }
 

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { ProyectosService } from 'src/app/core/services';
 import { PantallaUtil } from 'src/app/core/util/pantallaUtil';
-import { Utiles } from 'src/app/core/util/utiles';
+import { Utiles } from 'src/app/core/util';
 
 @Component({
   selector: 'app-navbar',
