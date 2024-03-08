@@ -107,7 +107,7 @@ export class ProyectosService {
       null,
       null,
       [TG.ANGULAR, TG.TYPESCRIPT, TG.CSS, TG.HTML, TG.BOOTSTRAP],
-      DescripcionProyecto.TESIS,
+      DescripcionProyecto.PORTAFOLIO,
       UrlPERSONAL.PORTAFOLIO,
       ['portafolio-1', 'portafolio-2', 'portafolio-3', 'portafolio-4'],
       'portafolio-preview',
