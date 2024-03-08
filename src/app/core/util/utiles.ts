@@ -14,6 +14,7 @@ export class Utiles {
   public proyectoSiguiente(id: number): void {
     let cantidadProyectos: number = this.proyectosService.getCantidadProyectos();
     this.router.navigate([`detalle-proyecto/${this.calculaSiguienteProyecto(id ?? Number.parseInt(this.route.snapshot.params["proyecto"]), cantidadProyectos)}`]);
+    console.log("");
   }
 
   public proyectoAnterior(id: number): void {
