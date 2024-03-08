@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Proyecto } from 'src/app/core/models';
-import { ProyectosService } from 'src/app/core/services';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Utiles } from 'src/app/core/util';
 

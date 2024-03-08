@@ -18,7 +18,7 @@ export class PantallaUtil {
       this.tabIndexEnPantalla();
     });
 
-    //Este servicio retornara cualquier cambio en la resolucion de pantalla
+    //Este servicio retornara cualquier cambio en la resolución de pantalla
     window.addEventListener('resize', () => {
       this.resolucion.next({ resolucion: window.innerWidth });
     });
