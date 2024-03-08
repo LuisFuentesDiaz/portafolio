@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Proyecto } from 'src/app/core/models';
-import { PantallaService } from 'src/app/core/util/pantalla.service';
+import { PantallaUtil } from 'src/app/core/util/pantallaUtil';
 import { Habilidad } from 'src/app/core/models';
 import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { SharedModule } from 'src/app/shared/shared.module';
@@ -24,7 +24,7 @@ export class ProyectosComponent implements OnInit {
   resolucion;
   tecnologias: Habilidad[] = [];
 
-  constructor(private pantallaUtil: PantallaService, private modalService: NgbModal, private router: Router) {
+  constructor(private pantallaUtil: PantallaUtil, private modalService: NgbModal, private router: Router) {
     this.pantallaUtil.resolucion.subscribe(e => {
       this.resolucion = e.resolucion;
     })

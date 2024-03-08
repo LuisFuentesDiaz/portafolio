@@ -4,9 +4,9 @@ import { DetalleProyectoComponent } from './modules/detalle-proyecto/detalle-pro
 import { HomeComponent } from './modules/home/home.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent }, // Redirige a '/detalle-proyecto' al inicio
+  { path: '', component: HomeComponent },
   { path: 'detalle-proyecto/:proyecto', component: DetalleProyectoComponent },
-  { path: '**', component: HomeComponent },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({

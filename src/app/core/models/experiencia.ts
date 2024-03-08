@@ -27,8 +27,6 @@ export class Experiencia {
       termino = dayjs();
     }
     if (termino.date() > 15 && termino.date() <= 31) {
-      console.log("termino", termino);
-
       termino.add(1, 'month');
     }
     this.duracion = termino.diff(inicio, 'months');

@@ -1,24 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { PantallaService } from 'src/app/core/util/pantalla.service';
+import { PantallaUtil } from 'src/app/core/util/pantallaUtil';
 
 @Component({
-  selector: 'app-seccion-b-page',
-  templateUrl: './seccion-b-page.component.html',
-  styleUrls: ['./seccion-b-page.component.css']
+    selector: 'app-seccion-b-page',
+    templateUrl: './seccion-b-page.component.html',
+    styleUrls: ['./seccion-b-page.component.css']
 })
 export class SeccionBPageComponent implements OnInit {
 
-  isMovil: boolean = false;
+    isMovil: boolean = false;
 
-  constructor(private pantallaService: PantallaService) { }
+    constructor(private pantallaService: PantallaUtil) { }
 
-  ngOnInit() {
-    this.pantallaService.resolucion.subscribe(e => {
-      if (e.resolucion > 1001) {
-        this.isMovil = false;
-      } else {
-        this.isMovil = true;
-      }
-    })
-  }
+    ngOnInit() {
+        this.pantallaService.resolucion.subscribe(e => {
+            if (e.resolucion > 1001) {
+                this.isMovil = false;
+            } else {
+                this.isMovil = true;
+            }
+        })
+    }
 }

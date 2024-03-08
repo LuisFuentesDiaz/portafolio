@@ -3,16 +3,25 @@
     <app-panel-difuminado [isBordeAbajo]="false" [isBordeSuperior]="false"></app-panel-difuminado>
     <main>
       <div class="contenedor-detalle flex-row">
+        <div class="navegacion flex-row">
+          <div>
+            <i routerLink="/" class="bi bi-arrow-left hover-navegacion" role="button"></i>
+          </div>
+          <div class="flex-row salto-proyecto">
+            <i role="button" (click)="proyectoAnterior(null)" class="bi bi-caret-left-fill hover-navegacion"></i>
+            <i role="button" (click)="proyectoSiguiente(null)" class="bi bi-caret-right-fill hover-navegacion"></i>
+          </div>
+        </div>
         <h1>{{data.nombre}}</h1>
 
         <div class="informacion-detalle flex-col">
-          <div class="columna flex-row">
+          <div *ngIf="data.consultora" class="columna flex-row">
             <label> <strong> Consultora: </strong> </label>
             <label> {{data.consultora}} </label>
           </div>
-          <div class="columna flex-row">
+          <div *ngIf="data.empresa" class="columna flex-row">
             <label> <strong> Empresa: </strong> </label>
-            <label> {{data.empresa}}: </label>
+            <label role="button" style="font-weight: bold; text-decoration: underline;" (click)="redirigirAExterno()"> {{data.empresa}} </label>
           </div>
           <div class="columna flex-row">
             <label> <strong> Tecnologías: </strong> </label>

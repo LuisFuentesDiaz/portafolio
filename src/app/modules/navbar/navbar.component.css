@@ -65,4 +65,12 @@
   .item-web {
     display: block;
   }
+
+  .heightCompleto {
+    display: flex;
+  }
+
+  .heightDetalle {
+    display: none;
+  }
 }

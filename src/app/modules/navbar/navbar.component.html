@@ -1,10 +1,6 @@
 <div class="navbar {{isDetalle ? 'heightDetalle' : 'heightCompleto'}}">
-  <ng-container>
-    <h5 (click)="focus('tabindex1')" type="button" class="item-movil item-navbar-local {{tabIndexVisible == 'tabindex1' ? 'scale' : 'noScale'}}"><i class="bi bi-house-door-fill"></i></h5>
-    <h5 (click)="focus('tabindex2')" type="button" class="item-movil item-navbar-local {{tabIndexVisible == 'tabindex2' ? 'scale' : 'noScale'}}"><i class="bi bi-file-person-fill"></i></h5>
-    <h5 (click)="focus('tabindex3')" type="button" class="item-movil item-navbar-local {{tabIndexVisible == 'tabindex3' ? 'scale' : 'noScale'}}"><i class="bi bi-briefcase-fill"></i></h5>
-    <h5 (click)="focus('tabindex4')" type="button" class="item-movil item-navbar-local {{tabIndexVisible == 'tabindex4' ? 'scale' : 'noScale'}}"><i class="bi bi-hammer"></i></h5>
-    <h5 (click)="focus('tabindex5')" type="button" class="item-movil item-navbar-local {{tabIndexVisible == 'tabindex5' ? 'scale' : 'noScale'}}"><i class="bi bi-card-heading"></i></h5>
+  <ng-container [ngTemplateOutlet]="isDetalle ? detalleProyectoMovil : home">
+
   </ng-container>
   <ng-container>
     <h5 (click)="focus('tabindex1')" type="button" class="item-web item-navbar-local {{tabIndexVisible == 'tabindex1' ? 'scale' : 'noScale'}}">Menu</h5>
@@ -14,3 +10,17 @@
     <h5 (click)="focus('tabindex5')" type="button" class="item-web item-navbar-local {{tabIndexVisible == 'tabindex5' ? 'scale' : 'noScale'}}">Certificaciones</h5>
   </ng-container>
 </div>
+
+<ng-template #detalleProyectoMovil>
+  <h5 type="button" routerLink="" class="item-movil item-navbar-local"><i class="bi bi-house-door-fill"></i></h5>
+  <h5 (click)="utiles.proyectoAnterior(proyectoActual)" type="button" class="item-movil item-navbar-local"><i class="bi bi-caret-left-fill"></i></h5>
+  <h5 (click)="utiles.proyectoSiguiente(proyectoActual)" type="button" class="item-movil item-navbar-local"><i class="bi bi-caret-right-fill"></i></h5>
+</ng-template>
+
+<ng-template #home>
+  <h5 (click)="focus('tabindex1')" type="button" class="item-movil item-navbar-local {{tabIndexVisible == 'tabindex1' ? 'scale' : 'noScale'}}"><i class="bi bi-house-door-fill"></i></h5>
+  <h5 (click)="focus('tabindex2')" type="button" class="item-movil item-navbar-local {{tabIndexVisible == 'tabindex2' ? 'scale' : 'noScale'}}"><i class="bi bi-file-person-fill"></i></h5>
+  <h5 (click)="focus('tabindex3')" type="button" class="item-movil item-navbar-local {{tabIndexVisible == 'tabindex3' ? 'scale' : 'noScale'}}"><i class="bi bi-briefcase-fill"></i></h5>
+  <h5 (click)="focus('tabindex4')" type="button" class="item-movil item-navbar-local {{tabIndexVisible == 'tabindex4' ? 'scale' : 'noScale'}}"><i class="bi bi-hammer"></i></h5>
+  <h5 (click)="focus('tabindex5')" type="button" class="item-movil item-navbar-local {{tabIndexVisible == 'tabindex5' ? 'scale' : 'noScale'}}"><i class="bi bi-card-heading"></i></h5>
+</ng-template>

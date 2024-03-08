@@ -122,4 +122,8 @@ export class ProyectosService {
   getProyectos(): Proyecto[] {
     return this.Proyectos;
   }
+
+  getCantidadProyectos(): number {
+    return this.Proyectos.length;
+  }
 }
