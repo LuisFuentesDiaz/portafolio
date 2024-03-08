@@ -1,0 +1,14 @@
+#tabindex1 {
+  position: relative;
+  background-image: linear-gradient(to top, #0a17a7 -67%, black 30%);
+}
+
+@media (max-width: 600px) {
+  #tabindex5 {
+    margin-bottom: 49px;
+  }
+}
+
+.tab-index {
+  background-color: #030731;
+}

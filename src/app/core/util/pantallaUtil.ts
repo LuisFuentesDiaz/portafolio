@@ -4,7 +4,7 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class PantallaService {
+export class PantallaUtil {
   ultimoTabIndexEnPantalla = null;
 
   public resolucion = new BehaviorSubject<any>({ resolucion: window.innerWidth });//Retorna cualquier cambio en la resolucion

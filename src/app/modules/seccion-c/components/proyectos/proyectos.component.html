@@ -17,7 +17,7 @@
             </a>
           </ng-container>
         </div>
-        <i class="bi bi-fullscreen icono-ampliar " (click)="openModal()"></i>
+        <i class="bi bi-fullscreen icono-ampliar " role="button" (click)="openModal()"></i>
         <div class="col-12 row pb-2" style="margin: auto; bottom: 0%; position: absolute;">
           <app-icono-skill *ngFor="let tg of tecnologias let i = index" id="web-iconosSkill-tarjeta-proyecto{{i}}" class="col web-habilidad-proyecto" noScale=true [data]="tg"></app-icono-skill>
         </div>

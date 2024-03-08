@@ -7,24 +7,24 @@ import { SeccionAModule } from './modules/seccion-a/seccion-a.module';
 import { SeccionCModule } from './modules/seccion-c/seccion-c.module';
 import { SharedModule } from './shared/shared.module';
 import { FooterComponent } from './modules/footer/footer.component';
-import { CvComponent } from './modules/cv/cv.component';
 import { NavbarComponent } from './modules/navbar/navbar.component';
 import { SeccionDModule } from './modules/seccion-d/seccion-d.module';
 import { SeccionEModule } from './modules/seccion-e/seccion-e.module';
+import { DetalleProyectoComponent } from './modules/detalle-proyecto/detalle-proyecto.component';
+import { HomeComponent } from './modules/home/home.component';
+import { HomeModule } from './modules/home/home.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
-    AppComponent, NavbarComponent, FooterComponent, CvComponent
+    AppComponent, NavbarComponent, FooterComponent, DetalleProyectoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SeccionAModule,
-    SeccionBModule,
-    SeccionCModule,
     SharedModule,
-    SeccionDModule,
-    SeccionEModule
+    HomeModule,
+    NgbModule
   ],
   providers: [
 
