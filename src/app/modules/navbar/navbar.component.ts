@@ -3,11 +3,14 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { ProyectosService } from 'src/app/core/services';
 import { PantallaUtil } from 'src/app/core/util/pantallaUtil';
 import { Utiles } from 'src/app/core/util';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
+  standalone: true,
+  imports: [CommonModule]
 })
 export class NavbarComponent implements OnInit {
   isDetalle: boolean = false;

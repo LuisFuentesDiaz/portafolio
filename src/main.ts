@@ -1,9 +1,17 @@
 /// <reference types="@angular/localize" />
 
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppComponent } from './app/app.component';
+import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
+import { provideRouter } from '@angular/router';
+import Routes from './app/app-routes'; import { importProvidersFrom } from '@angular/core';
+'./app/app-routes'
 
-import { AppModule } from './app/app.module';
 
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideRouter(Routes),
+    importProvidersFrom([BrowserModule]),
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+  ]
+})
   .catch(err => console.error(err));

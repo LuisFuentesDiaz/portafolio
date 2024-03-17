@@ -1,10 +1,13 @@
 import { Component, ElementRef, Input, Renderer2, AfterViewInit } from '@angular/core';
+import { NgbTooltip } from '@ng-bootstrap/ng-bootstrap';
 import { Habilidad } from 'src/app/core/models';
 
 @Component({
   selector: 'app-icono-skill',
   templateUrl: './icono-skill.component.html',
-  styleUrls: ['./icono-skill.component.css']
+  styleUrls: ['./icono-skill.component.css'],
+  standalone: true,
+  imports: [NgbTooltip]
 })
 export class IconoSkillComponent implements AfterViewInit {
   @Input() data: Habilidad

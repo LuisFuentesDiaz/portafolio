@@ -1,12 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Proyecto } from 'src/app/core/models';
-import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselConfig, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Utiles } from 'src/app/core/util';
+import { RouterModule } from '@angular/router';
+import { IconoSkillComponent } from 'src/app/shared/components/icono-skill/icono-skill.component';
+import { PanelDifuminadoComponent } from 'src/app/shared/components/panel-difuminado/panel-difuminado.component';
+import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-detalle-proyecto',
   templateUrl: './detalle-proyecto.component.html',
-  styleUrls: ['./detalle-proyecto.component.css']
+  styleUrls: ['./detalle-proyecto.component.css'],
+  standalone: true,
+  imports: [RouterModule, NgbModule, NgIf, NgFor, IconoSkillComponent, PanelDifuminadoComponent]
 })
 export class DetalleProyectoComponent extends Utiles implements OnInit {
   isData: boolean = false;

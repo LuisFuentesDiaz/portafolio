@@ -3,7 +3,8 @@ import { Component, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
 @Component({
   selector: 'app-estrella-fugaz',
   templateUrl: './estrella-fugaz.component.html',
-  styleUrls: ['./estrella-fugaz.component.css']
+  styleUrls: ['./estrella-fugaz.component.css'],
+  standalone: true
 })
 export class EstrellaFugazComponent implements OnInit {
 
