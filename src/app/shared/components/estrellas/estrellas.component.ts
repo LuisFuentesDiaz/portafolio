@@ -3,7 +3,8 @@ import { Component, ElementRef, OnInit, Renderer2, Input } from '@angular/core';
 @Component({
   selector: 'app-estrellas',
   templateUrl: './estrellas.component.html',
-  styleUrls: ['./estrellas.component.css']
+  styleUrls: ['./estrellas.component.css'],
+  standalone: true
 })
 export class EstrellasComponent implements OnInit {
   @Input() id;
