@@ -9,4 +9,6 @@ import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@ang
 export class PanelDifuminadoComponent {
   @Input() isBordeAbajo: boolean = true;
   @Input() isBordeSuperior: boolean = true;
+  @Input() opacity: Number = 28;
+  @Input() isBordeWeb: boolean = true;
 }

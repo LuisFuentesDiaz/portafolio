@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { ProyectosService } from 'src/app/core/services';
+import { ActivatedRoute, NavigationEnd, Router, RouterModule } from '@angular/router';
 import { PantallaUtil } from 'src/app/core/util/pantallaUtil';
 import { Utiles } from 'src/app/core/util';
 import { CommonModule } from '@angular/common';
@@ -10,7 +9,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
   standalone: true,
-  imports: [CommonModule]
+  imports: [CommonModule, RouterModule]
 })
 export class NavbarComponent implements OnInit {
   isDetalle: boolean = false;

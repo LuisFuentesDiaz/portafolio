@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, Renderer2, AfterViewInit } from '@angular/core';
-import { NgbTooltip } from '@ng-bootstrap/ng-bootstrap';
+import { NgxTippyModule } from 'ngx-tippy-wrapper';
 import { Habilidad } from 'src/app/core/models';
 
 @Component({
@@ -7,11 +7,11 @@ import { Habilidad } from 'src/app/core/models';
   templateUrl: './icono-skill.component.html',
   styleUrls: ['./icono-skill.component.css'],
   standalone: true,
-  imports: [NgbTooltip]
+  imports: [NgxTippyModule]
 })
 export class IconoSkillComponent implements AfterViewInit {
   @Input() data: Habilidad
-  @Input() ancho: Number = 65;
+  @Input() ancho: Number;
   @Input() id: string;
   @Input() noScale: boolean = false;
   @Input() borde: boolean = false;

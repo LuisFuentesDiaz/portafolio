@@ -39,6 +39,27 @@
     width: 90%;
     z-index: 2;
     color: ghostwhite;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .perfilProfesionalApp {
+    display: flex;
+    position: relative;
+    max-width: 100%;
+    min-width: 50%;
+    flex: 0 0;
+    flex-basis: 50%;
+    align-items: center;
+  }
+  .foto-personal {
+    position: relative;
+    display: flex;
+    min-width: 30%;
+    width: 30%;
+    flex: 1 1;
+    flex-basis: 50%;
   }
 }
 

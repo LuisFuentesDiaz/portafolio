@@ -4,46 +4,60 @@
       <img width="90%" loading="lazy" src="{{data.nombreLogo}}.png" alt="">
     </div>
     <div class="back">
-      <div class="difuminado"></div>
-      <h1 class="text-center">{{data.nombre}}</h1>
-      <div class="row col-12">
-        <div class="text-center mb-3 col-4 ">
-          <strong>Rubro:</strong>
-        </div>
-        <div class="text-center mb-3 col-8">
-          {{data.rubro}}
-        </div>
-      </div>
-      <div class="row col-12">
-        <div class="text-center mb-3 col-4">
-          <strong>Cargo:</strong>
-        </div>
-        <div class="text-center mb-3 col-8">
-          {{data.cargo }}
-        </div>
-      </div>
-      <div class="row col-12">
-        <div class="text-center mb-3 col-4">
-          <strong>Tiempo:</strong>
-        </div>
-        <div class="text-center mb-3 col-8">
-          {{data.duracion| mesesAFecha }}
-        </div>
-      </div>
-      <div class="row col-12">
-        <div class="text-center mb-3 col-4">
-          <strong>Desde:</strong>
-        </div>
-        <div class="text-center mb-3 col-8">
-          {{data.inicio | fecha }}
-        </div>
-      </div>
-      <div class="row col-12">
-        <div class="text-center mb-3 col-4">
-          <strong>Hasta:</strong>
-        </div>
-        <div class="text-center mb-3 col-8">
-          {{data.fin | fecha }}
+      <app-panel-difuminado opacity="80" [isBordeAbajo]="false" [isBordeWeb]="false" [isBordeSuperior]="false"></app-panel-difuminado>
+      <div class="back-contenedor">
+        <h1>{{data.nombre}}</h1>
+        <div class="flex-column">
+          <div class="flex-row">
+            <div class="cabecera">
+              <strong>Rubro:</strong>
+            </div>
+            <div class="contenido">
+              <Label>
+                {{data.rubro}}
+              </Label>
+            </div>
+          </div>
+          <div class="flex-row">
+            <div class="cabecera">
+              <strong>Cargo:</strong>
+            </div>
+            <div class="contenido">
+              <label>
+                {{data.cargo }}
+              </label>
+            </div>
+          </div>
+          <div class="flex-row">
+            <div class="cabecera">
+              <strong>Tiempo:</strong>
+            </div>
+            <div class="contenido">
+              <label>
+                {{data.duracion| mesesAFecha }}
+              </label>
+            </div>
+          </div>
+          <div class="flex-row">
+            <div class="cabecera">
+              <strong>Desde:</strong>
+            </div>
+            <div class="contenido">
+              <label>
+                {{data.inicio | fecha }}
+              </label>
+            </div>
+          </div>
+          <div class="flex-row">
+            <div class="cabecera">
+              <strong>Hasta:</strong>
+            </div>
+            <div class="contenido">
+              <label>
+                {{data.fin | fecha }}
+              </label>
+            </div>
+          </div>
         </div>
       </div>
     </div>

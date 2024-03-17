@@ -28,8 +28,6 @@ export class Utiles {
   }
 
   public calculaAnteriorProyecto(actual: number, totales: number): number {
-    console.log(actual, totales);
-
     if (actual > 1) return actual - 1;
     return totales;
   }
