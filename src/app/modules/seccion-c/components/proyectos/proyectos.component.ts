@@ -3,7 +3,7 @@ import { Proyecto } from 'src/app/core/models';
 import { PantallaUtil } from 'src/app/core/util/pantallaUtil';
 import { Habilidad } from 'src/app/core/models';
 import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbTooltip } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 import { IconoSkillComponent } from 'src/app/shared/components/icono-skill/icono-skill.component';
 
@@ -12,7 +12,7 @@ import { IconoSkillComponent } from 'src/app/shared/components/icono-skill/icono
   templateUrl: './proyectos.component.html',
   styleUrls: ['./proyectos.component.css'],
   standalone: true,
-  imports: [NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, IconoSkillComponent]
+  imports: [NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, IconoSkillComponent, NgbTooltip]
 })
 export class ProyectosComponent implements OnInit {
 
