@@ -61,8 +61,13 @@
 .subtituloCabecera {
   color: whitesmoke;
   font-family: "Graduate", serif;
-  margin-bottom: 5%;
+  margin-bottom: 5% !important;
+  margin: 0%;
   font-size: 1.1rem;
+}
+
+.btn-custom {
+  margin-top: 10px;
 }
 
 @media (max-width: 550px) {

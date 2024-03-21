@@ -6,7 +6,7 @@
   background-color: #000000;
   z-index: 3;
   transition: 0.5s;
-  align-items: baseline;
+  align-items: center;
 }
 
 .item-navbar-local {
@@ -24,7 +24,7 @@
   color: ghostwhite;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .item-navbar-local {
     font-size: 1.5rem;
   }
@@ -32,17 +32,19 @@
     display: none;
   }
   .item-movil {
-    display: block;
+    display: flex;
+    top: -10px;
   }
   .navbar {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 15%;
     bottom: 0%;
+    height: 53px;
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .navbar > ul:hover {
     transform: scale(1.2);
   }

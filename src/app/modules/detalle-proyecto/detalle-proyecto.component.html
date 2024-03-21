@@ -30,21 +30,18 @@
             </div>
           </div>
         </div>
-        <div class="flex-carrusel flex-row">
-          <div class="carrusel">
-            <ngb-carousel>
-              <ng-template *ngFor="let c of data.capturas" ngbSlide>
-                <img class="custom-carousel" loading="lazy" src="{{data.urlBaseImg+c}}.jpg" alt="Imagen 1">
-              </ng-template>
-            </ngb-carousel>
-          </div>
+        <div class="flex-carrusel">
+          <ngb-carousel style="height: 100%;">
+            <ng-template *ngFor="let c of data.capturas" ngbSlide>
+              <img class="custom-carousel" loading="lazy" src="{{data.urlBaseImg+c}}.jpg" alt="Imagen 1">
+            </ng-template>
+          </ngb-carousel>
         </div>
         <div class="columna descripcion flex-row">
           <label> <strong> Descripción: </strong> </label>
           <label> {{data.informacion}} </label>
         </div>
       </div>
-
     </main>
   </section>
 </article>

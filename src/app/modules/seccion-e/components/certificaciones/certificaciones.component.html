@@ -1,6 +1,6 @@
 <div class="contenedor-certificado">
   <a [href]="url" target="_blank">
-    <img class="certificado-img" loading="lazy" ngbTooltip="{{nombre}}" width="250px" height="150px" src="assets/certificaciones/{{certificado}}" [alt]="nombre">
+    <img class="certificado-img" loading="lazy" ngxTippy="{{nombre}}" width="250px" height="150px" src="assets/certificaciones/{{certificado}}" [alt]="nombre">
   </a>
   <div class="habilidades">
     <app-icono-skill *ngFor="let icono of habilidad" noScale=true class="m-1 habilidad-cabecera" [data]="icono"></app-icono-skill>

@@ -3,16 +3,16 @@ import { Proyecto } from 'src/app/core/models';
 import { PantallaUtil } from 'src/app/core/util/pantallaUtil';
 import { Habilidad } from 'src/app/core/models';
 import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 import { IconoSkillComponent } from 'src/app/shared/components/icono-skill/icono-skill.component';
+import { NgxTippyModule } from 'ngx-tippy-wrapper';
 
 @Component({
   selector: 'app-proyectos',
   templateUrl: './proyectos.component.html',
   styleUrls: ['./proyectos.component.css'],
   standalone: true,
-  imports: [NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, IconoSkillComponent]
+  imports: [NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, IconoSkillComponent, NgxTippyModule]
 })
 export class ProyectosComponent implements OnInit {
 
@@ -23,11 +23,12 @@ export class ProyectosComponent implements OnInit {
   resolucion;
   tecnologias: Habilidad[] = [];
 
-  constructor(private pantallaUtil: PantallaUtil, private modalService: NgbModal, private router: Router) {
+  constructor(private pantallaUtil: PantallaUtil, private router: Router) {
     this.pantallaUtil.resolucion.subscribe(e => {
       this.resolucion = e.resolucion;
     })
   }
+
 
   ngOnInit() {
     this.tecnologias = this.data.tecnologias.slice(0, 4);

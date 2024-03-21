@@ -79,12 +79,10 @@ main {
 }
 
 .navegacion {
-  position: absolute;
+  position: relative;
   width: 100%;
-  top: 1%;
   font-size: 30px;
   z-index: 4;
-  left: 20px;
 }
 
 .bi-arrow-left {
@@ -182,10 +180,24 @@ main {
   }
 }
 
+.container {
+  width: 100%px;
+  margin: auto;
+  position: relative;
+}
+
+.slide {
+  flex: 0 0 700px;
+  height: 400px;
+  position: relative;
+}
+
 @media (max-width: 800px) {
   section {
-    padding-top: 5%;
     font-size: calc(1rem - 2px);
+  }
+  .navegacion {
+    display: none;
   }
 }
 
@@ -196,9 +208,5 @@ main {
 
   section {
     padding-top: 0%;
-  }
-
-  .navegacion {
-    display: none;
   }
 }

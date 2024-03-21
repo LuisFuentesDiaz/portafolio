@@ -2,6 +2,9 @@
   border-radius: 25px;
   background-color: ghostwhite;
   transition: transform 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contenedor-cv {
@@ -29,7 +32,6 @@
 }
 
 h1 {
-  margin-bottom: 20px;
   font-size: 20px;
 }
 

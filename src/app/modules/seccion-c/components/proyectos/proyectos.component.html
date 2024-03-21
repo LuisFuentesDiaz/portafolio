@@ -8,18 +8,18 @@
       <div class="card-back" id="card-back{{id}}">
         <div id="web-disponibilidad{{id}}" [ngSwitch]="data.codigoAbierto" class="contenedor-disponibilidad-proyecto" [style.color]="data.codigoAbierto ? 'green' : 'red'">
           <ng-container *ngSwitchCase="false">
-            <i class="bi bi-exclamation-circle-fill" ngbTooltip="Privado"></i>
+            <i class="bi bi-exclamation-circle-fill" ngxTippy="Privado"></i>
           </ng-container>
 
           <ng-container *ngSwitchDefault>
             <a [href]="data.codigoAbierto" target="_blank">
-              <i class="bi bi-box-arrow-up-right grab" ngbTooltip="Abierto"></i>
+              <i class="bi bi-box-arrow-up-right grab" ngxTippy="Abierto"></i>
             </a>
           </ng-container>
         </div>
         <i class="bi bi-fullscreen icono-ampliar " role="button" (click)="openModal()"></i>
-        <div class="col-12 row pb-2" style="margin: auto; bottom: 0%; position: absolute;">
-          <app-icono-skill *ngFor="let tg of tecnologias let i = index" id="web-iconosSkill-tarjeta-proyecto{{i}}" class="col web-habilidad-proyecto" noScale=true [data]="tg"></app-icono-skill>
+        <div class="contenedor-Skills">
+          <app-icono-skill *ngFor="let tg of tecnologias let i = index" id="web-iconosSkill-tarjeta-proyecto{{i}}" ancho="35" noScale=true [data]="tg"></app-icono-skill>
         </div>
       </div>
     </div>
