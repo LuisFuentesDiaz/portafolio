@@ -61,12 +61,13 @@ h1 {
 .flex-row {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  width: 70%;
+  flex-wrap: nowrap;
+  width: 85%;
   max-width: 100%;
   font-size: large;
   margin: auto;
   flex-basis: 70%;
+  text-align: right;
 }
 .flex-row > .cabecera {
   display: flex;
@@ -79,7 +80,7 @@ h1 {
 }
 .flex-row > .contenido {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .flex-column {
@@ -97,17 +98,18 @@ h1 {
 @media (max-width: 400px) {
   .flex-row {
     width: 100%;
-    flex-direction: column;
     font-size: 1rem;
   }
   .flex-row > .contenido {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 
   .flex-row > .cabecera {
-    width: 100%;
-    justify-content: center;
+    width: 50%;
+    justify-content: left;
+    flex: 0 1;
   }
 
   .flex-column {
