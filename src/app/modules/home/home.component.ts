@@ -5,13 +5,14 @@ import { SeccionBPageComponent } from '../seccion-b/seccion-b-page.component';
 import { SeccionCPageComponent } from '../seccion-c/seccion-c-page.component';
 import { SeccionDPageComponent } from '../seccion-d/seccion-d-page.component';
 import { SeccionEPageComponent } from '../seccion-e/seccion-e-page.component';
+import { ContactoComponent } from '../contacto/contacto.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
   standalone: true,
-  imports: [SeccionAPageComponent, SeccionBPageComponent, SeccionCPageComponent, SeccionDPageComponent, SeccionEPageComponent, CvComponent]
+  imports: [SeccionAPageComponent, SeccionBPageComponent, SeccionCPageComponent, SeccionDPageComponent, SeccionEPageComponent, CvComponent, ContactoComponent]
 })
 export class HomeComponent implements OnInit {
 

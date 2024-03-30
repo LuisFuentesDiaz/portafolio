@@ -8,7 +8,6 @@
 }
 
 .contenedor-cv {
-  z-index: 1;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -16,6 +15,18 @@
   flex-flow: row;
   flex-direction: column;
   animation: moverArribaAbajo 2.4s ease-in-out infinite;
+}
+
+.contenedor-principal {
+  position: relative;
+  width: 100%;
+  height: 20vh;
+  min-height: 250px;
+  overflow: hidden;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
 }
 
 .btn-custom:hover {
@@ -39,11 +50,14 @@ h1 {
   .contenedor-cv {
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(1px);
   }
   .btn-custom {
     width: 30%;
     height: 50px;
+  }
+
+  .contenedor-principal {
+    backdrop-filter: blur(4px);
   }
 }
 
