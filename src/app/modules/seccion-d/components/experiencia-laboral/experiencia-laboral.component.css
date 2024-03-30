@@ -19,7 +19,7 @@
 
 h1 {
   font-size: 1rem !important;
-  margin-top: 7%;
+  margin-top: 3%;
 }
 
 .inner {
@@ -55,64 +55,52 @@ h1 {
   align-items: center;
   border-radius: 15px;
   color: ghostwhite;
-  font-size: 0.8rem;
 }
 
 .flex-row {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  width: 85%;
-  max-width: 100%;
-  font-size: large;
+  width: 90%;
   margin: auto;
-  flex-basis: 70%;
-  text-align: right;
+  font-family: "Graduate", serif;
+  font-size: 0.8rem;
+  gap: 20px;
+  justify-content: center;
 }
-.flex-row > .cabecera {
-  display: flex;
-  width: 50%;
-  flex-basis: 50%;
-  flex: 1 1;
-  justify-content: left;
-  font-weight: bold;
-  color: black;
-}
+
 .flex-row > .contenido {
   display: flex;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .flex-column {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: center;
+  width: 80%;
 }
 
 .back-contenedor {
   z-index: 2;
   position: relative;
   align-items: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media (max-width: 400px) {
   .flex-row {
     width: 100%;
-    font-size: 1rem;
-  }
-  .flex-row > .contenido {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .flex-row > .cabecera {
-    width: 50%;
-    justify-content: left;
-    flex: 0 1;
+    font-size: 0.8rem;
+    gap: 10px;
   }
 
   .flex-column {
-    gap: 0px;
+    gap: 10px;
   }
 }

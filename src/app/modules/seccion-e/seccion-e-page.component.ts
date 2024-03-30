@@ -16,5 +16,4 @@ import { PanelDifuminadoComponent } from 'src/app/shared/components/panel-difumi
 export class SeccionEPageComponent {
   tg = TG;
   wbURLEnum = WebUrl
-
 }

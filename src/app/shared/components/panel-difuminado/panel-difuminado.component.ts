@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-panel-difuminado',
@@ -11,4 +11,6 @@ export class PanelDifuminadoComponent {
   @Input() isBordeSuperior: boolean = true;
   @Input() opacity: Number = 28;
   @Input() isBordeWeb: boolean = true;
+  @Input() isNoMostrarMovil: boolean = false;
+  @Input() isNoMostrarWeb: boolean = false;
 }

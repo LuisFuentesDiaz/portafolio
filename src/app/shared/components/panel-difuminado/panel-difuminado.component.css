@@ -8,6 +8,10 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
+
+  .no-mostrar-movil {
+    display: none;
+  }
 }
 
 @media (min-width: 1001px) {
@@ -16,6 +20,10 @@
   }
   .borde-web {
     border-radius: 20px;
+  }
+
+  .no-mostrar-web {
+    display: none;
   }
 }
 
