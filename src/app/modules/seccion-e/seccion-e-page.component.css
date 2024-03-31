@@ -1,6 +1,6 @@
 article {
   position: relative;
-  width: 70vw;
+  width: 70%;
   height: auto;
   margin: auto;
   justify-content: center;
@@ -24,18 +24,29 @@ section {
   position: relative;
   width: 100%;
   height: auto;
-  padding: 5%;
   z-index: 2;
+  margin-bottom: 50px;
 }
 
-@media (min-width: 1001px) {
+@media (min-width: 1000px) {
   article {
     width: 70%;
+    min-width: 999px;
+    padding: 100px;
   }
 }
 
 @media (max-width: 1000px) {
   article {
     width: 100%;
+  }
+
+  section {
+    width: 90%;
+  }
+}
+
+@media (min-width: 800px) {
+  section {
   }
 }

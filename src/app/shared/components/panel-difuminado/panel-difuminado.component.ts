@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class PanelDifuminadoComponent {
   @Input() isBordeAbajo: boolean = true;
-  @Input() isBordeSuperior: boolean = true;
+  @Input() isBordeSuperior: boolean = false;
   @Input() opacity: Number = 28;
   @Input() isBordeWeb: boolean = true;
   @Input() isNoMostrarMovil: boolean = false;

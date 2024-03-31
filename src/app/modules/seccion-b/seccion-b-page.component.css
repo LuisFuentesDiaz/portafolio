@@ -14,6 +14,7 @@
   .seccion-seccion-b {
     width: 90%;
     margin: auto;
+    margin-top: 50px;
   }
 
   .foto personal {
@@ -21,7 +22,7 @@
   }
 }
 
-@media (min-width: 1001px) {
+@media (min-width: 1000px) {
   .movil-articulo-seccion-b {
     display: none;
   }
@@ -30,13 +31,14 @@
     justify-content: center;
     width: 70%;
     margin: auto;
-    min-height: 500px;
     display: flex;
     backdrop-filter: blur(5px);
+    min-width: 999px;
+    padding: 100px;
   }
 
   .seccion-seccion-b {
-    width: 90%;
+    width: 100%;
     z-index: 2;
     color: ghostwhite;
     display: flex;
@@ -71,7 +73,6 @@
 }
 
 .seccion-seccion-b {
-  padding-top: 5%;
-  padding-bottom: 5%;
   align-items: center;
+  z-index: 2;
 }

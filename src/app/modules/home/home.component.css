@@ -9,6 +9,12 @@
   }
 }
 
+@media (min-width: 1000px) {
+  .solo-web {
+    display: none;
+  }
+}
+
 .tab-index {
   background-color: #030731;
 }

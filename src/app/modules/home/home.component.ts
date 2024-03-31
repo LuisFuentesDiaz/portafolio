@@ -6,13 +6,14 @@ import { SeccionCPageComponent } from '../seccion-c/seccion-c-page.component';
 import { SeccionDPageComponent } from '../seccion-d/seccion-d-page.component';
 import { SeccionEPageComponent } from '../seccion-e/seccion-e-page.component';
 import { ContactoComponent } from '../contacto/contacto.component';
+import { EspacioComponent } from 'src/app/shared/components/espacio/espacio.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
   standalone: true,
-  imports: [SeccionAPageComponent, SeccionBPageComponent, SeccionCPageComponent, SeccionDPageComponent, SeccionEPageComponent, CvComponent, ContactoComponent]
+  imports: [SeccionAPageComponent, SeccionBPageComponent, SeccionCPageComponent, SeccionDPageComponent, SeccionEPageComponent, CvComponent, ContactoComponent, EspacioComponent]
 })
 export class HomeComponent implements OnInit {
 
