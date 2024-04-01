@@ -1,7 +1,7 @@
 <div class="proyecto animacionFlip" id="proyecto{{id}}">
   <div class="card-inner {{data.codigoAbierto ? 'borde-color-open' : ''}}">
     <div class="card-front">
-      <img [src]="img" loading="lazy" alt="screen proyecto {{img}}">
+      <img [src]="img" loading="lazy" width="250px" height="150px" alt="screen proyecto {{img}}">
       Frontal
     </div>
     <div class="card-back" id="card-back{{id}}">
@@ -16,7 +16,7 @@
           </a>
         </ng-container>
       </div>
-      <i class="bi bi-fullscreen icono-ampliar " role="button" (click)="openModal()"></i>
+      <i class="bi bi-fullscreen icono-ampliar " role="button" aria-label="expandir" (click)="openModal()"></i>
       <div class="contenedor-Skills">
         <app-icono-skill *ngFor="let tg of tecnologias let i = index" id="web-iconosSkill-tarjeta-proyecto{{i}}" ancho="35" noScale=true [data]="tg"></app-icono-skill>
       </div>
