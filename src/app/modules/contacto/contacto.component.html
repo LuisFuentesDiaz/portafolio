@@ -1,12 +1,18 @@
-<div class="contenedor-principal">
+<article>
   <app-panel-difuminado [isBordeAbajo]="false" [isBordeSuperior]="false" [isNoMostrarWeb]="true"></app-panel-difuminado>
-  <div class="container-text">
-    <div class="contenedor-contacto">
+  <section>
+    <div class="div-contenedor">
       <h1>Contacto</h1>
-      <div class="iconos-contacto">
-        <a [href]="wbURLEnum.CONTACTO_INSTAGRAM" target="_blank"><img width="80px" class="filtro-gray" src="assets/instagram.png" alt="Gmail"> </a>
-        <a [href]="wbURLEnum.CONTACTO_LINKEDIN" target="_blank"> <img width="80px" class="filtro-gray" src="assets/linkedin.png" alt="LinkedIn"> </a>
+      <div class="flex-row">
+        <a [href]="wbURLEnum.CONTACTO_INSTAGRAM" target="_blank"><img width="80px" src="assets/instagram.png" alt="Gmail"> </a>
+        <a [href]="wbURLEnum.CONTACTO_LINKEDIN" target="_blank"> <img width="80px" src="assets/linkedin.png" alt="LinkedIn"> </a>
       </div>
     </div>
-  </div>
+  </section>
+</article>
+
+
+<div class="contacto-web">
+  <a [href]="wbURLEnum.CONTACTO_INSTAGRAM" target="_blank"><img width="50px" src="assets/instagram.png" alt="Gmail"> </a>
+  <a [href]="wbURLEnum.CONTACTO_LINKEDIN" target="_blank"> <img width="50px" src="assets/linkedin.png" alt="LinkedIn"> </a>
 </div>

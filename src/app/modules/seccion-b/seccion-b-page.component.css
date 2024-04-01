@@ -7,13 +7,10 @@
     backdrop-filter: blur(5px);
   }
 
-  .web-articulo-seccion-b {
-    display: none;
-  }
-
   .seccion-seccion-b {
     width: 90%;
     margin: auto;
+    margin-top: 50px;
   }
 
   .foto personal {
@@ -21,22 +18,18 @@
   }
 }
 
-@media (min-width: 1001px) {
-  .movil-articulo-seccion-b {
-    display: none;
-  }
-
+@media (min-width: 1000px) {
   .web-articulo-seccion-b {
     justify-content: center;
     width: 70%;
     margin: auto;
-    min-height: 500px;
     display: flex;
     backdrop-filter: blur(5px);
+    padding: 100px;
   }
 
   .seccion-seccion-b {
-    width: 90%;
+    width: 100%;
     z-index: 2;
     color: ghostwhite;
     display: flex;
@@ -71,7 +64,6 @@
 }
 
 .seccion-seccion-b {
-  padding-top: 5%;
-  padding-bottom: 5%;
   align-items: center;
+  z-index: 2;
 }

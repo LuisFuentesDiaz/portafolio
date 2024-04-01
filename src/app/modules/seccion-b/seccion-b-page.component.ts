@@ -20,7 +20,7 @@ export class SeccionBPageComponent implements OnInit {
 
   ngOnInit() {
     this.pantallaService.resolucion.subscribe(e => {
-      if (e.resolucion > 1001) {
+      if (e.resolucion >= 1000) {
         this.isMovil = false;
       } else {
         this.isMovil = true;

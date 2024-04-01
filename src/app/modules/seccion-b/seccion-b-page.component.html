@@ -1,14 +1,17 @@
-<article *ngIf="!isMovil" class="web-articulo-seccion-b articulo-seccion-b">
-  <app-panel-difuminado></app-panel-difuminado>
-  <section class="web-seccion-seccion-b seccion-seccion-b container">
-    <app-perfil-profesional class="perfilProfesionalApp"></app-perfil-profesional>
-    <app-foto-personal class="foto-personal"></app-foto-personal>
-  </section>
-</article>
-
-<article *ngIf="isMovil" class="movil-articulo-seccion-b articulo-seccion-b">
-  <app-panel-difuminado [isBordeAbajo]="false"></app-panel-difuminado>
-  <section class="movil-seccion-seccion-b seccion-seccion-b">
-    <app-perfil-profesional></app-perfil-profesional>
-  </section>
-</article>
+<ng-container *ngIf="!isMovil">
+  <article class="web-articulo-seccion-b articulo-seccion-b min-width-articles">
+    <app-panel-difuminado></app-panel-difuminado>
+    <section class="web-seccion-seccion-b seccion-seccion-b container">
+      <app-perfil-profesional class="perfilProfesionalApp"></app-perfil-profesional>
+      <app-foto-personal class="foto-personal"></app-foto-personal>
+    </section>
+  </article>
+</ng-container>
+<ng-container *ngIf="isMovil">
+  <article class="movil-articulo-seccion-b articulo-seccion-b">
+    <app-panel-difuminado [isBordeSuperior]="true"></app-panel-difuminado>
+    <section class="movil-seccion-seccion-b seccion-seccion-b">
+      <app-perfil-profesional></app-perfil-profesional>
+    </section>
+  </article>
+</ng-container>

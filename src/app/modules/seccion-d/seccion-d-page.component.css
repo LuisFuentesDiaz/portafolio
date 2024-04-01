@@ -14,7 +14,6 @@ section {
   width: 100%;
   height: auto;
   position: relative;
-  padding: 5%;
   z-index: 2;
 }
 
@@ -22,10 +21,15 @@ section {
   article {
     width: 100%;
   }
+  section {
+    width: 90%;
+    padding-top: 50px;
+  }
 }
 
-@media (min-width: 1001px) {
+@media (min-width: 1000px) {
   article {
     width: 70%;
+    padding: 100px;
   }
 }

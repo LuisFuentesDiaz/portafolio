@@ -1,33 +1,4 @@
-.contenedor-contacto {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-flow: row;
-  flex-direction: column;
-}
-
-.iconos-contacto {
-  display: flex;
-  justify-content: center;
-  font-size: 2rem;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 5%;
-}
-
-.container-text {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  flex-flow: row;
-  flex-direction: column;
-  width: 100%;
-  z-index: 2;
-  height: 25vh;
-  animation: moverArribaAbajo 2.4s ease-in-out infinite;
-}
-
-.contenedor-principal {
+article {
   position: relative;
   width: 100%;
   height: 20vh;
@@ -36,21 +7,64 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  z-index: 1;
+  background-color: #030731;
 }
 
-@media (max-width: 600px) {
-  .container-text {
-    font-size: 0.6rem;
-  }
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
 
-  .contenedor-principal {
+.div-contenedor {
+  display: flex;
+  z-index: 1;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.flex-row {
+  gap: 10px;
+  display: flex;
+}
+
+@media (max-width: 1000px) {
+  section {
+    font-size: 0.6rem;
     backdrop-filter: blur(4px);
   }
+
+  .contacto-web {
+    display: none;
+  }
 }
 
-@media (min-width: 601px) {
-  .container-text {
+@media (min-width: 1000px) {
+  section {
     font-size: 1rem;
   }
+
+  article {
+    display: none;
+  }
+
+  .contacto-web {
+    display: flex;
+  }
+}
+
+.contacto-web {
+  width: auto;
+  z-index: 3;
+  position: fixed;
+  left: 1vw;
+  bottom: 1vh;
+  flex-direction: column;
+  filter: grayscale(1);
+  gap: 5px;
 }

@@ -65,8 +65,13 @@ h1 {
   font-weight: bold !important;
   filter: drop-shadow(2px 4px 6px black);
   color: ghostwhite !important;
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: calc(1.175rem + 1vw);
   margin: 0;
+}
+@media (min-width: 1000px) {
+  .min-width-articles {
+    min-width: 990px;
+  }
 }
 
 .filtro-gray {

@@ -15,15 +15,15 @@
 }
 
 @media (min-width: 1001px) {
-  .panel-difuminado {
-    box-shadow: 0px 0px 37px 12px white;
-  }
   .borde-web {
     border-radius: 20px;
   }
 
   .no-mostrar-web {
     display: none;
+  }
+  .panel-difuminado {
+    box-shadow: 0px 0px 37px 12px white;
   }
 }
 

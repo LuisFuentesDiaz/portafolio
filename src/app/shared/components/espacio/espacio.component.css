@@ -1,0 +1,12 @@
+.espacio {
+  height: 25vh;
+  position: relative;
+  width: 100%;
+  background-color: #030731;
+}
+
+@media (max-width: 1000px) {
+  .espacio {
+    display: none;
+  }
+}
