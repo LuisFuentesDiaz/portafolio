@@ -31,7 +31,6 @@ section {
 @media (min-width: 1000px) {
   article {
     width: 70%;
-    min-width: 999px;
     padding: 100px;
   }
 }

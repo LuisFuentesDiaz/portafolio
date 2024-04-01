@@ -117,6 +117,10 @@ img {
   gap: 5px;
 }
 
+.borde-color-open {
+  border-color: green;
+}
+
 @keyframes mostrarModal {
   10% {
     z-index: 3;

@@ -68,6 +68,11 @@ h1 {
   font-size: calc(1.175rem + 1vw);
   margin: 0;
 }
+@media (min-width: 1000px) {
+  .min-width-articles {
+    min-width: 990px;
+  }
+}
 
 .filtro-gray {
   filter: grayscale(10);

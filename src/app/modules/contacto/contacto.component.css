@@ -38,10 +38,33 @@ section {
     font-size: 0.6rem;
     backdrop-filter: blur(4px);
   }
+
+  .contacto-web {
+    display: none;
+  }
 }
 
 @media (min-width: 1000px) {
   section {
     font-size: 1rem;
   }
+
+  article {
+    display: none;
+  }
+
+  .contacto-web {
+    display: flex;
+  }
+}
+
+.contacto-web {
+  width: auto;
+  z-index: 3;
+  position: fixed;
+  left: 1vw;
+  bottom: 1vh;
+  flex-direction: column;
+  filter: grayscale(1);
+  gap: 5px;
 }

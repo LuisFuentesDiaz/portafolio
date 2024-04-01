@@ -1,27 +1,25 @@
-<ng-container>
-  <div class="proyecto animacionFlip " id="proyecto{{id}}">
-    <div class="card-inner">
-      <div class="card-front">
-        <img [src]="img" loading="lazy" alt="screen proyecto {{img}}">
-        Frontal
-      </div>
-      <div class="card-back" id="card-back{{id}}">
-        <div id="web-disponibilidad{{id}}" [ngSwitch]="data.codigoAbierto" class="contenedor-disponibilidad-proyecto" [style.color]="data.codigoAbierto ? 'green' : 'red'">
-          <ng-container *ngSwitchCase="false">
-            <i class="bi bi-exclamation-circle-fill" ngxTippy="Privado"></i>
-          </ng-container>
+<div class="proyecto animacionFlip" id="proyecto{{id}}">
+  <div class="card-inner {{data.codigoAbierto ? 'borde-color-open' : ''}}">
+    <div class="card-front">
+      <img [src]="img" loading="lazy" alt="screen proyecto {{img}}">
+      Frontal
+    </div>
+    <div class="card-back" id="card-back{{id}}">
+      <div id="web-disponibilidad{{id}}" [ngSwitch]="data.codigoAbierto" class="contenedor-disponibilidad-proyecto" [style.color]="data.codigoAbierto ? 'green' : 'red'">
+        <ng-container *ngSwitchCase="false">
+          <i class="bi bi-exclamation-circle-fill" ngxTippy="Privado"></i>
+        </ng-container>
 
-          <ng-container *ngSwitchDefault>
-            <a [href]="data.codigoAbierto" target="_blank">
-              <i class="bi bi-box-arrow-up-right grab" ngxTippy="Abierto"></i>
-            </a>
-          </ng-container>
-        </div>
-        <i class="bi bi-fullscreen icono-ampliar " role="button" (click)="openModal()"></i>
-        <div class="contenedor-Skills">
-          <app-icono-skill *ngFor="let tg of tecnologias let i = index" id="web-iconosSkill-tarjeta-proyecto{{i}}" ancho="35" noScale=true [data]="tg"></app-icono-skill>
-        </div>
+        <ng-container *ngSwitchDefault>
+          <a [href]="data.codigoAbierto" target="_blank">
+            <i class="bi bi-box-arrow-up-right grab" ngxTippy="Abierto"></i>
+          </a>
+        </ng-container>
+      </div>
+      <i class="bi bi-fullscreen icono-ampliar " role="button" (click)="openModal()"></i>
+      <div class="contenedor-Skills">
+        <app-icono-skill *ngFor="let tg of tecnologias let i = index" id="web-iconosSkill-tarjeta-proyecto{{i}}" ancho="35" noScale=true [data]="tg"></app-icono-skill>
       </div>
     </div>
   </div>
-</ng-container>
+</div>

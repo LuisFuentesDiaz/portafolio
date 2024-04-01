@@ -7,10 +7,6 @@
     backdrop-filter: blur(5px);
   }
 
-  .web-articulo-seccion-b {
-    display: none;
-  }
-
   .seccion-seccion-b {
     width: 90%;
     margin: auto;
@@ -23,17 +19,12 @@
 }
 
 @media (min-width: 1000px) {
-  .movil-articulo-seccion-b {
-    display: none;
-  }
-
   .web-articulo-seccion-b {
     justify-content: center;
     width: 70%;
     margin: auto;
     display: flex;
     backdrop-filter: blur(5px);
-    min-width: 999px;
     padding: 100px;
   }
 

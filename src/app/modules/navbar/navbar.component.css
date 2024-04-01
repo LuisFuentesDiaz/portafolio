@@ -44,7 +44,7 @@
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 801px) {
   .navbar > ul:hover {
     transform: scale(1.2);
   }
