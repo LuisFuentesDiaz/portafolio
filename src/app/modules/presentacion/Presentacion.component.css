@@ -16,7 +16,6 @@
 }
 
 .fotoPersonal {
-  width: 20vh;
   border-radius: 50%;
   filter: drop-shadow(2px 4px 6px black) grayscale(1);
   max-width: 20vh;
@@ -68,6 +67,10 @@
 
 .btn-custom {
   margin-top: 10px;
+}
+
+.btn-custom:hover {
+  scale: 1.1;
 }
 
 @media (max-width: 550px) {

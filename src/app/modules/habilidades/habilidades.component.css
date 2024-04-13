@@ -6,10 +6,6 @@
   z-index: 1;
 }
 
-.gray {
-  filter: grayscale(10);
-}
-
 @media (max-width: 400px) {
   .endurance-con-habilidades {
     height: 100%;

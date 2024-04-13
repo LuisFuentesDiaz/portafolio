@@ -6,15 +6,6 @@
   filter: drop-shadow(2px 4px 6px black);
 }
 
-.marco-certificado {
-  position: absolute;
-  width: 230px;
-  height: 170px;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  filter: grayscale(1);
-}
 .certificado-img {
   filter: grayscale(1);
 }

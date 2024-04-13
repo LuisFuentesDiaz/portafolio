@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-estrella-fugaz',
@@ -8,86 +8,68 @@ import { Component, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
 })
 export class EstrellaFugazComponent implements OnInit {
 
-  @Input() id = "";
-  @Input() intervalo = "5000";
-  @Input() right = 0;
-  @Input() top = 0;
-  @Input() tamaño = 70;
+  animar: boolean = false;
+  isHidden: boolean = false;
+  x: number = -30;
+  y: number = -30;
+  duracion: number = 2;
+  tamano: number = 100;
+  ultimoRandomPosicion = 0;
 
-  ultimaClaseAnimacion = null;
+  posiciones = [
+    { x: 0, y: -30 },
+    { x: 10, y: -30 },
+    { x: 20, y: -30 },
+    { x: 30, y: -30 },
+    { x: 40, y: -30 },
+    { x: 50, y: -30 },
+    { x: 60, y: -30 },
+    { x: 70, y: -30 },
+    { x: 80, y: -30 },
+    { x: -30, y: 20 },
+    { x: -30, y: 40 },
+  ];
 
-  constructor(private el: ElementRef, private renderer: Renderer2) { }
+  duraciones = [
+    { duracion: 0.5, tamaño: 100 },
+    { duracion: 1, tamaño: 80 },
+    { duracion: 1.5, tamaño: 60 },
+    { duracion: 2, tamaño: 50 },
+  ];
+
+  constructor() { }
 
   ngOnInit(): void {
+    this.animar = true;
 
-    let win = this;
-    document.addEventListener("DOMContentLoaded", function () {
-      const spanFugaz = win.renderer.createElement('div');
-      const estrella = win.renderer.createElement('img');
-      estrella.id = "estrellaFugaz" + win.id;
-      estrella.src = "assets/estrellaFugaz.png";
-      estrella.alt = "modelo estrella fugaz";
-      win.renderer.addClass(estrella, `estrellaFugaz`);
-      win.renderer.addClass(spanFugaz, `contEstrellaFugaz1`);
-      spanFugaz.style.display = "none";
-      spanFugaz.id = "spanFugaz" + win.id;
-      spanFugaz.appendChild(estrella);
-      document.getElementById("estrellasFugaces" + win.id).appendChild(spanFugaz);
-      spanFugaz.addEventListener("animationend", function () {
-        spanFugaz.style.display = "none";
-        if (win.ultimaClaseAnimacion != null) {
-          spanFugaz.classList.remove(`${win.ultimaClaseAnimacion}`);
-        }
-      });
-    })
   }
 
-  ngAfterViewInit(): void {
-    setInterval(() => {
-      this.showEstrellaFugaz();
-    }, parseInt(this.intervalo));
+  animationEnd() {
+    this.isHidden = true;
+    this.animar = false;
+    this.cambiarStyle();
   }
 
-  showEstrellaFugaz = () => {
-    let span = document.getElementById("spanFugaz" + this.id);
-    let estrella = document.getElementById("estrellaFugaz" + this.id);
-
-    if (span && estrella) {
-
-      let azar = Math.round(Math.random() * (100 - 0) + 0);
-      let azarAnimacion = Math.round(Math.random() * (5 - 1) + 1);
-      let azarTamaño = Math.round(Math.random() * (50 - 15) + 15);
-      let azarPosicionRight = Math.round(Math.random() * (100 - 0) + 0);
-
-      if (azar > 50) {
-        estrella.style.width = `${azarTamaño.toString()}px`;
-        estrella.style.height = `${azarTamaño.toString()}px`;
-
-        if (azarPosicionRight == 0) {
-          let azarPosicionTop = Math.round(Math.random() * (100 - 0) + 0);
-          estrella.style.right = "0%";
-          estrella.style.top = `${azarPosicionTop}%`;
-        } else {
-          estrella.style.top = "0%";
-          estrella.style.right = `${azarPosicionRight}%`;
-        }
-
-        span.style.display = "block";
-        this.ultimaClaseAnimacion = "animacionStart" + azarAnimacion;
-        if (this.id == "2") {
-        }
-        span.classList.add(`animacionStart${azarAnimacion}`);
-      } else {
-        this.ultimaClaseAnimacion = null;
-      }
+  cambiarStyle() {
+    let tiempo = this.numeroRandom(3000, 5000);
+    this.isHidden = false;
+    let numPosicion = this.numeroRandom(0, this.posiciones.length - 1);
+    while (numPosicion == this.ultimoRandomPosicion) {
+      numPosicion = this.numeroRandom(0, this.posiciones.length - 1);
     }
+    let numDuracion = this.numeroRandom(0, this.duraciones.length - 1);
+    this.ultimoRandomPosicion = numPosicion;
+
+    setTimeout(() => {
+      this.x = this.posiciones[numPosicion].x;
+      this.y = this.posiciones[numPosicion].y;
+      this.tamano = this.duraciones[numDuracion].tamaño;
+      this.duracion = this.duraciones[numDuracion].duracion;
+      this.animar = true;
+    }, tiempo);
   }
 
-  toggleClass(element, className) {
-    if (element.classList.contains(className)) {
-      element.classList.remove(className);
-    } else {
-      element.classList.add(className);
-    }
+  numeroRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 }

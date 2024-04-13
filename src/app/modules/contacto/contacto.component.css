@@ -33,6 +33,15 @@ section {
   display: flex;
 }
 
+.itemContacto {
+  filter: grayscale(1);
+}
+
+.itemContacto:hover {
+  filter: grayscale(0);
+  scale: 1.1;
+}
+
 @media (max-width: 1000px) {
   section {
     font-size: 0.6rem;
@@ -65,6 +74,5 @@ section {
   left: 1vw;
   bottom: 1vh;
   flex-direction: column;
-  filter: grayscale(1);
-  gap: 5px;
+  gap: 7px;
 }

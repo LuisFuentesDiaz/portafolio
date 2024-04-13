@@ -4,7 +4,7 @@ import { Utiles } from 'src/app/core/util';
 import { RouterModule } from '@angular/router';
 import { IconoSkillComponent } from 'src/app/shared/components/icono-skill/icono-skill.component';
 import { PanelDifuminadoComponent } from 'src/app/shared/components/panel-difuminado/panel-difuminado.component';
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor, NgIf, NgSwitch, NgSwitchCase } from '@angular/common';
 import { NgbCarousel, NgbCarouselConfig, NgbCarouselModule, NgbSlide } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -12,7 +12,7 @@ import { NgbCarousel, NgbCarouselConfig, NgbCarouselModule, NgbSlide } from '@ng
   templateUrl: './detalle-proyecto.component.html',
   styleUrls: ['./detalle-proyecto.component.css'],
   standalone: true,
-  imports: [RouterModule, NgIf, NgFor, IconoSkillComponent, PanelDifuminadoComponent, NgbCarouselModule]
+  imports: [RouterModule, NgIf, NgFor, IconoSkillComponent, PanelDifuminadoComponent, NgbCarouselModule, NgSwitch, NgSwitchCase]
 })
 export class DetalleProyectoComponent extends Utiles implements OnInit {
   isData: boolean = false;
