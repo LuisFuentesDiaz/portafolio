@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NavbarComponent } from './modules/navbar/navbar.component';
-import { FooterComponent } from './modules/footer/footer.component';
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './modules/home/home.component';
 import { EstrellasComponent } from './shared/components/estrellas/estrellas.component';

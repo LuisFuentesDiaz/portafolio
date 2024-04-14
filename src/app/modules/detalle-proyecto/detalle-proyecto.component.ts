@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { IconoSkillComponent } from 'src/app/shared/components/icono-skill/icono-skill.component';
 import { PanelDifuminadoComponent } from 'src/app/shared/components/panel-difuminado/panel-difuminado.component';
 import { NgFor, NgIf, NgSwitch, NgSwitchCase } from '@angular/common';
-import { NgbCarousel, NgbCarouselConfig, NgbCarouselModule, NgbSlide } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselConfig, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-detalle-proyecto',

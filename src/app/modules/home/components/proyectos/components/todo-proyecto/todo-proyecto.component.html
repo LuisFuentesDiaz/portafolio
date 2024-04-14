@@ -1,0 +1,5 @@
+<div class="contenedor-todo-proyectos">
+  <div *ngFor="let proyecto of proyectos, let i = index" class="contenedor-proyectos">
+    <app-proyecto [data]="proyecto" [id]="'todos'+i" [img]="proyecto.urlBaseImg+proyecto.imgPreview+proyecto.extension"></app-proyecto>
+  </div>
+</div>
