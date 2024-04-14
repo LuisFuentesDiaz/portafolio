@@ -1,2 +1,3 @@
-<div [id]="'estrellasFugaces'+id">
+<div class="sky">
+  <div class="star {{animar ? 'animar' : ''}} {{isHidden ? 'hidden': 'show'}}" (animationend)="animationEnd()" [style.right.%]="x" [style.top.%]="y" [style.width.px]="tamano"></div>
 </div>

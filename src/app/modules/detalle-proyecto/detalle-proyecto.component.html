@@ -12,7 +12,13 @@
             <i role="button" (click)="proyectoSiguiente(null)" class="bi bi-caret-right-fill hover-navegacion"></i>
           </div>
         </div>
-        <h1>{{data.nombre}}</h1>
+
+        <h1>{{data.nombre}}
+
+          <ng-container *ngIf="data.codigoAbierto">
+            <a [href]="data.codigoAbierto" target="_blank"><i class="bi bi-box-arrow-up-right grab" style="color:green; font-size: 20px;"></i></a>
+          </ng-container>
+        </h1>
 
         <div class="informacion-detalle flex-col">
           <div *ngIf="data.consultora" class="columna flex-row">

@@ -1,0 +1,35 @@
+footer {
+  width: 100%;
+  position: relative;
+  align-items: center;
+  display: flex;
+  color: white;
+  z-index: 0;
+}
+
+.heightDetalle {
+  height: 5vh;
+}
+
+.heightCompleto {
+  height: 25vh;
+}
+
+p {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  right: 2%;
+  display: flex;
+  gap: 10px;
+}
+
+.corazon {
+  color: red;
+}
+
+@media (max-width: 1000px) {
+  footer {
+    display: none;
+  }
+}

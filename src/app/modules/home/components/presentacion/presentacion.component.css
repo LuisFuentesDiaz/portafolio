@@ -1,0 +1,110 @@
+.container-seccion-a {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  z-index: 2;
+}
+
+.contenedor-img-seccion-a {
+  position: relative;
+  width: 25%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.fotoPersonal {
+  border-radius: 50%;
+  filter: drop-shadow(2px 4px 6px black) grayscale(1);
+  max-width: 20vh;
+  min-width: 150px;
+}
+
+.anillo-planeta {
+  position: absolute;
+  z-index: 2;
+  filter: opacity(0.5);
+  width: 50vw;
+  max-width: 300px;
+  min-width: 290px;
+}
+
+.contenedor-info-seccion-a {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-flow: row;
+  flex-direction: column;
+  animation: moverArribaAbajo 2.4s infinite ease-in-out;
+}
+
+.contenedor-info {
+  margin-top: 2%;
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  align-items: center;
+}
+
+.habilidades-seccion-a {
+  display: flex;
+}
+
+.subtituloCabecera {
+  color: whitesmoke;
+  font-family: "Graduate", serif;
+  margin-bottom: 5% !important;
+  margin: 0%;
+  font-size: 1.1rem;
+}
+
+.btn-custom {
+  margin-top: 10px;
+}
+
+.btn-custom:hover {
+  scale: 1.1;
+}
+
+@media (max-width: 550px) {
+  .container-seccion-a {
+    height: 100vh;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+
+  .contenedor-img-seccion-a {
+    display: flex;
+  }
+
+  .contenedor-info-seccion-a {
+    top: -5vh;
+  }
+}
+
+@media (min-width: 1001px) {
+  .contenedor-img-seccion-a {
+    display: none;
+  }
+}
+
+@media (min-width: 551px) {
+  .container-seccion-a {
+    height: 70vh;
+  }
+
+  h1 {
+    margin-top: 5px;
+    font-size: 3.5rem;
+  }
+}

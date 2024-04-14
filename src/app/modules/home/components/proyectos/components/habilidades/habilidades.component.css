@@ -1,0 +1,26 @@
+.endurance-con-habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+@media (max-width: 400px) {
+  .endurance-con-habilidades {
+    height: 100%;
+    gap: 10px;
+    margin: auto;
+    width: 100%;
+    backdrop-filter: blur(4px);
+  }
+}
+
+@media (min-width: 400px) {
+  .endurance-con-habilidades {
+    animation: moverArribaAbajo 2.4s ease-in-out infinite;
+    width: 70%;
+    margin: auto;
+    gap: 23px;
+  }
+}

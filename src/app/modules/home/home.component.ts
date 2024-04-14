@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { CvComponent } from '../cv/cv.component';
-import { SeccionAPageComponent } from '../seccion-a/seccion-a-page.component';
-import { SeccionBPageComponent } from '../seccion-b/seccion-b-page.component';
-import { SeccionCPageComponent } from '../seccion-c/seccion-c-page.component';
-import { SeccionDPageComponent } from '../seccion-d/seccion-d-page.component';
-import { SeccionEPageComponent } from '../seccion-e/seccion-e-page.component';
-import { ContactoComponent } from '../contacto/contacto.component';
+import { CvComponent } from './components/cv/cv.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
 import { EspacioComponent } from 'src/app/shared/components/espacio/espacio.component';
+import { PresentacionComponent } from './components/presentacion/presentacion.component';
+import { SobreMiComponent } from './components/sobreMi/sobreMi.component';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { ExperienciasComponent } from './components/experiencias/experiencias.component';
+import { CertificacionesComponent } from './components/certificaciones/certificaciones.component';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
   standalone: true,
-  imports: [SeccionAPageComponent, SeccionBPageComponent, SeccionCPageComponent, SeccionDPageComponent, SeccionEPageComponent, CvComponent, ContactoComponent, EspacioComponent]
+  imports: [PresentacionComponent, SobreMiComponent, ProyectosComponent, ExperienciasComponent, CertificacionesComponent, CvComponent, ContactoComponent, EspacioComponent]
 })
 export class HomeComponent implements OnInit {
 

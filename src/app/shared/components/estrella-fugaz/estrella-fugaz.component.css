@@ -1,63 +1,45 @@
-@media(max-width:400px) {
-  .estrellaFugaz {
-    rotate: -37deg;
-  }
+.sky {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
 }
 
-@media(min-width:400px) {
-  .estrellaFugaz {
-    rotate: -10deg;
-  }
-}
-
-@media(min-width:1001px) {
-  .estrellaFugaz {
-    rotate: 0deg;
-  }
-}
-
-
-.estrellasFugaces {
-  z-index: -1;
-}
-
-.estrellaFugaz {
+.star {
   position: absolute;
+  height: 3px;
+  background: linear-gradient(60deg, white, rgba(0, 0, 255, 0));
+  border-radius: 999px;
+  filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
+  rotate: -60deg;
 }
 
-.animacionStart1 {
-  animation: estrellaFugaz1 2s 1;
+.animar {
+  animation: shooting 4s;
 }
 
-.animacionStart2 {
-  animation: estrellaFugaz1 1.7s 1;
+.hidden {
+  display: none;
 }
 
-.animacionStart3 {
-  animation: estrellaFugaz1 1.5s 1;
+.show {
+  display: flex;
 }
 
-.animacionStart4 {
-  animation: estrellaFugaz1 1.3s 1;
+@media (max-width: 800px) {
+  .animar {
+    animation: shooting 2s;
+  }
 }
 
-.animacionStart5 {
-  animation: estrellaFugaz1 1s 1;
-}
-
-
-.contEstrellaFugaz {
-  position: absolute;
-}
-
-@keyframes estrellaFugaz1 {
+@keyframes shooting {
   0% {
-    transform: translate(0, 0);
-    opacity: 1;
+    transform: translateX(0);
+    scale: 0;
   }
 
   100% {
-    transform: translate(-100vw, 100vh);
-    opacity: 0;
+    transform: translateX(-300vw);
+    scale: 1;
   }
 }
